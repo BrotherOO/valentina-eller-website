@@ -1,0 +1,24 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.vue";
+import Hero from "../components/Hero.vue";
+import Services from "../components/Services.vue";
+import AboutTeaser from "../components/AboutTeaser.astro";
+import PriceList from "../components/PriceList.vue";
+import Testimonials from "../components/Testimonials.vue";
+import ContactInfo from "../components/ContactInfo.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout>
+	<Header client:load />
+	<main>
+		<Hero client:load />
+		<Services />
+		<AboutTeaser />
+		<PriceList client:visible />
+		<Testimonials client:visible />
+		<ContactInfo />
+	</main>
+	<Footer />
+</Layout>

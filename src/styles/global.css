@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  /* Primary Action: Magenta - Leidenschaft & Energie */
+  --color-primary-action: #C21179;
+
+  /* Primary Background: Soft Apricot/Nude - Hautnah & Warm */
+  --color-primary-bg: #F8DAC2;
+
+  /* Secondary Deep: Midnight Navy - Seriosität & Kontrast */
+  --color-secondary-deep: #122738;
+
+  /* Accent Warm: Living Coral - Freundliche Unterstützung */
+  --color-accent-warm: #F3A398;
+
+  /* Highlight Glow: Golden Sand - Qualität & Licht */
+  --color-highlight-glow: #FEDA9C;
+
+  /* Base White */
+  --color-white: #FFFFFF;
+
+  /* Typography */
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+}
+
+@layer utilities {
+  .bg-fabric-flow {
+    background: radial-gradient(circle at center, var(--color-primary-bg) 0%, #FFFFFF 100%);
+  }
+}

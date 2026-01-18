@@ -1,0 +1,75 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.vue";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="Impressum | Valentina Änderungsschneiderei">
+    <Header client:load />
+    <main class="fixed-nav-spacing pt-32 pb-20 container mx-auto px-4 md:px-8">
+        <div
+            class="prose prose-lg mx-auto bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-gray-100 max-w-3xl"
+        >
+            <h1 class="text-3xl font-bold mb-8 text-secondary-deep font-serif">
+                Impressum
+            </h1>
+
+            <p class="text-sm text-gray-500 mb-6">Angaben gemäß § 5 TMG</p>
+
+            <p>
+                <strong>Valentina Dubinsky</strong><br />
+                Änderungsschneiderei<br />
+                Dillenburger Weg 33a<br />
+                40229 Düsseldorf<br />
+            </p>
+
+            <h3 class="font-bold mt-6 mb-2">Kontakt</h3>
+            <p>
+                Telefon: 0211 217213<br />
+                E-Mail: info@valentina-schneiderei.de<br />
+            </p>
+
+            <h3 class="font-bold mt-6 mb-2">Umsatzsteuer-ID</h3>
+            <p>
+                Umsatzsteuer-Identifikationsnummer gemäß § 27 a
+                Umsatzsteuergesetz: <br />
+                <span class="italic text-gray-500"
+                    >Kleinunternehmer gemäß § 19 UStG</span
+                >
+            </p>
+
+            <h3 class="font-bold mt-6 mb-2">
+                Berufsbezeichnung und berufsrechtliche Regelungen
+            </h3>
+            <p>
+                Berufsbezeichnung: Änderungsschneiderin<br />
+                Zuständige Kammer: Handwerkskammer Düsseldorf<br />
+                Verliehen in: Deutschland
+            </p>
+
+            <h3 class="font-bold mt-6 mb-2">EU-Streitschlichtung</h3>
+            <p>
+                Die Europäische Kommission stellt eine Plattform zur
+                Online-Streitbeilegung (OS) bereit:
+                <a
+                    href="https://ec.europa.eu/consumers/odr/"
+                    target="_blank"
+                    rel="noopener"
+                    class="text-green-600 hover:underline"
+                    >https://ec.europa.eu/consumers/odr/</a
+                >.<br />
+                Unsere E-Mail-Adresse finden Sie oben im Impressum.
+            </p>
+
+            <h3 class="font-bold mt-6 mb-2">
+                Verbraucherstreitbeilegung/Universalschlichtungsstelle
+            </h3>
+            <p>
+                Wir sind nicht bereit oder verpflichtet, an
+                Streitbeilegungsverfahren vor einer
+                Verbraucherschlichtungsstelle teilzunehmen.
+            </p>
+        </div>
+    </main>
+    <Footer />
+</Layout>

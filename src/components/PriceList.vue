@@ -1,0 +1,77 @@
+<template>
+  <section id="preise" class="py-24 bg-white scroll-mt-20">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-4">Preisübersicht</h2>
+        <p class="text-gray-500">Transparente Preise für erstklassiges Handwerk. Alle Preise sind Richtwerte und können je nach Aufwand variieren.</p>
+      </div>
+
+      <div class="max-w-3xl mx-auto">
+        <!-- Express Badge -->
+        <div class="mb-8 flex justify-center">
+            <span class="inline-flex items-center gap-2 bg-red-100 text-red-800 px-4 py-2 rounded-full font-bold text-sm border border-red-200 shadow-sm">
+                <span class="text-lg">⚡</span>
+                Express-Service möglich (Same-Day) – nach Absprache & Kapazität!
+            </span>
+        </div>
+
+        <!-- Desktop Table (Hidden on mobile) -->
+        <div class="hidden md:block bg-neutral-50 rounded-3xl p-8 shadow-sm border border-neutral-100">
+          <table class="w-full text-left">
+            <thead>
+              <tr class="border-b border-gray-200">
+                <th class="py-4 font-bold text-gray-700">Dienstleistung</th>
+                <th class="py-4 font-bold text-gray-700">Preis ab</th>
+                <th class="py-4 font-bold text-gray-700">Dauer (ca.)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-100">
+              <tr v-for="item in prices" :key="item.name" class="group hover:bg-white transition-colors">
+                <td class="py-4 font-medium text-gray-800 group-hover:text-primary transition-colors">{{ item.name }}</td>
+                <td class="py-4 font-bold text-green-700">{{ item.price }}</td>
+                <td class="py-4 text-gray-500 text-sm">{{ item.duration }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Mobile Accordion -->
+        <div class="md:hidden space-y-3">
+            <div v-for="(item, index) in prices" :key="index" class="bg-neutral-50 rounded-2xl overflow-hidden border border-neutral-100">
+                <button @click="toggle(index)" class="w-full flex justify-between items-center p-4 text-left focus:outline-none">
+                    <span class="font-bold text-gray-800">{{ item.name }}</span>
+                    <span class="text-green-600 font-bold bg-green-50 px-2 py-1 rounded text-sm">{{ item.price }}</span>
+                </button>
+                <div v-show="activeIndex === index" class="px-4 pb-4 text-sm text-gray-500 bg-white pt-2 border-t border-gray-100">
+                    <p>Bearbeitungsdauer: {{ item.duration }}</p>
+                    <p class="mt-1 opacity-70">Je nach Auftragslage und Umfang kann der Preis variieren.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mt-8 text-center text-xs text-gray-400">
+            * Preise inkl. MwSt. Endgültiger Preis nach Begutachtung vor Ort.
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
+
+<script setup lang="ts">
+import { ref } from 'vue';
+
+const prices = [
+  { name: 'Hosen kürzen', price: 'ab 15,00 €', duration: '1 Tag' },
+  { name: 'Reißverschluss Jacke/Hose', price: 'ab 18,00 €', duration: '1-2 Tage' },
+  { name: 'Flickarbeiten / Löcher', price: 'ab 15,00 €', duration: '1 Tag' },
+  { name: 'Lederreparatur', price: 'ab 25,00 €', duration: '2-3 Tage' },
+  { name: 'Wäsche / Bügeln (pro Stk.)', price: 'ab 8,00 €', duration: '1 Tag' },
+  { name: 'Gardinen kürzen (pro m)', price: 'ab 10,00 €', duration: '2 Tage' },
+];
+
+const activeIndex = ref<number | null>(null);
+
+const toggle = (index: number) => {
+  activeIndex.value = activeIndex.value === index ? null : index;
+};
+</script>
