@@ -55,7 +55,7 @@
       <div class="mt-20 mb-16 md:mb-0 grid grid-cols-3 gap-8 md:gap-20 text-secondary-deep/60 w-full max-w-4xl mx-auto pb-12 md:pb-0">
         <div class="flex flex-col items-center gap-3 group hover:text-[#F8A08C] transition-colors">
             <div class="p-4 bg-accent-warm/20 rounded-full group-hover:bg-accent-warm/30 transition-colors">
-                 <MdiNeedle class="text-3xl" />
+                 <MdiTapeMeasure class="text-3xl" />
             </div>
             <span class="text-xs uppercase tracking-widest font-bold font-sans">Präzision</span>
         </div>
@@ -77,7 +77,7 @@
 </template>
 
 <script setup>
-import MdiNeedle from '~icons/mdi/needle';
+import MdiTapeMeasure from '~icons/mdi/tape-measure';
 import MdiScissorsCutting from '~icons/mdi/scissors-cutting';
 import MdiIron from '~icons/mdi/iron';
 import HeroBackground from './HeroBackground.vue';
