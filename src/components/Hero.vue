@@ -10,7 +10,7 @@
        <div class="absolute bottom-20 right-10 w-[500px] h-[500px] bg-white rounded-full mix-blend-overlay filter blur-3xl opacity-60 animate-pulse-slow delay-1000"></div>
     </div>
 
-    <div class="container mx-auto px-4 z-10 text-center flex flex-col items-center pt-32 md:pt-20">
+    <div class="container mx-auto px-4 z-20 relative text-center flex flex-col items-center pt-32 md:pt-20">
       <!-- Profile Image -->
       <div class="mb-8 relative group">
           <div class="absolute -inset-1 bg-gradient-to-r from-[#F8A08C] to-[#e08e7b] rounded-full opacity-60 group-hover:opacity-100 blur transition duration-500"></div>
