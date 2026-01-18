@@ -10,14 +10,18 @@
        <div class="absolute bottom-20 right-10 w-[500px] h-[500px] bg-white rounded-full mix-blend-overlay filter blur-3xl opacity-60 animate-pulse-slow delay-1000"></div>
     </div>
 
-    <div class="container mx-auto px-4 z-10 text-center flex flex-col items-center pt-8 md:pt-16">
-      
       <!-- Profile Image -->
       <div class="mb-8 relative group">
           <div class="absolute -inset-1 bg-gradient-to-r from-[#F8A08C] to-[#e08e7b] rounded-full opacity-60 group-hover:opacity-100 blur transition duration-500"></div>
-          <img :src="ProfileImg.src" alt="Valentina Dubinsky" class="relative w-28 h-28 rounded-full border-4 border-white shadow-xl object-cover transform transition duration-500 hover:scale-105" />
+          <img 
+            :src="ProfileImg.src" 
+            alt="Valentina Dubinsky - Ihre erfahrene Änderungsschneiderin in Düsseldorf-Eller" 
+            width="112" 
+            height="112"
+            class="relative w-28 h-28 rounded-full border-4 border-white shadow-xl object-cover transform transition duration-500 hover:scale-105" 
+          />
           <div class="absolute -right-8 top-0 bg-white/90 backdrop-blur px-3 py-1 rounded-full shadow-sm text-xs font-bold text-gray-600 rotate-12">
-             Inhaberin
+             Ihre Schneiderin
           </div>
       </div>
 
@@ -45,8 +49,8 @@
         </a>
       </div>
 
-      <!-- Feature Icons Strip -->
-      <div class="mt-20 flex flex-wrap justify-center gap-12 md:gap-20 text-secondary-deep/60">
+      <!-- Feature Icons Strip (Grid for consistent spacing) -->
+      <div class="mt-20 grid grid-cols-3 gap-8 md:gap-20 text-secondary-deep/60 w-full max-w-4xl mx-auto">
         <div class="flex flex-col items-center gap-3 group hover:text-[#F8A08C] transition-colors">
             <div class="p-4 bg-accent-warm/20 rounded-full group-hover:bg-accent-warm/30 transition-colors">
                  <MdiNeedle class="text-3xl" />

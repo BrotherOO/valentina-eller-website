@@ -4,7 +4,7 @@
       <!-- Logo -->
       <a href="/" class="flex items-center gap-2 group">
         <div class="h-16 w-auto transition-transform group-hover:scale-105">
-           <img :src="logoImg.src" alt="Valentina Logo" class="object-contain h-full w-full" />
+           <img :src="logoImg.src" alt="Valentina Änderungsschneiderei Logo - Ihr vertrauensvoller Partner" width="163" height="64" class="object-contain h-full w-full" />
         </div>
       </a>
 
