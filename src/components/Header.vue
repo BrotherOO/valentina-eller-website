@@ -10,7 +10,7 @@
 
       <!-- Desktop Nav -->
       <nav class="hidden md:flex gap-8 items-center">
-        <a v-for="link in links" :key="link.href" :href="link.href" class="text-sm font-medium hover:text-green-600 transition-colors relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-green-400 after:transition-all hover:after:w-full">
+        <a v-for="link in links" :key="link.href" :href="link.href" class="text-sm font-medium text-secondary-deep hover:text-accent-warm transition-colors relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-accent-warm after:transition-all hover:after:w-full">
           {{ link.label }}
         </a>
       </nav>
@@ -26,13 +26,23 @@
     </div>
 
     <!-- Mobile Menu -->
-    <div v-show="isOpen" class="md:hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-lg border-t border-gray-100 shadow-xl">
-      <div class="flex flex-col p-4 gap-4">
-        <a v-for="link in links" :key="link.href" :href="link.href" @click="isOpen = false" class="text-lg font-medium text-gray-700 hover:text-primary">
-          {{ link.label }}
-        </a>
+    <Transition
+      enter-active-class="transition duration-300 ease-out transform"
+      enter-from-class="-translate-y-4 opacity-0"
+      enter-to-class="translate-y-0 opacity-100"
+      leave-active-class="transition duration-200 ease-in transform"
+      leave-from-class="translate-y-0 opacity-100"
+      leave-to-class="-translate-y-4 opacity-0"
+    >
+      <div v-show="isOpen" class="md:hidden absolute top-full left-0 w-full bg-[#FFF5F2]/98 backdrop-blur-lg border-t border-accent-warm/20 shadow-xl z-40">
+        <div class="flex flex-col p-6 gap-6 items-center text-center">
+          <a v-for="link in links" :key="link.href" :href="link.href" @click="isOpen = false" class="text-xl font-serif text-secondary-deep hover:text-accent-warm transition-colors relative group">
+            {{ link.label }}
+             <span class="absolute -bottom-2 left-1/2 w-0 h-0.5 bg-accent-warm transition-all group-hover:w-full group-hover:left-0"></span>
+          </a>
+        </div>
       </div>
-    </div>
+    </Transition>
   </header>
 </template>
 

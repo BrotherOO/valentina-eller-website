@@ -48,7 +48,7 @@ const cards = [
     headline: 'Reparieren statt Wegwerfen',
     text: 'Jede Reparatur spart Ressourcen. Durch das Ändern Ihrer Kleidung reduzieren Sie Textilmüll und den CO2-Fußabdruck um bis zu 70% im Vergleich zum Neukauf.',
     icon: MdiLeaf,
-    iconColor: 'text-green-600'
+    iconColor: 'text-accent-warm'
   },
   {
     headline: '40 Jahre Präzision',

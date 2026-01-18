@@ -28,7 +28,7 @@
             <tbody class="divide-y divide-gray-100">
               <tr v-for="item in prices" :key="item.name" class="group hover:bg-white transition-colors">
                 <td class="py-4 font-medium text-gray-800 group-hover:text-primary transition-colors">{{ item.name }}</td>
-                <td class="py-4 font-bold text-green-700">{{ item.price }}</td>
+                <td class="py-4 font-bold text-accent-warm">{{ item.price }}</td>
                 <td class="py-4 text-gray-500 text-sm">{{ item.duration }}</td>
               </tr>
             </tbody>
@@ -40,7 +40,7 @@
             <div v-for="(item, index) in prices" :key="index" class="bg-neutral-50 rounded-2xl overflow-hidden border border-neutral-100">
                 <button @click="toggle(index)" class="w-full flex justify-between items-center p-4 text-left focus:outline-none">
                     <span class="font-bold text-gray-800">{{ item.name }}</span>
-                    <span class="text-green-600 font-bold bg-green-50 px-2 py-1 rounded text-sm">{{ item.price }}</span>
+                    <span class="text-secondary-deep font-bold bg-accent-warm/10 px-2 py-1 rounded text-sm">{{ item.price }}</span>
                 </button>
                 <div v-show="activeIndex === index" class="px-4 pb-4 text-sm text-gray-500 bg-white pt-2 border-t border-gray-100">
                     <p>Bearbeitungsdauer: {{ item.duration }}</p>

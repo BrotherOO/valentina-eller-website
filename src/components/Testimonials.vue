@@ -1,14 +1,18 @@
 <template>
-  <section class="py-20 bg-gradient-to-br from-green-50 to-blue-50 overflow-hidden">
+  <section class="py-20 bg-gradient-to-br from-[#FFF5F2] to-white overflow-hidden">
     <div class="container mx-auto px-4 max-w-4xl text-center">
       <h2 class="text-3xl font-bold text-gray-900 mb-12">Was unsere Kunden sagen</h2>
 
-      <div class="relative">
+      <div 
+        class="relative"
+        @touchstart="handleTouchStart"
+        @touchend="handleTouchEnd"
+      >
          <!-- Slides -->
          <div v-for="(review, index) in reviews" :key="index" v-show="currentIndex === index" class="transition-all duration-500 ease-in-out">
             <div class="bg-white p-8 md:p-12 rounded-3xl shadow-lg relative mx-4 md:mx-0">
                  <!-- Quote Icon -->
-                 <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-highlight rounded-full flex items-center justify-center text-4xl text-green-700 font-serif">
+                 <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-highlight rounded-full flex items-center justify-center text-4xl text-accent-warm font-serif">
                     &rdquo;
                  </div>
                  
@@ -34,12 +38,12 @@
          </div>
          
          <!-- Arrows -->
-         <button @click="prevSlide" class="absolute left-0 top-1/2 transform -translate-y-1/2 -ml-4 md:-ml-12 bg-white p-3 rounded-full shadow-md text-gray-600 hover:text-green-600 hover:scale-110 transition-all z-10" aria-label="Vorherige Bewertung">
+         <button @click="prevSlide" class="absolute left-0 top-1/2 transform -translate-y-1/2 -ml-4 md:-ml-12 bg-white p-3 rounded-full shadow-md text-gray-600 hover:text-accent-warm hover:scale-110 transition-all z-10" aria-label="Vorherige Bewertung">
              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
                  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
              </svg>
          </button>
-         <button @click="nextSlide" class="absolute right-0 top-1/2 transform -translate-y-1/2 -mr-4 md:-mr-12 bg-white p-3 rounded-full shadow-md text-gray-600 hover:text-green-600 hover:scale-110 transition-all z-10" aria-label="Nächste Bewertung">
+         <button @click="nextSlide" class="absolute right-0 top-1/2 transform -translate-y-1/2 -mr-4 md:-mr-12 bg-white p-3 rounded-full shadow-md text-gray-600 hover:text-accent-warm hover:scale-110 transition-all z-10" aria-label="Nächste Bewertung">
              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
                  <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
              </svg>
@@ -47,7 +51,7 @@
 
          <!-- Controls -->
          <div class="flex justify-center mt-8 gap-3">
-            <button v-for="(_, index) in reviews" :key="index" @click="currentIndex = index" :class="['w-3 h-3 rounded-full transition-all duration-300', currentIndex === index ? 'bg-green-600 w-8' : 'bg-gray-300 hover:bg-green-300']" :aria-label="'Gehe zu Bewertung ' + (index + 1)">
+            <button v-for="(_, index) in reviews" :key="index" @click="currentIndex = index" :class="['w-3 h-3 rounded-full transition-all duration-300', currentIndex === index ? 'bg-accent-warm w-8' : 'bg-gray-300 hover:bg-[#F8A08C]/50']" :aria-label="'Gehe zu Bewertung ' + (index + 1)">
             </button>
          </div>
       </div>
@@ -69,6 +73,30 @@ const reviews = [
 
 const currentIndex = ref(0);
 let interval: ReturnType<typeof setInterval>;
+
+// Swipe Logic
+const touchStartX = ref(0);
+const touchEndX = ref(0);
+
+const handleTouchStart = (e: TouchEvent) => {
+    touchStartX.value = e.changedTouches[0].screenX;
+};
+
+const handleTouchEnd = (e: TouchEvent) => {
+    touchEndX.value = e.changedTouches[0].screenX;
+    handleSwipe();
+};
+
+const handleSwipe = () => {
+    if (touchEndX.value < touchStartX.value - 50) {
+        nextSlide(); // Swipe Left -> Next
+        resetTimer();
+    }
+    if (touchEndX.value > touchStartX.value + 50) {
+        prevSlide(); // Swipe Right -> Prev
+        resetTimer();
+    }
+};
 
 const nextSlide = () => {
     currentIndex.value = (currentIndex.value + 1) % reviews.length;

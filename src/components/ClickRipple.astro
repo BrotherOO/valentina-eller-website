@@ -1,0 +1,43 @@
+<script>
+    // Global Click Ripple Effect
+    document.addEventListener("click", (e) => {
+        // Create ripples
+        const ripple = document.createElement("div");
+        ripple.className =
+            "fixed rounded-full pointer-events-none z-[9999] animate-click-ripple";
+
+        // Position
+        ripple.style.left = `${e.clientX}px`;
+        ripple.style.top = `${e.clientY}px`;
+
+        document.body.appendChild(ripple);
+
+        // Cleanup
+        ripple.addEventListener("animationend", () => {
+            ripple.remove();
+        });
+    });
+</script>
+
+<style is:global>
+    @keyframes click-ripple {
+        0% {
+            transform: translate(-50%, -50%) scale(0);
+            opacity: 0.8;
+            width: 20px;
+            height: 20px;
+            background-color: #f8a08c; /* CI Salmon */
+        }
+        100% {
+            transform: translate(-50%, -50%) scale(4);
+            opacity: 0;
+            width: 20px;
+            height: 20px;
+            background-color: #f8a08c;
+        }
+    }
+
+    .animate-click-ripple {
+        animation: click-ripple 0.6s cubic-bezier(0, 0, 0.2, 1) forwards;
+    }
+</style>

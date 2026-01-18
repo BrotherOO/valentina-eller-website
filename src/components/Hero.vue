@@ -52,7 +52,7 @@
       </div>
 
       <!-- Feature Icons Strip (Grid for consistent spacing) -->
-      <div class="mt-20 grid grid-cols-3 gap-8 md:gap-20 text-secondary-deep/60 w-full max-w-4xl mx-auto">
+      <div class="mt-20 mb-16 md:mb-0 grid grid-cols-3 gap-8 md:gap-20 text-secondary-deep/60 w-full max-w-4xl mx-auto pb-12 md:pb-0">
         <div class="flex flex-col items-center gap-3 group hover:text-[#F8A08C] transition-colors">
             <div class="p-4 bg-accent-warm/20 rounded-full group-hover:bg-accent-warm/30 transition-colors">
                  <MdiNeedle class="text-3xl" />

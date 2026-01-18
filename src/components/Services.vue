@@ -8,53 +8,53 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         <!-- Service 1 -->
-        <div class="group bg-neutral-50 p-8 rounded-3xl hover:bg-secondary/30 transition-all duration-300 hover:shadow-lg border border-transparent hover:border-blue-100">
-          <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-blue-400 mb-6 shadow-sm group-hover:scale-110 transition-transform">
+        <div class="group bg-neutral-50 p-8 rounded-3xl hover:bg-accent-warm/10 transition-all duration-300 hover:shadow-lg border border-transparent hover:border-accent-warm/20">
+          <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-accent-warm mb-6 shadow-sm group-hover:scale-110 transition-transform">
              <MdiRuler class="text-2xl" />
           </div>
           <h3 class="text-xl font-bold text-gray-900 mb-2">Hosen & Ärmel kürzen</h3>
           <p class="text-gray-500 text-sm mb-4 leading-relaxed">Perfekte Länge für den perfekten Fall. Originalsaum oder neuer Abschluss.</p>
           <ul class="text-sm text-gray-600 space-y-2 mb-6">
-            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-300"></span>Schnell & sauber</li>
-            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-300"></span>Originalsaum möglich</li>
-            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-300"></span>Auch für Jeans</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent-warm"></span>Schnell & sauber</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent-warm"></span>Originalsaum möglich</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent-warm"></span>Auch für Jeans</li>
           </ul>
           <div class="flex justify-between items-center text-sm font-semibold">
-             <span class="text-blue-900">ab 12€</span>
+             <span class="text-secondary-deep">ab 12€</span>
           </div>
         </div>
 
         <!-- Service 2 -->
-        <div class="group bg-neutral-50 p-8 rounded-3xl hover:bg-purple-50 transition-all duration-300 hover:shadow-lg border border-transparent hover:border-purple-100">
-          <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-purple-400 mb-6 shadow-sm group-hover:scale-110 transition-transform">
+        <div class="group bg-neutral-50 p-8 rounded-3xl hover:bg-accent-warm/10 transition-all duration-300 hover:shadow-lg border border-transparent hover:border-accent-warm/20">
+          <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-accent-warm mb-6 shadow-sm group-hover:scale-110 transition-transform">
              <MdiWardrobe class="text-2xl" />
           </div>
           <h3 class="text-xl font-bold text-gray-900 mb-2">Anpassungen</h3>
           <p class="text-gray-500 text-sm mb-4 leading-relaxed">Kleider, Sakkos oder Blusen – wir passen Ihre Kleidung millimetergenau an.</p>
           <ul class="text-sm text-gray-600 space-y-2 mb-6">
-            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-300"></span>Taille anpassen</li>
-            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-300"></span>Schultern heben</li>
-            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-300"></span>Figurbetont</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent-warm"></span>Taille anpassen</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent-warm"></span>Schultern heben</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent-warm"></span>Figurbetont</li>
           </ul>
           <div class="flex justify-between items-center text-sm font-semibold">
-             <span class="text-purple-900">Individuell</span>
+             <span class="text-secondary-deep">Individuell</span>
           </div>
         </div>
 
         <!-- Service 3 -->
-        <div class="group bg-neutral-50 p-8 rounded-3xl hover:bg-green-50 transition-all duration-300 hover:shadow-lg border border-transparent hover:border-green-100">
-          <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-green-400 mb-6 shadow-sm group-hover:scale-110 transition-transform">
+        <div class="group bg-neutral-50 p-8 rounded-3xl hover:bg-accent-warm/10 transition-all duration-300 hover:shadow-lg border border-transparent hover:border-accent-warm/20">
+          <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-accent-warm mb-6 shadow-sm group-hover:scale-110 transition-transform">
              <MdiZipper class="text-2xl" />
           </div>
           <h3 class="text-xl font-bold text-gray-900 mb-2">Reparaturen</h3>
           <p class="text-gray-500 text-sm mb-4 leading-relaxed">Reißverschlüsse, Risse oder Löcher – retten Sie Ihre Lieblingsstücke.</p>
           <ul class="text-sm text-gray-600 space-y-2 mb-6">
-            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-green-300"></span>Reißverschlussauschtausch</li>
-            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-green-300"></span>Kunststopfen</li>
-            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-green-300"></span>Knöpfe annähen</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent-warm"></span>Reißverschlussauschtausch</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent-warm"></span>Kunststopfen</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent-warm"></span>Knöpfe annähen</li>
           </ul>
           <div class="flex justify-between items-center text-sm font-semibold">
-             <span class="text-green-900">ab 15€</span>
+             <span class="text-secondary-deep">ab 15€</span>
           </div>
         </div>
 

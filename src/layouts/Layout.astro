@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import favicon from "../assets/valentina_favicon.png";
 import CookieBanner from "../components/CookieBanner.vue";
+import ClickRipple from "../components/ClickRipple.astro"; // Import ClickRipple
 
 interface Props {
 	title?: string;
@@ -92,9 +93,6 @@ const {
 	>
 		<slot />
 		<CookieBanner client:load />
+		<ClickRipple />
 	</body>
 </html>
-
-<script>
-	// Global script if needed
-</script>
