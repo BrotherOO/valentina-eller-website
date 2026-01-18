@@ -33,7 +33,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted, computed } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
 import MdiLeaf from '~icons/mdi/leaf';
 import MdiNeedle from '~icons/mdi/needle';
 import MdiPiggyBankOutline from '~icons/mdi/piggy-bank-outline';
