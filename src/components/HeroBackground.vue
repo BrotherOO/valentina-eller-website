@@ -127,7 +127,9 @@ const initSilk = () => {
 
   renderer = new Renderer({
     alpha: true,
-    antialias: true
+    antialias: true,
+    dpr: Math.min(window.devicePixelRatio, 1.5),
+    powerPreference: 'high-performance'
   });
 
   const gl = renderer.gl;

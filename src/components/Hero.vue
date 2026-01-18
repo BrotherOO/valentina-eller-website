@@ -10,7 +10,7 @@
        <div class="absolute bottom-20 right-10 w-[500px] h-[500px] bg-white rounded-full mix-blend-overlay filter blur-3xl opacity-60 animate-pulse-slow delay-1000"></div>
     </div>
 
-    <div class="container mx-auto px-4 z-10 text-center flex flex-col items-center pt-8 md:pt-16">
+    <div class="container mx-auto px-4 z-10 text-center flex flex-col items-center pt-32 md:pt-20">
       <!-- Profile Image -->
       <div class="mb-8 relative group">
           <div class="absolute -inset-1 bg-gradient-to-r from-[#F8A08C] to-[#e08e7b] rounded-full opacity-60 group-hover:opacity-100 blur transition duration-500"></div>
@@ -19,6 +19,7 @@
             alt="Valentina Dubinsky - Ihre erfahrene Änderungsschneiderin in Düsseldorf-Eller" 
             width="112" 
             height="112"
+            fetchpriority="high"
             class="relative w-28 h-28 rounded-full border-4 border-white shadow-xl object-cover transform transition duration-500 hover:scale-105" 
           />
           <div class="absolute -right-8 top-0 bg-white/90 backdrop-blur px-3 py-1 rounded-full shadow-sm text-xs font-bold text-gray-600 rotate-12">
