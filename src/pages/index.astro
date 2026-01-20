@@ -3,7 +3,6 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.vue";
 import Hero from "../components/Hero.vue";
 import Services from "../components/Services.vue";
-import DhlImg from "../assets/images/DHL-PaketShop-450.jpg";
 import AboutTeaser from "../components/AboutTeaser.astro";
 import PriceList from "../components/PriceList.vue";
 import Testimonials from "../components/Testimonials.vue";
@@ -20,209 +19,212 @@ import Footer from "../components/Footer.astro";
 		<Hero client:load />
 		<Services />
 
-		<!-- DHL Section (Refined Redesign) -->
-		<section class="py-24 bg-white">
-			<div class="container mx-auto px-4">
+		<!-- DHL Section (Aligned with About Us Design) -->
+		<section class="py-16 md:py-24 bg-white relative">
+			<div class="container mx-auto px-4 max-w-5xl">
 				<div
-					class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
+					class="bg-white rounded-3xl border border-gray-200 shadow-sm p-8 md:p-12 relative overflow-hidden"
 				>
-					<!-- Text Content -->
-					<div class="order-2 lg:order-1">
-						<div
-							class="inline-flex items-center gap-2 bg-neutral-100 text-gray-600 px-3 py-1.5 rounded-full text-xs font-bold mb-6 shadow-sm uppercase tracking-wider"
-						>
-							<span class="w-2 h-2 rounded-full bg-accent-warm"
-							></span>
-							Offizieller Partner
+					<!-- Top Badge / Logo Area -->
+					<div class="flex justify-between items-start mb-8">
+						<div>
+							<h2
+								class="text-2xl md:text-3xl font-bold text-gray-900 mb-2"
+							>
+								DHL Service in Düsseldorf-Eller: Ihr Partner vor
+								Ort
+							</h2>
+							<p class="text-gray-500">
+								Verbinden Sie Ihre Schneider-Termine mit Ihren
+								Postgeschäften – effizient und unkompliziert.
+							</p>
 						</div>
-						<h2
-							class="text-3xl font-bold text-gray-900 mb-2 leading-tight"
+						<!-- Mini DHL Logo Icon -->
+						<div
+							class="hidden md:flex flex-col items-center justify-center p-3 bg-gray-50 rounded-xl border border-gray-100"
 						>
-							DHL Service vor Ort
-						</h2>
-						<p class="text-xl text-gray-500 mb-10 font-medium">
-							Kombinieren Sie Ihren Besuch mit Ihren
-							Postgeschäften.
-						</p>
+							<span
+								class="text-xs font-bold text-gray-400 mb-1 tracking-widest uppercase"
+								>Official</span
+							>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 24 24"
+								class="w-12 h-8 text-red-600"
+								fill="currentColor"
+							>
+								<path d="M0 0h24v24H0z" fill="none"></path>
+								<path
+									d="M11 15H9v2h2v-2zm2 0h-2v2h2v-2zm7.5-6.5l-2.5 7h-2.1l2.5-7h2.1zm-18 0l-2.5 7h-2.1l2.5-7h2.1zm8.7 0l-2.5 7h-2.1l2.5-7h2.1z"
+									stroke="currentColor"
+									stroke-width="2"></path>
+								<text
+									x="50%"
+									y="50%"
+									dominant-baseline="middle"
+									text-anchor="middle"
+									font-weight="900"
+									font-size="10"
+									fill="#d40511">DHL</text
+								>
+							</svg>
+						</div>
+					</div>
 
-						<!-- 4 Core Benefits (Grid) -->
-						<div class="grid grid-cols-2 gap-x-8 gap-y-10">
-							<div class="flex flex-col gap-4">
-								<div
-									class="w-14 h-14 bg-accent-warm/10 rounded-2xl flex items-center justify-center text-accent-warm group-hover:bg-accent-warm group-hover:text-white transition-colors"
+					<!-- 2x2 Grid Benefits -->
+					<div
+						class="grid grid-cols-1 md:grid-cols-2 gap-y-10 gap-x-12"
+					>
+						<!-- Benefit 1 -->
+						<div class="flex gap-4">
+							<div
+								class="mt-1 flex-shrink-0 w-12 h-12 bg-accent-warm/10 rounded-full flex items-center justify-center text-accent-warm"
+							>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									class="w-6 h-6"
+									fill="none"
+									viewBox="0 0 24 24"
+									stroke="currentColor"
 								>
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										width="28"
-										height="28"
-										viewBox="0 0 24 24"
-										fill="none"
-										stroke="currentColor"
-										stroke-width="2"
+									<path
 										stroke-linecap="round"
 										stroke-linejoin="round"
-										><path
-											d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
-										></path><polyline
-											points="3.27 6.96 12 12.01 20.73 6.96"
-										></polyline><line
-											x1="12"
-											y1="22.08"
-											x2="12"
-											y2="12"></line></svg
-									>
-								</div>
-								<div>
-									<h4
-										class="font-bold text-gray-900 text-base mb-1"
-									>
-										Paketannahme
-									</h4>
-									<p
-										class="text-xs text-gray-500 leading-relaxed"
-									>
-										Bequeme Abgabe von Retouren & Paketen
-									</p>
-								</div>
+										stroke-width="2"
+										d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
+									></path>
+								</svg>
 							</div>
-							<div class="flex flex-col gap-4">
-								<div
-									class="w-14 h-14 bg-accent-warm/10 rounded-2xl flex items-center justify-center text-accent-warm"
-								>
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										width="28"
-										height="28"
-										viewBox="0 0 24 24"
-										fill="none"
-										stroke="currentColor"
-										stroke-width="2"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										><rect
-											x="2"
-											y="4"
-											width="20"
-											height="16"
-											rx="2"></rect><path
-											d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"
-										></path></svg
-									>
-								</div>
-								<div>
-									<h4
-										class="font-bold text-gray-900 text-base mb-1"
-									>
-										Briefversand
-									</h4>
-									<p
-										class="text-xs text-gray-500 leading-relaxed"
-									>
-										Verkauf von Briefmarken direkt vor Ort
-									</p>
-								</div>
+							<div>
+								<h4 class="font-bold text-gray-900 mb-1">
+									Paketannahme
+								</h4>
+								<p class="text-sm text-gray-500 leading-snug">
+									Bequeme Abgabe von Retouren & Paketen.
+								</p>
 							</div>
-							<div class="flex flex-col gap-4">
-								<div
-									class="w-14 h-14 bg-accent-warm/10 rounded-2xl flex items-center justify-center text-accent-warm"
+						</div>
+
+						<!-- Benefit 2 -->
+						<div class="flex gap-4">
+							<div
+								class="mt-1 flex-shrink-0 w-12 h-12 bg-accent-warm/10 rounded-full flex items-center justify-center text-accent-warm"
+							>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									class="w-6 h-6"
+									fill="none"
+									viewBox="0 0 24 24"
+									stroke="currentColor"
 								>
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										width="28"
-										height="28"
-										viewBox="0 0 24 24"
-										fill="none"
-										stroke="currentColor"
-										stroke-width="2"
+									<path
 										stroke-linecap="round"
 										stroke-linejoin="round"
-										><path
-											d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"
-										></path><circle cx="7" cy="17" r="2"
-										></circle><path d="M9 17h6"
-										></path><circle cx="17" cy="17" r="2"
-										></circle></svg
-									>
-								</div>
-								<div>
-									<h4
-										class="font-bold text-gray-900 text-base mb-1"
-									>
-										Parkplätze
-									</h4>
-									<p
-										class="text-xs text-gray-500 leading-relaxed"
-									>
-										Entspanntes Parken direkt vor der Tür
-									</p>
-								</div>
+										stroke-width="2"
+										d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+									></path>
+								</svg>
 							</div>
-							<div class="flex flex-col gap-4">
-								<div
-									class="w-14 h-14 bg-accent-warm/10 rounded-2xl flex items-center justify-center text-accent-warm"
+							<div>
+								<h4 class="font-bold text-gray-900 mb-1">
+									Briefversand
+								</h4>
+								<p class="text-sm text-gray-500 leading-snug">
+									Verkauf von Briefmarken direkt vor Ort.
+								</p>
+							</div>
+						</div>
+
+						<!-- Benefit 3 -->
+						<div class="flex gap-4">
+							<div
+								class="mt-1 flex-shrink-0 w-12 h-12 bg-accent-warm/10 rounded-full flex items-center justify-center text-accent-warm"
+							>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									class="w-6 h-6"
+									fill="none"
+									viewBox="0 0 24 24"
+									stroke="currentColor"
 								>
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										width="28"
-										height="28"
-										viewBox="0 0 24 24"
-										fill="none"
-										stroke="currentColor"
-										stroke-width="2"
+									<path
 										stroke-linecap="round"
 										stroke-linejoin="round"
-										><polygon
-											points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"
-										></polygon></svg
-									>
-								</div>
-								<div>
-									<h4
-										class="font-bold text-gray-900 text-base mb-1"
-									>
-										Express-Service
-									</h4>
-									<p
-										class="text-xs text-gray-500 leading-relaxed"
-									>
-										Schnelle & unkomplizierte Abwicklung
-									</p>
-								</div>
+										stroke-width="2"
+										d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"
+									></path>
+								</svg>
+							</div>
+							<div>
+								<h4 class="font-bold text-gray-900 mb-1">
+									Parkplätze
+								</h4>
+								<p class="text-sm text-gray-500 leading-snug">
+									Stressfreies Parken direkt vor der Tür.
+								</p>
+							</div>
+						</div>
+
+						<!-- Benefit 4 -->
+						<div class="flex gap-4">
+							<div
+								class="mt-1 flex-shrink-0 w-12 h-12 bg-accent-warm/10 rounded-full flex items-center justify-center text-accent-warm"
+							>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									class="w-6 h-6"
+									fill="none"
+									viewBox="0 0 24 24"
+									stroke="currentColor"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+									></path>
+								</svg>
+							</div>
+							<div>
+								<h4 class="font-bold text-gray-900 mb-1">
+									Zeitersparnis
+								</h4>
+								<p class="text-sm text-gray-500 leading-snug">
+									Kombinieren Sie Post & Schneiderei.
+								</p>
 							</div>
 						</div>
 					</div>
 
-					<!-- Image (Rounded 12px, Correct Aspect) -->
+					<!-- CTA -->
 					<div
-						class="relative order-1 lg:order-2 flex justify-center lg:justify-end"
+						class="mt-10 pt-8 border-t border-gray-100 flex justify-center md:justify-start"
 					>
-						<div class="relative w-full max-w-sm">
-							<div
-								class="absolute inset-0 bg-accent-warm/5 rounded-[12px] rotate-3 transform transition-transform scale-105"
+						<a
+							href="#footer-map"
+							class="text-sm font-semibold text-accent-warm hover:text-accent-warm/80 transition-colors flex items-center gap-2"
+						>
+							Jetzt Standort auf Karte ansehen
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								class="w-4 h-4"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke="currentColor"
 							>
-							</div>
-							<div
-								class="relative aspect-[4/3] rounded-[12px] overflow-hidden shadow-sm border border-gray-100 bg-white"
-							>
-								<img
-									src={DhlImg.src}
-									alt="DHL Paketshop"
-									class="w-full h-full object-cover opacity-95 hover:scale-105 transition-transform duration-700"
-								/>
-								<!-- Discreet Logo Overlay -->
-								<div
-									class="absolute top-4 left-4 bg-white/95 backdrop-blur-sm px-3 py-1.5 rounded-lg shadow-sm border border-gray-100 flex items-center gap-2"
-								>
-									<span
-										class="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"
-									></span>
-									<span
-										class="text-[10px] font-bold text-gray-500 tracking-wider"
-										>GEÖFFNET</span
-									>
-								</div>
-							</div>
-						</div>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M19 9l-7 7-7-7"></path>
+							</svg>
+						</a>
+					</div>
+
+					<!-- Decorative Background Blob -->
+					<div
+						class="absolute -right-20 -top-20 w-64 h-64 bg-accent-warm/5 rounded-full blur-3xl pointer-events-none"
+					>
 					</div>
 				</div>
 			</div>
