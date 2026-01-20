@@ -20,7 +20,7 @@ import Footer from "../components/Footer.astro";
 		<Hero client:load />
 		<Services />
 
-		<!-- DHL Section ("Less is More" Redesign) -->
+		<!-- DHL Section (Refined Redesign) -->
 		<section class="py-24 bg-white">
 			<div class="container mx-auto px-4">
 				<div
@@ -46,15 +46,15 @@ import Footer from "../components/Footer.astro";
 						</p>
 
 						<!-- 4 Core Benefits (Grid) -->
-						<div class="grid grid-cols-2 gap-8">
-							<div class="flex flex-col gap-3">
+						<div class="grid grid-cols-2 gap-x-8 gap-y-10">
+							<div class="flex flex-col gap-4">
 								<div
-									class="w-10 h-10 bg-accent-warm/10 rounded-xl flex items-center justify-center text-accent-warm"
+									class="w-14 h-14 bg-accent-warm/10 rounded-2xl flex items-center justify-center text-accent-warm group-hover:bg-accent-warm group-hover:text-white transition-colors"
 								>
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
-										width="20"
-										height="20"
+										width="28"
+										height="28"
 										viewBox="0 0 24 24"
 										fill="none"
 										stroke="currentColor"
@@ -73,22 +73,26 @@ import Footer from "../components/Footer.astro";
 									>
 								</div>
 								<div>
-									<h4 class="font-bold text-gray-900 text-sm">
+									<h4
+										class="font-bold text-gray-900 text-base mb-1"
+									>
 										Paketannahme
 									</h4>
-									<p class="text-xs text-gray-500">
-										Retouren & Pakete
+									<p
+										class="text-xs text-gray-500 leading-relaxed"
+									>
+										Bequeme Abgabe von Retouren & Paketen
 									</p>
 								</div>
 							</div>
-							<div class="flex flex-col gap-3">
+							<div class="flex flex-col gap-4">
 								<div
-									class="w-10 h-10 bg-accent-warm/10 rounded-xl flex items-center justify-center text-accent-warm"
+									class="w-14 h-14 bg-accent-warm/10 rounded-2xl flex items-center justify-center text-accent-warm"
 								>
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
-										width="20"
-										height="20"
+										width="28"
+										height="28"
 										viewBox="0 0 24 24"
 										fill="none"
 										stroke="currentColor"
@@ -106,22 +110,26 @@ import Footer from "../components/Footer.astro";
 									>
 								</div>
 								<div>
-									<h4 class="font-bold text-gray-900 text-sm">
+									<h4
+										class="font-bold text-gray-900 text-base mb-1"
+									>
 										Briefversand
 									</h4>
-									<p class="text-xs text-gray-500">
-										Briefmarkenverkauf
+									<p
+										class="text-xs text-gray-500 leading-relaxed"
+									>
+										Verkauf von Briefmarken direkt vor Ort
 									</p>
 								</div>
 							</div>
-							<div class="flex flex-col gap-3">
+							<div class="flex flex-col gap-4">
 								<div
-									class="w-10 h-10 bg-accent-warm/10 rounded-xl flex items-center justify-center text-accent-warm"
+									class="w-14 h-14 bg-accent-warm/10 rounded-2xl flex items-center justify-center text-accent-warm"
 								>
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
-										width="20"
-										height="20"
+										width="28"
+										height="28"
 										viewBox="0 0 24 24"
 										fill="none"
 										stroke="currentColor"
@@ -137,22 +145,26 @@ import Footer from "../components/Footer.astro";
 									>
 								</div>
 								<div>
-									<h4 class="font-bold text-gray-900 text-sm">
+									<h4
+										class="font-bold text-gray-900 text-base mb-1"
+									>
 										Parkplätze
 									</h4>
-									<p class="text-xs text-gray-500">
-										Direkt vor der Tür
+									<p
+										class="text-xs text-gray-500 leading-relaxed"
+									>
+										Entspanntes Parken direkt vor der Tür
 									</p>
 								</div>
 							</div>
-							<div class="flex flex-col gap-3">
+							<div class="flex flex-col gap-4">
 								<div
-									class="w-10 h-10 bg-accent-warm/10 rounded-xl flex items-center justify-center text-accent-warm"
+									class="w-14 h-14 bg-accent-warm/10 rounded-2xl flex items-center justify-center text-accent-warm"
 								>
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
-										width="20"
-										height="20"
+										width="28"
+										height="28"
 										viewBox="0 0 24 24"
 										fill="none"
 										stroke="currentColor"
@@ -165,33 +177,37 @@ import Footer from "../components/Footer.astro";
 									>
 								</div>
 								<div>
-									<h4 class="font-bold text-gray-900 text-sm">
+									<h4
+										class="font-bold text-gray-900 text-base mb-1"
+									>
 										Express-Service
 									</h4>
-									<p class="text-xs text-gray-500">
-										Schnelle Abwicklung
+									<p
+										class="text-xs text-gray-500 leading-relaxed"
+									>
+										Schnelle & unkomplizierte Abwicklung
 									</p>
 								</div>
 							</div>
 						</div>
 					</div>
 
-					<!-- Image (Small & Rounded, Trust) -->
+					<!-- Image (Rounded 12px, Correct Aspect) -->
 					<div
 						class="relative order-1 lg:order-2 flex justify-center lg:justify-end"
 					>
-						<div class="relative w-full max-w-sm group">
+						<div class="relative w-full max-w-sm">
 							<div
-								class="absolute inset-0 bg-accent-warm/5 rounded-[2rem] rotate-3 transform transition-transform group-hover:rotate-6"
+								class="absolute inset-0 bg-accent-warm/5 rounded-[12px] rotate-3 transform transition-transform scale-105"
 							>
 							</div>
 							<div
-								class="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-sm border border-gray-100 bg-white"
+								class="relative aspect-[4/3] rounded-[12px] overflow-hidden shadow-sm border border-gray-100 bg-white"
 							>
 								<img
 									src={DhlImg.src}
 									alt="DHL Paketshop"
-									class="w-full h-full object-cover opacity-95 transition-all duration-700 hover:scale-105"
+									class="w-full h-full object-cover opacity-95 hover:scale-105 transition-transform duration-700"
 								/>
 								<!-- Discreet Logo Overlay -->
 								<div
