@@ -34,9 +34,9 @@
       leave-from-class="translate-y-0 opacity-100"
       leave-to-class="-translate-y-4 opacity-0"
     >
-      <div v-show="isOpen" class="md:hidden absolute top-full left-0 w-full bg-[#FFF5F2]/98 backdrop-blur-lg border-t border-accent-warm/20 shadow-xl z-40">
-        <div class="flex flex-col p-6 gap-6 items-center text-center">
-          <a v-for="link in links" :key="link.href" :href="link.href" @click="isOpen = false" class="text-xl font-serif text-secondary-deep hover:text-accent-warm transition-colors relative group">
+      <div v-show="isOpen" class="md:hidden absolute top-full left-0 w-full h-screen bg-[#FFF5F2]/98 backdrop-blur-lg border-t border-accent-warm/20 shadow-xl z-[999] overflow-y-auto pb-40">
+        <div class="flex flex-col p-6 gap-6 items-center text-center pt-12">
+          <a v-for="link in links" :key="link.href" :href="link.href" @click="closeMenu" class="text-2xl font-serif text-secondary-deep hover:text-accent-warm transition-colors relative group py-2">
             {{ link.label }}
              <span class="absolute -bottom-2 left-1/2 w-0 h-0.5 bg-accent-warm transition-all group-hover:w-full group-hover:left-0"></span>
           </a>
@@ -47,7 +47,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue';
+import { ref, onMounted, onUnmounted, watch } from 'vue';
 import logoImg from '../assets/logo_valentina_neu.png';
 
 const links = [
@@ -61,6 +61,21 @@ const links = [
 const isOpen = ref(false);
 const isScrolled = ref(false);
 
+// Scroll Lock Logic
+watch(isOpen, (newValue) => {
+    if (typeof document !== 'undefined') {
+        if (newValue) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+    }
+});
+
+const closeMenu = () => {
+    isOpen.value = false;
+};
+
 const handleScroll = () => {
   isScrolled.value = window.scrollY > 50;
 };
@@ -71,5 +86,9 @@ onMounted(() => {
 
 onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll);
+  // Safety cleanup
+  if (typeof document !== 'undefined') {
+        document.body.style.overflow = '';
+  }
 });
 </script>

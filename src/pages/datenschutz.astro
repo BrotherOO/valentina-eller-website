@@ -1,122 +1,181 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Header from "../components/Header.vue";
 import Footer from "../components/Footer.astro";
+import Header from "../components/Header.vue";
 ---
 
-<Layout title="Datenschutzerklärung | Valentina Änderungsschneiderei">
+<Layout
+    title="Datenschutzerklärung – Valentina Änderungsschneiderei"
+    description="Informationen zum Datenschutz gemäß DSGVO."
+>
     <Header client:load />
-    <main class="fixed-nav-spacing pt-32 pb-20 container mx-auto px-4 md:px-8">
-        <div
-            class="prose prose-lg mx-auto bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-gray-100 max-w-3xl"
-        >
-            <h1 class="text-3xl font-bold mb-8 text-secondary-deep font-serif">
-                Datenschutzerklärung
-            </h1>
-
-            <h2 class="text-xl font-bold text-gray-900 mt-8 mb-4">
-                1. Datenschutz auf einen Blick
-            </h2>
-
-            <h3 class="text-lg font-semibold text-gray-800 mt-6 mb-2">
-                Allgemeine Hinweise
-            </h3>
-            <p class="text-gray-600 mb-4">
-                Die folgenden Hinweise geben einen einfachen Überblick darüber,
-                was mit Ihren personenbezogenen Daten passiert, wenn Sie diese
-                Website besuchen. Personenbezogene Daten sind alle Daten, mit
-                denen Sie persönlich identifiziert werden können.
-            </p>
-
-            <h3 class="text-lg font-semibold text-gray-800 mt-6 mb-2">
-                Datenerfassung auf dieser Website
-            </h3>
-            <ul class="list-none space-y-4 pl-0">
-                <li class="pl-4 border-l-2 border-green-500">
-                    <strong class="block text-gray-900 mb-1"
-                        >Wer ist verantwortlich?</strong
-                    >
-                    <span class="text-gray-600"
-                        >Die Datenverarbeitung auf dieser Website erfolgt durch
-                        den Websitebetreiber. Kontaktdaten finden Sie im
-                        Impressum.</span
-                    >
-                </li>
-                <li class="pl-4 border-l-2 border-green-500">
-                    <strong class="block text-gray-900 mb-1"
-                        >Wie erfassen wir Ihre Daten?</strong
-                    >
-                    <span class="text-gray-600"
-                        >Automatisch beim Besuch durch IT-Systeme (technische
-                        Daten wie Browser, OS, Uhrzeit) oder durch Ihre
-                        Mitteilung (z.B. E-Mail).</span
-                    >
-                </li>
-                <li class="pl-4 border-l-2 border-green-500">
-                    <strong class="block text-gray-900 mb-1"
-                        >Wofür nutzen wir Ihre Daten?</strong
-                    >
-                    <span class="text-gray-600"
-                        >Zur fehlerfreien Bereitstellung der Website und zur
-                        Analyse des Nutzerverhaltens.</span
-                    >
-                </li>
-            </ul>
-
-            <h2 class="text-xl font-bold text-gray-900 mt-12 mb-4">
-                2. Hosting
-            </h2>
-            <p class="text-gray-600 mb-4">
-                Wir hosten die Inhalte unserer Website bei folgendem Anbieter:
-            </p>
-
-            <div class="bg-gray-50 p-6 rounded-xl border border-gray-100 mb-6">
-                <h3 class="font-bold text-gray-900 mb-2">Vercel</h3>
-                <p class="text-gray-600 text-sm mb-4">
-                    Anbieter ist Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA
-                    91789, USA. <br />
-                    Vercel erfasst Logfiles inkl. IP-Adressen (Art. 6 Abs. 1 lit.
-                    f DSGVO).
-                </p>
-                <a
-                    href="https://vercel.com/legal/privacy-policy"
-                    target="_blank"
-                    rel="noopener"
-                    class="text-green-600 hover:underline text-sm font-medium"
+    <main
+        class="fixed-nav-spacing pt-32 pb-20 container mx-auto px-4 md:px-8 bg-neutral-50/50"
+    >
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div
+                class="bg-white p-8 md:p-12 rounded-[2.5rem] shadow-sm border border-gray-100"
+            >
+                <h1
+                    class="text-3xl md:text-4xl font-bold text-gray-900 mb-8 border-b-4 border-[#FF91A4] inline-block pb-2"
                 >
-                    Datenschutzerklärung von Vercel &rarr;
-                </a>
-            </div>
+                    Datenschutzerklärung
+                </h1>
 
-            <h2 class="text-xl font-bold text-gray-900 mt-12 mb-4">
-                3. Allgemeine Hinweise und Pflichtinformationen
-            </h2>
+                <div class="prose prose-lg text-gray-600 max-w-none">
+                    <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">
+                        1. Datenschutz auf einen Blick
+                    </h2>
+                    <h3 class="text-xl font-bold text-gray-800 mt-6 mb-2">
+                        Allgemeine Hinweise
+                    </h3>
+                    <p>
+                        Die folgenden Hinweise geben einen einfachen Überblick
+                        darüber, was mit Ihren personenbezogenen Daten passiert,
+                        wenn Sie diese Website besuchen. Personenbezogene Daten
+                        sind alle Daten, mit denen Sie persönlich identifiziert
+                        werden können.
+                    </p>
 
-            <h3 class="text-lg font-semibold text-gray-800 mt-6 mb-2">
-                Datenschutz
-            </h3>
-            <p class="text-gray-600 mb-4">
-                Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen
-                Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten
-                vertraulich und entsprechend der gesetzlichen
-                Datenschutzvorschriften.
-            </p>
+                    <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-4">
+                        2. Hosting
+                    </h2>
+                    <p>
+                        Wir hosten die Inhalte unserer Website bei folgendem
+                        Anbieter:
+                    </p>
+                    <p>
+                        <strong>Vercel Inc.</strong><br />
+                        340 S Lemon Ave #4133<br />
+                        Walnut, CA 91789, USA
+                    </p>
+                    <p>
+                        Der Anbieter ist Adverma zertifiziert nach dem „EU-US
+                        Data Privacy Framework“ (DPF). Weitere Details entnehmen
+                        Sie der Datenschutzerklärung von Vercel: <a
+                            href="https://vercel.com/legal/privacy-policy"
+                            target="_blank"
+                            rel="noopener"
+                            class="text-[#FF91A4] hover:underline"
+                            >https://vercel.com/legal/privacy-policy</a
+                        >.
+                    </p>
 
-            <h3 class="text-lg font-semibold text-gray-800 mt-6 mb-2">
-                Hinweis zur verantwortlichen Stelle
-            </h3>
-            <div class="mt-4 p-6 bg-secondary-deep/5 rounded-xl">
-                <p class="text-gray-900 font-bold mb-2">Valentina Dubinsky</p>
-                <p class="text-gray-600 text-sm leading-relaxed">
-                    Dillenburger Weg 33a<br />
-                    40229 Düsseldorf<br />
-                    Telefon: 0211 217213<br />
-                    E-Mail: <a
-                        href="mailto:info@valentina-schneiderei.de"
-                        class="text-green-600 hover:underline"
-                        >info@valentina-schneiderei.de</a
+                    <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-4">
+                        3. Allgemeine Hinweise und Pflichtinformationen
+                    </h2>
+
+                    <h3 class="text-xl font-bold text-gray-800 mt-6 mb-2">
+                        Verantwortlicher
+                    </h3>
+                    <p>
+                        Die verantwortliche Stelle für die Datenverarbeitung auf
+                        dieser Website ist:
+                    </p>
+                    <p>
+                        <strong>Valentina Dubinskaya</strong><br />
+                        Änderungsschneiderei<br />
+                        Dillenburger Weg 33a<br />
+                        40229 Düsseldorf
+                    </p>
+                    <p>Telefon: 0211 91737673</p>
+
+                    <h3 class="text-xl font-bold text-gray-800 mt-6 mb-2">
+                        Ihre Rechte (Widerruf, Auskunft, Löschung)
+                    </h3>
+                    <p>Sie haben jederzeit das Recht:</p>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>
+                            Unentgeltlich Auskunft über Herkunft, Empfänger und
+                            Zweck Ihrer gespeicherten personenbezogenen Daten zu
+                            erhalten.
+                        </li>
+                        <li>
+                            Die Berichtigung oder Löschung dieser Daten zu
+                            verlangen.
+                        </li>
+                        <li>
+                            Eine erteilte Einwilligung zur Datenverarbeitung
+                            jederzeit zu widerrufen.
+                        </li>
+                    </ul>
+                    <p class="mt-4">
+                        Hierzu sowie zu weiteren Fragen zum Thema Datenschutz
+                        können Sie sich jederzeit an uns wenden.
+                    </p>
+
+                    <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-4">
+                        4. Datenerfassung auf dieser Website
+                    </h2>
+                    <h3 class="text-xl font-bold text-gray-800 mt-6 mb-2">
+                        Server-Log-Dateien
+                    </h3>
+                    <p>
+                        Der Provider der Seiten erhebt und speichert automatisch
+                        Informationen in so genannten Server-Log-Dateien, die
+                        Ihr Browser automatisch an uns übermittelt. Dies sind:
+                    </p>
+                    <ul class="list-disc pl-5 space-y-1">
+                        <li>Browsertyp und Browserversion</li>
+                        <li>Verwendetes Betriebssystem</li>
+                        <li>Referrer URL</li>
+                        <li>Hostname des zugreifenden Rechners</li>
+                        <li>Uhrzeit der Serveranfrage</li>
+                        <li>IP-Adresse</li>
+                    </ul>
+                    <p class="mt-4">
+                        Eine Zusammenführung dieser Daten mit anderen
+                        Datenquellen wird nicht vorgenommen. <br />
+                        Grundlage für die Datenverarbeitung ist Art. 6 Abs. 1 lit.
+                        f DSGVO, der die Verarbeitung von Daten zur Erfüllung eines
+                        Vertrags oder vorvertraglicher Maßnahmen gestattet.
+                    </p>
+
+                    <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-4">
+                        5. Plugins und Tools
+                    </h2>
+                    <h3 class="text-xl font-bold text-gray-800 mt-6 mb-2">
+                        Google Maps
+                    </h3>
+                    <p>
+                        Diese Seite nutzt den Kartendienst Google Maps. Anbieter
+                        ist die Google Ireland Limited („Google“), Gordon House,
+                        Barrow Street, Dublin 4, Irland.
+                    </p>
+                    <p>
+                        Zur Nutzung der Funktionen von Google Maps ist es
+                        notwendig, Ihre IP-Adresse zu speichern. Diese
+                        Informationen werden in der Regel an einen Server von
+                        Google in den USA übertragen und dort gespeichert. Der
+                        Anbieter dieser Seite hat keinen Einfluss auf diese
+                        Datenübertragung.
+                    </p>
+                    <p>
+                        Die Nutzung von Google Maps erfolgt im Interesse einer
+                        ansprechenden Darstellung unserer Online-Angebote und an
+                        einer leichten Auffindbarkeit der von uns auf der
+                        Website angegebenen Orte. Dies stellt ein berechtigtes
+                        Interesse im Sinne von Art. 6 Abs. 1 lit. f DSGVO dar.
+                    </p>
+                    <p>
+                        Mehr Informationen zum Umgang mit Nutzerdaten finden Sie
+                        in der Datenschutzerklärung von Google: <a
+                            href="https://policies.google.com/privacy?hl=de"
+                            target="_blank"
+                            rel="noopener"
+                            class="text-[#FF91A4] hover:underline"
+                            >https://policies.google.com/privacy?hl=de</a
+                        >.
+                    </p>
+                </div>
+
+                <div class="mt-12 text-center pt-8 border-t border-gray-100">
+                    <a
+                        href="/"
+                        class="inline-block px-8 py-3 bg-gray-900 text-white rounded-full font-bold hover:bg-gray-800 transition-all"
+                        >Zurück zur Startseite</a
                     >
-                </p>
+                </div>
             </div>
         </div>
     </main>
