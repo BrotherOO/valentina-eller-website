@@ -70,6 +70,8 @@ const prices = [
   { name: 'Decke kürzen (pro m)', price: 'ab 10,00 €', duration: '2 Tage' },
   { name: 'DHL Paketshop', price: 'Service', duration: 'Sofort' },
   { name: 'Reinigung & Wäscherei', price: 'Auf Anfrage', duration: 'Variiert' },
+  { name: 'Flicken / Riss reparieren', price: 'Auf Anfrage', duration: 'Variiert' },
+  { name: 'Knopf annähen / wechseln', price: 'Auf Anfrage', duration: 'Variiert' },
 ];
 
 const activeIndex = ref<number | null>(null);
