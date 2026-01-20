@@ -1,0 +1,21 @@
+{
+    "rewrites": [
+        {
+            "source": "/(.*)",
+            "destination": "/$1"
+        }
+    ],
+    "redirects": [
+        {
+            "source": "/:path*",
+            "has": [
+                {
+                    "type": "host",
+                    "value": "schneiderei-eller.de"
+                }
+            ],
+            "destination": "https://www.schneiderei-eller.de/:path*",
+            "permanent": true
+        }
+    ]
+}
