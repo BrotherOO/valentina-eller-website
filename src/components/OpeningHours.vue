@@ -13,27 +13,30 @@
     <ul class="space-y-4 text-lg text-gray-600">
       <!-- Mo, Di, Do, Fr -->
       <li class="flex justify-between border-b border-gray-100 pb-2 transition-colors duration-300"
-          :class="{ 'font-bold text-gray-900 bg-[#FFF0F3]/30 px-2 -mx-2 rounded-lg': isLongDay }">
+          :class="{ 'font-bold text-gray-900 bg-[#FFF0F3]/30 px-2 -mx-2 rounded-lg': isLongDayGroup }">
         <span class="font-medium">Mo, Di, Do, Fr</span>
         <div class="flex flex-col text-right">
-             <span :class="{ 'text-[#FF91A4]': isLongDay && isMorningSlot }">10:00 - 13:00</span>
-             <span class="text-xs text-gray-400" v-if="isLongDay">&</span>
-             <span :class="{ 'text-[#FF91A4]': isLongDay && isAfternoonSlot }">15:00 - 18:00</span>
+             <!-- Morning Slot: Bold if highlight morning is true, AND it's a long day -->
+             <span :class="{ 'text-[#FF91A4]': isLongDayGroup && highlightMorning }">10:00 - 13:00</span>
+             <span class="text-xs text-gray-400" v-if="isLongDayGroup">&</span>
+             <!-- Afternoon Slot: Bold if highlight afternoon is true -->
+             <span :class="{ 'text-[#FF91A4]': isLongDayGroup && highlightAfternoon }">15:00 - 18:00</span>
         </div>
       </li>
 
       <!-- Wednesday -->
       <li class="flex justify-between border-b border-gray-100 pb-2 transition-colors duration-300"
-          :class="{ 'font-bold text-gray-900 bg-[#FFF0F3]/30 px-2 -mx-2 rounded-lg': currentDay === 3 }">
+          :class="{ 'font-bold text-gray-900 bg-[#FFF0F3]/30 px-2 -mx-2 rounded-lg': isWednesday }">
         <span class="font-medium">Mittwoch</span>
-        <span :class="{ 'text-[#FF91A4]': currentDay === 3 && isMorningSlot }">10:00 - 13:00</span>
+        <!-- Wednesday only has morning slot. Highlight if it's Wed AND morning highlight is active -->
+        <span :class="{ 'text-[#FF91A4]': isWednesday && highlightMorning }">10:00 - 13:00</span>
       </li>
 
       <!-- Saturday -->
-      <li class="flex justify-between font-bold text-gray-800 pt-2 transition-colors duration-300"
-           :class="{ 'text-gray-900 bg-[#FFF0F3]/30 px-2 -mx-2 rounded-lg': currentDay === 6 }">
-        <span>Samstag</span>
-        <span :class="{ 'text-[#FF91A4]': currentDay === 6 && isMorningSlot }">10:00 - 13:00</span>
+      <li class="flex justify-between pt-2 transition-colors duration-300"
+           :class="{ 'font-bold text-gray-900 bg-[#FFF0F3]/30 px-2 -mx-2 rounded-lg': isSaturday }">
+        <span class="font-medium">Samstag</span>
+        <span :class="{ 'text-[#FF91A4]': isSaturday && highlightMorning }">10:00 - 13:00</span>
       </li>
     </ul>
 
@@ -91,48 +94,36 @@ const currentHour = computed(() => now.value.getHours());
 const currentMinute = computed(() => now.value.getMinutes());
 const timeFloat = computed(() => currentHour.value + currentMinute.value / 60);
 
-// Mo, Di, Do, Fr (1, 2, 4, 5)
-const isLongDay = computed(() => [1, 2, 4, 5].includes(currentDay.value));
-// Wed (3), Sat (6)
-const isShortDay = computed(() => [3, 6].includes(currentDay.value));
+// Day Groups
+const isLongDayGroup = computed(() => [1, 2, 4, 5].includes(currentDay.value)); // Mo, Di, Do, Fr
+const isWednesday = computed(() => currentDay.value === 3);
+const isSaturday = computed(() => currentDay.value === 6);
 
-// Slots Logic
-const isMorningSlot = computed(() => {
-    // 10:00 - 13:00
-    return timeFloat.value >= 10 && timeFloat.value < 13;
-});
-
-const isAfternoonSlot = computed(() => {
-    // 15:00 - 18:00 (only on Long Days)
-    return isLongDay.value && timeFloat.value >= 15 && timeFloat.value < 18;
-});
-
-// Status Message Logic
+// Status Logic
 const status = computed(() => {
-    // 1. Before 10:00
+    // 1. Sunday
+    if (currentDay.value === 0) {
+         return { msg: "Heute geschlossen", type: "closed" };
+    }
+
+    // 2. Before 10:00 (All days)
     if (timeFloat.value < 10) {
         return { msg: "Öffnet demnächst um 10:00 Uhr", type: "soon" };
     }
 
-    // 2. Lunch Break (Long Days only, 13:00 - 15:00)
-    if (isLongDay.value && timeFloat.value >= 13 && timeFloat.value < 15) {
+    // 3. Lunch Break (Long Days: 13:00 - 15:00)
+    if (isLongDayGroup.value && timeFloat.value >= 13 && timeFloat.value < 15) {
         return { msg: "Aktuell in der Mittagspause – wir öffnen wieder ab 15:00 Uhr", type: "lunch" };
     }
 
-    // 3. Closed Early (Short Days > 13:00)
-    if (isShortDay.value && timeFloat.value >= 13) {
-        // Find next working day? Simple "Closed for today" as requested
+    // 4. Closed Early (Wed & Sat > 13:00)
+    if ((isWednesday.value || isSaturday.value) && timeFloat.value >= 13) {
         return { msg: "Für heute geschlossen – wir öffnen am nächsten Werktag", type: "closed" };
     }
 
-    // 4. Closed Evening (Long Days > 18:00)
-    if (isLongDay.value && timeFloat.value >= 18) {
+    // 5. Closed Evening (Long Days > 18:00)
+    if (isLongDayGroup.value && timeFloat.value >= 18) {
         return { msg: "Geschlossen – öffnet morgen um 10:00 Uhr", type: "closed" };
-    }
-    
-     // 5. Sunday
-    if (currentDay.value === 0) {
-         return { msg: "Heute geschlossen", type: "closed" };
     }
 
     // 6. Default Open
@@ -141,11 +132,33 @@ const status = computed(() => {
 
 const statusMessage = computed(() => status.value.msg);
 
+// Slot Highlighting Logic
+// Only highlight specific time slots if the store is currently OPEN or SOON to open in that slot.
+// If closed for the day, NO time slot should be highlighted (just the day row).
+
+const highlightMorning = computed(() => {
+    // Highlight 10-13 if it's before 13:00 AND status is not 'closed' (unless it's 'soon' before 10)
+    if (status.value.type === 'closed') return false;
+    if (status.value.type === 'lunch') return false;
+    return timeFloat.value < 13;
+});
+
+const highlightAfternoon = computed(() => {
+    // Highlight 15-18 if it's Long Day AND (after 13:00 OR currently in lunch) AND not closed
+    if (!isLongDayGroup.value) return false;
+    if (status.value.type === 'closed') return false;
+    // If it's morning (e.g. 11:00), we typically focus regarding the *current* open slot. 
+    // User requested: "Ist es nach 15:00 Uhr, markiere nur 15:00 - 18:00 fett."
+    // Also implicit: during lunch (13-15), we probably want to highlight the *next* slot (15-18).
+    return timeFloat.value >= 13; 
+});
+
+
 const statusClasses = computed(() => {
     switch (status.value.type) {
-        case 'open': return 'bg-[#FF91A4]/20 text-[#D06074] border border-[#FF91A4]/30'; // CI colors (Salmon)
+        case 'open': return 'bg-[#FF91A4]/20 text-[#D06074] border border-[#FF91A4]/30'; 
         case 'soon': return 'bg-yellow-50 text-yellow-700 border border-yellow-200';
-        case 'lunch': return 'bg-gray-100 text-gray-600 border border-gray-200';
+        case 'lunch': return 'bg-blue-50 text-blue-600 border border-blue-200';
         case 'closed': return 'bg-gray-100 text-gray-500 border border-gray-200';
         default: return 'bg-gray-50 text-gray-500';
     }
@@ -155,7 +168,7 @@ const statusDotClass = computed(() => {
      switch (status.value.type) {
         case 'open': return 'bg-[#D06074]'; 
         case 'soon': return 'bg-yellow-500';
-        case 'lunch': return 'bg-gray-400';
+        case 'lunch': return 'bg-blue-400';
         case 'closed': return 'bg-gray-400';
         default: return 'bg-gray-400';
     }

@@ -1,5 +1,5 @@
 <template>
-  <section id="leistungen" class="py-20 bg-white">
+  <section id="dienstleistungen" class="py-20 bg-white">
     <div class="container mx-auto px-4">
       <div class="text-center mb-16">
         <h2 class="text-3xl md:text-5xl font-bold text-gray-800 mb-4">Unsere Dienstleistungen</h2>
