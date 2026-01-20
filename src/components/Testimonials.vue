@@ -38,7 +38,6 @@
                 </div>
              </div>
            </Transition>
-         </div>
          
          <!-- Arrows -->
          <button @click="prevSlide" class="absolute left-0 top-1/2 transform -translate-y-1/2 -ml-4 md:-ml-12 bg-white p-3 rounded-full shadow-md text-gray-600 hover:text-accent-warm hover:scale-110 transition-all z-10" aria-label="Vorherige Bewertung">
