@@ -63,12 +63,12 @@
           <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-orange-400 mb-6 shadow-sm group-hover:scale-110 transition-transform">
              <MdiLeather class="text-2xl" />
           </div>
-          <h3 class="text-xl font-bold text-gray-900 mb-2">Leder & Wohnen</h3>
-          <p class="text-gray-500 text-sm mb-4 leading-relaxed">Spezialbehandlung für Lederjacken sowie Gardinen und Vorhänge nach Maß.</p>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Heimtextilien & Mehr</h3>
+          <p class="text-gray-500 text-sm mb-4 leading-relaxed">Wohnlichkeit nach Maß – wir bearbeiten Ihre Heimtextilien fachgerecht.</p>
           <ul class="text-sm text-gray-600 space-y-2 mb-6">
-            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-orange-300"></span>Lederpflege</li>
             <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-orange-300"></span>Gardinen kürzen</li>
             <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-orange-300"></span>Kissenbezüge</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-orange-300"></span>Tischdecken</li>
           </ul>
           <div class="flex justify-between items-center text-sm font-semibold">
              <span class="text-orange-900">Auf Anfrage</span>

@@ -61,12 +61,15 @@
 import { ref } from 'vue';
 
 const prices = [
-  { name: 'Hosen kürzen', price: 'ab 15,00 €', duration: '1 Tag' },
-  { name: 'Reißverschluss Jacke/Hose', price: 'ab 18,00 €', duration: '1-2 Tage' },
-  { name: 'Flickarbeiten / Löcher', price: 'ab 15,00 €', duration: '1 Tag' },
-  { name: 'Lederreparatur', price: 'ab 25,00 €', duration: '2-3 Tage' },
-  { name: 'Wäsche / Bügeln (pro Stk.)', price: 'ab 8,00 €', duration: '1 Tag' },
-  { name: 'Gardinen kürzen (pro m)', price: 'ab 10,00 €', duration: '2 Tage' },
+  { name: 'Hose kürzen', price: 'ab 8,00 €', duration: '1 Tag' },
+  { name: 'Hose neuer RV', price: 'ab 14,00 €', duration: '1-2 Tage' },
+  { name: 'Jacke neuer RV', price: 'ab 22,00 €', duration: '2 Tage' },
+  { name: 'Rock kürzen', price: 'ab 16,00 €', duration: '1-2 Tage' },
+  { name: 'Jacke Arm kürzen', price: 'ab 18,00 €', duration: '2 Tage' },
+  { name: 'Sakko Arm kürzen', price: 'ab 16,00 €', duration: '2 Tage' },
+  { name: 'Decke kürzen (pro m)', price: 'ab 10,00 €', duration: '2 Tage' },
+  { name: 'DHL Paketshop', price: 'Service', duration: 'Sofort' },
+  { name: 'Reinigung & Wäscherei', price: 'Auf Anfrage', duration: 'Variiert' },
 ];
 
 const activeIndex = ref<number | null>(null);
