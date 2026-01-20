@@ -9,9 +9,9 @@
       <div class="max-w-3xl mx-auto">
         <!-- Express Badge -->
         <div class="mb-8 flex justify-center">
-            <span class="inline-flex items-center gap-2 bg-red-100 text-red-800 px-4 py-2 rounded-full font-bold text-sm border border-red-200 shadow-sm">
-                <span class="text-lg">⚡</span>
-                Express-Service möglich (Same-Day) – nach Absprache & Kapazität!
+            <span class="inline-flex items-center gap-2 bg-amber-50 text-amber-800 px-4 py-1.5 rounded-full font-medium text-xs border border-amber-100/50">
+                <span class="text-base">⚡</span>
+                Express-Service (Same-Day) nach Absprache möglich
             </span>
         </div>
 

@@ -3,38 +3,41 @@
     <div class="container mx-auto px-4 max-w-4xl text-center">
       <h2 class="text-3xl font-bold text-gray-900 mb-12">Was unsere Kunden sagen</h2>
 
-      <div 
-        class="relative"
-        @touchstart="handleTouchStart"
-        @touchend="handleTouchEnd"
-      >
          <!-- Slides -->
-         <div v-for="(review, index) in reviews" :key="index" v-show="currentIndex === index" class="transition-all duration-500 ease-in-out">
-            <div class="bg-white p-8 md:p-12 rounded-3xl shadow-lg relative mx-4 md:mx-0">
-                 <!-- Quote Icon -->
-                 <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-highlight rounded-full flex items-center justify-center text-4xl text-accent-warm font-serif">
-                    &rdquo;
-                 </div>
-                 
-                 <!-- Stars -->
-                 <div class="flex justify-center gap-1 mb-6 text-yellow-400">
-                    <svg v-for="n in 5" :key="n" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-                        <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
-                    </svg>
-                 </div>
-
-                 <p class="text-lg md:text-2xl text-gray-700 italic mb-8 leading-relaxed">
-                    {{ review.text }}
-                 </p>
-                 
-                 <div class="flex flex-col items-center">
-                    <div class="w-12 h-12 bg-gray-200 rounded-full mb-3 overflow-hidden">
-                         <img :src="`https://api.dicebear.com/9.x/avataaars/svg?seed=${review.name}`" alt="Avatar" />
-                    </div>
-                    <p class="font-bold text-gray-900">{{ review.name }}</p>
-                    <p class="text-sm text-gray-500 uppercase tracking-widest">{{ review.type }}</p>
-                 </div>
-            </div>
+         <div 
+            class="relative min-h-[400px] flex items-center justify-center"
+            @touchstart="handleTouchStart"
+            @touchend="handleTouchEnd"
+          >
+           <Transition name="fade" mode="out-in">
+             <div :key="currentIndex" class="w-full">
+                <div class="bg-white p-8 md:p-12 rounded-3xl shadow-lg relative mx-4 md:mx-0">
+                     <!-- Quote Icon -->
+                     <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-highlight rounded-full flex items-center justify-center text-4xl text-accent-warm font-serif">
+                        &rdquo;
+                     </div>
+                     
+                     <!-- Stars -->
+                     <div class="flex justify-center gap-1 mb-6 text-yellow-400">
+                        <svg v-for="n in 5" :key="n" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                        </svg>
+                     </div>
+    
+                     <p class="text-lg md:text-2xl text-gray-700 italic mb-8 leading-relaxed">
+                        {{ reviews[currentIndex].text }}
+                     </p>
+                     
+                     <div class="flex flex-col items-center">
+                        <div class="w-12 h-12 bg-gray-200 rounded-full mb-3 overflow-hidden">
+                             <img :src="`https://api.dicebear.com/9.x/avataaars/svg?seed=${reviews[currentIndex].name}`" alt="Avatar" />
+                        </div>
+                        <p class="font-bold text-gray-900">{{ reviews[currentIndex].name }}</p>
+                        <p class="text-sm text-gray-500 uppercase tracking-widest">{{ reviews[currentIndex].type }}</p>
+                     </div>
+                </div>
+             </div>
+           </Transition>
          </div>
          
          <!-- Arrows -->

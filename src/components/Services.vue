@@ -86,15 +86,7 @@
 <script setup>
 import MdiRuler from '~icons/mdi/ruler'; 
 import MdiWardrobe from '~icons/mdi/wardrobe'; 
-import MdiZipper from '~icons/mdi/wrench'; // Safe replacement for repairs
-import MdiLeather from '~icons/mdi/home'; // Safe replacement for living/curtains might not exist directly or be different. 'wallet-bifold' or 'material-design' or generic. Checking common mdi names. 'mdi:leather' exists? Let's use 'coat-rack' or similar if leather not found. 'mdi:leather' is not standard MDI. 'mdi:hand-back-right-off' no. 'mdi:cow' no.
-// Re-checking requested icons: mdi-leather.
-// If mdi-leather is invalid, I'll use mdi-hanger or mdi-texture.
-// Actually, I'll check if mdi-leather exists. It's likely `mdi:leather` doesn't exist.
-// Replaced with `mdi:material-design` or `mdi:tshirt-crew` or `mdi:hanger`.
-// User asked for "mdi-leather". I'll try `mdi:leather-off`? No.
-// I will use `~icons/mdi/content-cut` for generic or `~icons/mdi/sofa` for interior?
-// Let's use `~icons/mdi/hand-heart` (care) or similar.
-// Actually I'll use `~icons/mdi/sofa-outline` for Gardinen/Wohnen vibe, or `~icons/mdi/coat-rack`.
-// Let's stick with `~icons/mdi/coat-rack` as safe fallback for "Leder & Wohnen".
+import MdiZipper from '~icons/mdi/wrench'; 
+import MdiLeather from '~icons/mdi/home'; 
+import MdiPackageVariantClosed from '~icons/mdi/package-variant-closed';
 </script>
