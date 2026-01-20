@@ -6,9 +6,9 @@
         <p class="text-gray-500 max-w-2xl mx-auto">Von einfachen Anpassungen bis hin zu komplexen Reparaturen – wir kümmern uns um jedes Detail Ihrer Garderobe.</p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="flex flex-wrap justify-center gap-6">
         <!-- Service 1 -->
-        <div class="group bg-neutral-50 p-8 rounded-3xl hover:bg-accent-warm/10 transition-all duration-300 hover:shadow-lg border border-transparent hover:border-accent-warm/20">
+        <div class="group bg-neutral-50 p-8 rounded-3xl hover:bg-accent-warm/10 transition-all duration-300 hover:shadow-lg border border-transparent hover:border-accent-warm/20 w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1rem)] max-w-sm">
           <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-accent-warm mb-6 shadow-sm group-hover:scale-110 transition-transform">
              <MdiRuler class="text-2xl" />
           </div>
@@ -25,7 +25,7 @@
         </div>
 
         <!-- Service 2 -->
-        <div class="group bg-neutral-50 p-8 rounded-3xl hover:bg-accent-warm/10 transition-all duration-300 hover:shadow-lg border border-transparent hover:border-accent-warm/20">
+        <div class="group bg-neutral-50 p-8 rounded-3xl hover:bg-accent-warm/10 transition-all duration-300 hover:shadow-lg border border-transparent hover:border-accent-warm/20 w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1rem)] max-w-sm">
           <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-accent-warm mb-6 shadow-sm group-hover:scale-110 transition-transform">
              <MdiWardrobe class="text-2xl" />
           </div>
@@ -42,7 +42,7 @@
         </div>
 
         <!-- Service 3 -->
-        <div class="group bg-neutral-50 p-8 rounded-3xl hover:bg-accent-warm/10 transition-all duration-300 hover:shadow-lg border border-transparent hover:border-accent-warm/20">
+        <div class="group bg-neutral-50 p-8 rounded-3xl hover:bg-accent-warm/10 transition-all duration-300 hover:shadow-lg border border-transparent hover:border-accent-warm/20 w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1rem)] max-w-sm">
           <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-accent-warm mb-6 shadow-sm group-hover:scale-110 transition-transform">
              <MdiZipper class="text-2xl" />
           </div>
@@ -59,8 +59,7 @@
         </div>
 
         <!-- Service 4 -->
-        <!-- Service 4 -->
-        <div class="group bg-neutral-50 p-8 rounded-3xl hover:bg-accent-warm/10 transition-all duration-300 hover:shadow-lg border border-transparent hover:border-accent-warm/20">
+        <div class="group bg-neutral-50 p-8 rounded-3xl hover:bg-accent-warm/10 transition-all duration-300 hover:shadow-lg border border-transparent hover:border-accent-warm/20 w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1rem)] max-w-sm">
           <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-accent-warm mb-6 shadow-sm group-hover:scale-110 transition-transform">
              <MdiLeather class="text-2xl" />
           </div>
@@ -76,8 +75,24 @@
           </div>
         </div>
 
-      </div>
+        <!-- Service 5 (DHL) -->
+        <div class="group bg-neutral-50 p-8 rounded-3xl hover:bg-accent-warm/10 transition-all duration-300 hover:shadow-lg border border-transparent hover:border-accent-warm/20 w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1rem)] max-w-sm">
+          <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-accent-warm mb-6 shadow-sm group-hover:scale-110 transition-transform">
+             <MdiPackageVariantClosed class="text-2xl" />
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">DHL Paketshop</h3>
+          <p class="text-gray-500 text-sm mb-4 leading-relaxed">Annahme von Paketen & Retouren, Verkauf von Briefmarken.</p>
+          <ul class="text-sm text-gray-600 space-y-2 mb-6">
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent-warm"></span>Paketannahme</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent-warm"></span>Briefmarken</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent-warm"></span>Retouren</li>
+          </ul>
+          <div class="flex justify-between items-center text-sm font-semibold">
+             <span class="text-secondary-deep">Service</span>
+          </div>
+        </div>
 
+      </div>
 
     </div>
   </section>
