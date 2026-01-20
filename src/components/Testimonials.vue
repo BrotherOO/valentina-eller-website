@@ -109,7 +109,7 @@ const reviews = [
     { text: "Mein Brautkleid war ein Erbstück und eigentlich unrettbar. Valentina hat es mit so viel Gefühl modernisiert. Ich habe geweint vor Glück.", name: "Lisa K.", type: "Braut" },
     { text: "Als Biker ist mir Sicherheit wichtig. Der neue Reißverschluss an meiner Lederjacke ist robuster als das Original. Top Arbeit!", name: "Markus W.", type: "Leder-Spezialist" },
     { text: "Montag Hose gebracht, Dienstag abgeholt. Der Express-Service ist der Wahnsinn für Düsseldorf. Danke!", name: "Sophie T.", type: "Express" },
-    { text: "Ich komme seit 20 Jahren hierher. Egal ob Gardinen oder Mantel – Valentina ist eine Institution des Vertrauens.", name: "Renate B.", type: "Stammkundin" },
+    { text: "Ich komme seit 20 Jahren hierher. Egal ob Gardinen oder Mantel – Valentina ist die Schneiderin meines Vertrauens.", name: "Renate B.", type: "Stammkundin" },
     { text: "Mein Business-Anzug musste perfekt sitzen. Jetzt tut er es. Die Beratung zur Passform war exzellent.", name: "Jan P.", type: "Business" }
 ];
 
