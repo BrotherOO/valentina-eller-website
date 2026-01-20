@@ -7,7 +7,10 @@ import ext1 from "../assets/ausenansicht.jpg";
 import ext2 from "../assets/ausenansicht2.jpg";
 import int1 from "../assets/innenansicht1.jpg";
 import int2 from "../assets/innenansicht2.jpg";
-import HighlightStack from "../components/HighlightStack.vue";
+
+// Assets
+const dhlLogo =
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/DHL_Logo.svg/200px-DHL_Logo.svg.png"; // Using a placeholder or external URL if specific asset not found, but better to omit or use simple text/SVG if possible. Proceding with pure SVG approach for icons as requested.
 ---
 
 <Layout
@@ -15,510 +18,530 @@ import HighlightStack from "../components/HighlightStack.vue";
     description="Seit über 40 Jahren: Ihre Änderungsschneiderei in Düsseldorf-Eller. Nachhaltig, präzise und mit Herz. Leder, Brautkleider, Hosen & mehr."
 >
     <Header client:load />
-    <main class="pt-24 pb-20 bg-texture-linen min-h-screen">
-        <div class="container mx-auto px-4 md:px-8">
-            <!-- Hero Section -->
+
+    <main class="pt-0">
+        <!-- 1. Hero Section (SEO & CI Fix) -->
+        <section
+            class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-accent-warm/5"
+        >
             <div
-                class="relative w-full h-[500px] rounded-3xl overflow-hidden mb-16 shadow-2xl group"
+                class="absolute inset-0 bg-gradient-to-br from-white via-accent-warm/10 to-transparent"
             >
-                <img
-                    src={ownerImg.src}
-                    alt="Valentina Dubinsky - Erfahrene Schneiderin in Düsseldorf-Eller seit 40 Jahren"
-                    width="1200"
-                    height="800"
-                    loading="eager"
-                    class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
-                />
-                <div
-                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"
-                >
-                </div>
-                <div
-                    class="absolute bottom-10 left-6 md:left-10 right-6 md:right-10 text-white"
-                >
-                    <span
-                        class="inline-block py-1 px-3 rounded-full bg-green-500/80 text-xs font-bold uppercase track-wide mb-3 backdrop-blur-sm"
-                        >Mehr als nur Nadel und Faden</span
-                    >
-                    <h1
-                        class="text-3xl md:text-5xl font-bold mb-4 leading-tight"
-                    >
-                        Über Valentina Dubinsky – Ihre Änderungsschneiderei in
-                        Düsseldorf-Eller seit über 40 Jahren
-                    </h1>
-                    <div class="h-1.5 w-24 bg-highlight rounded-full"></div>
-                </div>
             </div>
-
-            <article
-                class="prose prose-lg prose-green bg-white p-8 md:p-12 rounded-3xl shadow-sm mx-auto max-w-none"
-            >
-                <!-- Introduction (Grid) -->
-                <div
-                    class="mb-12 grid grid-cols-1 md:grid-cols-2 gap-12 items-start"
-                >
-                    <div>
-                        <div class="mb-4">
-                            <span
-                                class="bg-green-100 text-green-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider"
-                                >Seit 1984</span
-                            >
-                        </div>
-                        <h2
-                            class="text-3xl font-bold text-gray-900 mb-6 leading-tight"
-                        >
-                            Willkommen im Zuhause für Ihre Lieblingskleidung
-                        </h2>
-                        <p class="text-gray-600 leading-relaxed text-lg mb-6">
-                            Willkommen bei Valentina Dubinskys
-                            Änderungsschneiderei – Ihrem Partner für
-                            Textilreparatur in <strong>Düsseldorf-Eller</strong
-                            >.
-                        </p>
-                        <p class="text-gray-600 leading-relaxed">
-                            Seit über <strong>40 Jahren</strong> widmet sich Valentina
-                            Dubinsky mit Herzblut und meisterhafter Handwerkskunst
-                            der Pflege Ihrer Garderobe. Was einst als kleiner Familienbetrieb
-                            begann, ist heute eine feste Institution im Stadtteil.
-                        </p>
-                    </div>
-                    <div
-                        class="bg-gray-50 p-8 rounded-3xl border border-gray-100"
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="max-w-4xl mx-auto text-center">
+                    <span
+                        class="inline-block py-1 px-3 rounded-full bg-white border border-accent-warm/20 text-accent-warm text-xs font-bold uppercase tracking-wider mb-6 shadow-sm"
                     >
-                        <p
-                            class="text-gray-600 leading-relaxed mb-6 font-medium"
-                        >
-                            Generationen von Düsseldorfern vertrauen uns ihre
-                            wertvollsten Stücke an. Ob die erste Hose gekürzt
-                            werden muss, das geerbte Vintage-Kleid modernisiert
-                            wird oder die Lederjacke einen neuen Zipper braucht.
-                        </p>
-                        <div class="flex items-center gap-4">
-                            <div class="w-12 h-1 bg-green-500 rounded-full">
-                            </div>
-                            <span
-                                class="text-sm text-gray-400 uppercase tracking-widest font-bold"
-                                >Tradition & Präzision</span
-                            >
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Philosophy -->
-                <div
-                    class="bg-gray-50 p-8 rounded-2xl mb-0 border-l-4 border-green-500"
-                >
-                    <h3 class="text-2xl font-bold text-gray-800 mb-4">
-                        Warum Reparieren das neue Kaufen ist
-                    </h3>
-                    <p class="text-gray-600 mb-6">
-                        In einer Welt von Fast Fashion und Wegwerfmentalität
-                        setzen wir ein Zeichen für Nachhaltigkeit und Slow
-                        Fashion. Valentina sagt oft: <em class="text-green-700"
-                            >„Kleidung ist mehr als Stoff – sie ist Erinnerung,
-                            Selbstvertrauen und Individualität.“</em
-                        > Wenn wir Ihre Kleidung reparieren, verlängern wir nicht
-                        nur deren Lebensdauer, sondern schonen auch wertvolle Ressourcen.
-                    </p>
-                    <ul class="space-y-3">
-                        <li class="flex items-start gap-3">
-                            <span class="text-green-500 text-xl">🌿</span>
-                            <span
-                                ><strong>Ressourcenschonung:</strong> Jede Jeansreparatur
-                                spart Tausende Liter Wasser, die für eine Neuproduktion
-                                nötig wären.</span
-                            >
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-green-500 text-xl">💰</span>
-                            <span
-                                ><strong>Geld sparen:</strong> Eine professionelle
-                                Änderung kostet oft nur einen Bruchteil einer Neuanschaffung.</span
-                            >
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-green-500 text-xl">✨</span>
-                            <span
-                                ><strong>Individualität:</strong> Ein maßangepasstes
-                                Kleidungsstück sitzt besser als jede Stangenware.</span
-                            >
-                        </li>
-                    </ul>
-                    <p class="mt-6 text-sm text-gray-500 italic">
-                        Indem wir Löcher stopfen, Säume auslassen oder
-                        Reißverschlüsse erneuern, reduzieren wir gemeinsam
-                        Textilmüll. Das ist unser Beitrag zum Umweltschutz –
-                        direkt hier aus Eller für ganz Düsseldorf.
-                    </p>
-                </div>
-
-                <!-- Highlight Stack -->
-                <HighlightStack client:load />
-
-                <!-- Expertise -->
-                <div class="mb-16 mt-12">
-                    <h2 class="text-3xl font-bold text-gray-900 mb-8">
-                        Maßgeschneiderte Lösungen für jeden Stoff
-                    </h2>
-                    <p class="mb-8 text-gray-600">
-                        Wir sind Experten für komplexe Textilanpassungen. Ob <strong
-                            >Seide, Leder</strong
-                        > oder <strong>Jersey</strong> – wir finden die Lösung.
-                    </p>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div
-                            class="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-shadow"
-                        >
-                            <div class="text-4xl mb-4">👗</div>
-                            <h4 class="font-bold text-lg mb-2">
-                                1. Perfekte Passform
-                            </h4>
-                            <p class="text-sm text-gray-600">
-                                Abgenommen oder <strong>Erbstück</strong> erhalten?
-                                Wir passen <strong>Taillen</strong> an, kürzen <strong
-                                    >Sakkos</strong
-                                > (auch mit Schlitz) und weiten Bunde für den perfekten
-                                Sitz.
-                            </p>
-                        </div>
-                        <div
-                            class="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-shadow"
-                        >
-                            <div class="text-4xl mb-4">🧥</div>
-                            <h4 class="font-bold text-lg mb-2">
-                                2. Spezialgebiet: Lederreparatur
-                            </h4>
-                            <p class="text-sm text-gray-600">
-                                Wir flicken <strong>Lederjacken</strong>,
-                                schließen Risse in <strong
-                                    >Motorradkombis</strong
-                                > und kürzen Lederhosen.
-                                <em class="text-xs text-gray-500 block mt-1"
-                                    >(Keine Lederreinigung)</em
-                                >
-                            </p>
-                        </div>
-                        <div
-                            class="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-shadow"
-                        >
-                            <div class="text-4xl mb-4">🏠</div>
-                            <h4 class="font-bold text-lg mb-2">
-                                3. Heimtextilien & Wohnen
-                            </h4>
-                            <p class="text-sm text-gray-600">
-                                <strong>Gardinen</strong> kürzen oder Kissenbezüge
-                                nach Maß. Wir bearbeiten schwere Stoffe ebenso präzise
-                                wie feine <strong>Seide</strong> für Ihr Zuhause.
-                            </p>
-                        </div>
-                        <div
-                            class="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-shadow"
-                        >
-                            <div class="text-4xl mb-4">🤐</div>
-                            <h4 class="font-bold text-lg mb-2">
-                                4. Reißverschluss-Doktor
-                            </h4>
-                            <p class="text-sm text-gray-600">
-                                Defekter <strong>Zipper</strong>? Wir tauschen
-                                schnell und fachgerecht aus – meist mit
-                                hochwertigen <strong>YKK-Produkten</strong>. Für
-                                Jeans, Jacken und Mäntel.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- DHL Service Section -->
-                <div
-                    class="mb-16 bg-[#ffcc00]/10 p-8 rounded-3xl border-2 border-[#ffcc00] relative overflow-hidden"
-                >
-                    <div class="relative z-10">
-                        <div class="flex items-center gap-4 mb-4">
-                            <span class="text-4xl font-bold text-[#d40511]"
-                                >DHL</span
-                            >
-                            <h2 class="text-2xl font-bold text-gray-900">
-                                Ihr offizieller Paketshop in Eller
-                            </h2>
-                        </div>
-                        <p
-                            class="text-gray-700 leading-relaxed mb-6 font-medium"
-                        >
-                            Verbinden Sie Ihre Erledigungen! Als offizieller DHL
-                            Paketshop kümmern wir uns verlässlich um Ihre
-                            Postgeschäfte. Sparen Sie sich zusätzliche Wege.
-                        </p>
-                        <ul
-                            class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-gray-800 font-bold"
-                        >
-                            <li class="flex items-center gap-2">
-                                <span class="text-[#d40511]">✓</span> Paketannahme
-                                & Abholung
-                            </li>
-                            <li class="flex items-center gap-2">
-                                <span class="text-[#d40511]">✓</span> Retourenabwicklung
-                            </li>
-                            <li class="flex items-center gap-2">
-                                <span class="text-[#d40511]">✓</span> Briefmarkenverkauf
-                                (Post)
-                            </li>
-                            <li class="flex items-center gap-2">
-                                <span class="text-[#d40511]">✓</span> Sendungsverfolgung
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- Decor -->
-                    <div
-                        class="absolute -right-10 -bottom-10 text-[#ffcc00] opacity-20 text-9xl font-bold rotate-12 select-none"
+                        Seit 1984 in Eller
+                    </span>
+                    <h1
+                        class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight"
                     >
-                        DHL
-                    </div>
-                </div>
-
-                <!-- Service -->
-                <div class="mb-16">
-                    <h2 class="text-3xl font-bold text-gray-900 mb-6">
-                        Ihr Komfort steht an erster Stelle
-                    </h2>
-                    <p class="mb-6 text-gray-600">
-                        Wir wissen, dass Ihr Alltag stressig sein kann. Deshalb
-                        haben wir unseren Service so gestaltet, dass er
-                        federleicht in Ihren Tag passt.
-                    </p>
-
-                    <ul class="grid grid-cols-1 gap-4">
-                        <li
-                            class="flex items-start bg-highlight/10 p-4 rounded-lg"
-                        >
-                            <span class="mr-3 text-2xl">⚡</span>
-                            <div>
-                                <strong class="text-gray-900 block"
-                                    >Express-Änderungsschneiderei</strong
-                                >
-                                <span class="text-sm text-gray-600"
-                                    >Für Notfälle (z.B. vor einer Hochzeit oder
-                                    einem Business-Meeting) bieten wir nach
-                                    Absprache schnelle Lösungen an.</span
-                                >
-                            </div>
-                        </li>
-                        <li
-                            class="flex items-start bg-highlight/10 p-4 rounded-lg"
-                        >
-                            <span class="mr-3 text-2xl">🧺</span>
-                            <div>
-                                <strong class="text-gray-900 block"
-                                    >Wäscheservice & Bügeln</strong
-                                >
-                                <span class="text-sm text-gray-600"
-                                    >Kooperation mit externer Wäscherei für
-                                    Hemden, Anzüge und Fleckenentfernung. Sie
-                                    bekommen alles schrankfertig zurück.</span
-                                >
-                            </div>
-                        </li>
-                        <li
-                            class="flex items-start bg-highlight/10 p-4 rounded-lg"
-                        >
-                            <span class="mr-3 text-2xl">🤝</span>
-                            <div>
-                                <strong class="text-gray-900 block"
-                                    >Faire Preise</strong
-                                >
-                                <span class="text-sm text-gray-600"
-                                    >Transparenz ist uns wichtig. Wir besprechen
-                                    die Kosten vorab. Keine versteckten
-                                    Gebühren.</span
-                                >
-                            </div>
-                        </li>
-                    </ul>
-                    <blockquote
-                        class="mt-8 border-l-4 border-highlight pl-6 italic text-gray-700 text-lg"
+                        Traditionelles Handwerk & Präzision: <br
+                            class="hidden md:block"
+                        />Ihre Änderungsschneiderei in Düsseldorf-Eller
+                    </h1>
+                    <p
+                        class="text-xl text-gray-600 mb-10 leading-relaxed max-w-2xl mx-auto"
                     >
-                        "Hier fühlt man sich wie in der Familie."
-                        <footer class="text-sm text-gray-500 not-italic mt-2">
-                            – Kundenfeedback
-                        </footer>
-                    </blockquote>
-                </div>
-
-                <!-- Location -->
-                <div
-                    class="mb-16 bg-gray-900 text-white p-8 md:p-12 rounded-3xl relative overflow-hidden"
-                >
-                    <div class="relative z-10">
-                        <h2 class="text-3xl font-bold mb-6 text-white">
-                            Besuchen Sie uns im Dillenburger Weg
-                        </h2>
-                        <p class="text-gray-300 mb-8 max-w-2xl">
-                            Unsere Änderungsschneiderei in Düsseldorf-Eller ist
-                            optimal erreichbar. Egal ob Sie aus Lierenfeld,
-                            Vennhausen, Oberbilk oder Wersten kommen – wir sind
-                            nur einen Katzensprung entfernt. Nutzen Sie unsere
-                            Online-Terminvereinbarung oder kommen Sie spontan
-                            vorbei.
-                        </p>
-
-                        <div
-                            class="bg-white/10 p-6 rounded-xl backdrop-blur-sm"
-                        >
-                            <h4 class="font-bold text-highlight mb-4">
-                                Öffnungszeiten für Berufstätige:
-                            </h4>
-                            <p class="mb-2">
-                                <span class="font-bold"
-                                    >Montag, Dienstag, Donnerstag, Freitag:</span
-                                >
-                                <br class="md:hidden" />Auch nachmittags bis
-                                18:00 Uhr geöffnet.
-                            </p>
-                            <p>
-                                <span class="font-bold"
-                                    >Mittwoch & Samstag:</span
-                                >
-                                <br class="md:hidden" />Vormittags für Ihre
-                                Erledigungen (10:00 - 13:00).
-                            </p>
-                        </div>
-                    </div>
-                    <!-- Decoration -->
-                    <div
-                        class="absolute top-0 right-0 w-64 h-64 bg-highlight/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"
-                    >
-                    </div>
-                </div>
-
-                <!-- SEO Cloud -->
-                <div class="mb-16 border-t border-gray-100 pt-12">
-                    <h3
-                        class="text-lg font-bold text-gray-400 mb-6 uppercase tracking-widest text-center"
-                    >
-                        Unsere Leistungen im Überblick
-                    </h3>
-                    <div class="flex flex-wrap justify-center gap-3">
-                        {
-                            [
-                                "Hose kürzen mit Originalsaum",
-                                "Jeans flicken im Schritt (Kunststopfen)",
-                                "Reißverschluss reparieren Jacke",
-                                "Brautkleid kürzen Düsseldorf",
-                                "Anzug anpassen",
-                                "Sakko Ärmel kürzen",
-                                "Lederrock ändern",
-                                "Gardinen nähen lassen",
-                                "Motorradbekleidung Reparatur",
-                                "Reißverschlussschieber austauschen",
-                                "Winterjacke Reißverschluss erneuern",
-                                "Kleidung upcycling Düsseldorf",
-                                "Textilreinigung Annahme",
-                                "Knöpfe annähen Service",
-                                "T-Shirt kürzen",
-                                "Kleid enger nähen",
-                                "Mantel Futter erneuern",
-                                "Arbeitskleidung reparieren",
-                                "Schneiderei in meiner Nähe (Eller)",
-                                "Express Schneider Düsseldorf",
-                                "Vorhänge umnähen",
-                            ].map((tag) => (
-                                <span class="bg-gray-100 text-gray-500 px-3 py-1 rounded-full text-xs hover:bg-highlight hover:text-gray-900 transition-colors cursor-default">
-                                    {tag}
-                                </span>
-                            ))
-                        }
-                    </div>
-                </div>
-
-                <!-- CTA -->
-                <div class="text-center bg-highlight/20 py-12 rounded-3xl">
-                    <h3
-                        class="text-2xl md:text-3xl font-bold text-gray-900 mb-4"
-                    >
-                        Haben Sie ein Kleidungsstück, das Liebe braucht?
-                    </h3>
-                    <p class="text-gray-700 mb-8 max-w-xl mx-auto">
-                        Warten Sie nicht länger. Bringen Sie Ihre Schätze zu
-                        Leben.
+                        Seit über 40 Jahren machen wir Unpassendes passend. Wir
+                        retten Ihre Lieblingsstücke mit Meisterhandwerk und
+                        Leidenschaft.
                     </p>
                     <a
-                        href="/#kontakt"
-                        class="inline-block bg-gray-900 text-white px-8 py-4 rounded-full font-bold shadow-xl hover:scale-105 transition-transform"
+                        href="/#leistungen"
+                        class="inline-flex items-center gap-2 bg-accent-warm text-white px-8 py-4 rounded-full font-bold shadow-lg hover:shadow-xl hover:scale-105 transition-all"
                     >
-                        Fahren Sie vorbei und besuchen Sie uns!
+                        Unsere Leistungen entdecken
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            ><path d="M7 17l9.2-9.2M17 17V7H7"></path></svg
+                        >
                     </a>
                 </div>
-            </article>
+            </div>
+        </section>
 
-            <!-- Gallery Section (Retained) -->
-            <div class="mt-20 mb-16">
-                <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">
-                    Einblick in unser Atelier
-                </h2>
+        <!-- 2. The Story Section (Storytelling & Trust) -->
+        <section class="py-24 bg-white">
+            <div class="container mx-auto px-4">
                 <div
-                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8"
+                    class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
                 >
-                    <div
-                        class="rounded-3xl overflow-hidden shadow-lg h-80 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group"
-                    >
-                        <img
-                            src={ext1.src}
-                            alt="Frontansicht der Änderungsschneiderei Valentina Eller im Dillenburger Weg"
-                            width="600"
-                            height="400"
-                            loading="lazy"
-                            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
-                        />
+                    <!-- Text -->
+                    <div class="order-2 lg:order-1">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6">
+                            Mehr als nur Nadel und Faden
+                        </h2>
+                        <div class="prose prose-lg text-gray-600 mb-8">
+                            <p class="mb-4">
+                                Willkommen bei Valentina Dubinsky. Was vor 40
+                                Jahren als kleine Passion begann, ist heute eine
+                                Institution in Düsseldorf-Eller. Für uns ist
+                                Kleidung nicht nur Stoff – sie ist Erinnerung,
+                                Ausdruck und ein Stück Heimat.
+                            </p>
+                            <p>
+                                Wir glauben an <strong
+                                    >Nachhaltigkeit durch Langlebigkeit</strong
+                                >. In einer Welt der Fast Fashion setzen wir
+                                bewusst auf Reparatur und Pflege. Ob das geerbte
+                                Brautkleid oder die geliebte Lederjacke: Wir
+                                behandeln jedes Stück mit dem Respekt, den es
+                                verdient.
+                            </p>
+                        </div>
+
+                        <!-- Icons Grid -->
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="flex flex-col gap-2">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-accent-warm/10 flex items-center justify-center text-accent-warm"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="20"
+                                        height="20"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        ><path
+                                            d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
+                                        ></path><polyline
+                                            points="3.27 6.96 12 12.01 20.73 6.96"
+                                        ></polyline><line
+                                            x1="12"
+                                            y1="22.08"
+                                            x2="12"
+                                            y2="12"></line></svg
+                                    >
+                                </div>
+                                <span class="font-bold text-gray-900 text-sm"
+                                    >Meisterhandwerk</span
+                                >
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-accent-warm/10 flex items-center justify-center text-accent-warm"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="20"
+                                        height="20"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        ><circle cx="12" cy="12" r="10"
+                                        ></circle><path d="M12 6v6l4 2"
+                                        ></path></svg
+                                    >
+                                </div>
+                                <span class="font-bold text-gray-900 text-sm"
+                                    >40 Jahre Erfahrung</span
+                                >
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-accent-warm/10 flex items-center justify-center text-accent-warm"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="20"
+                                        height="20"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        ><circle cx="12" cy="12" r="10"
+                                        ></circle><line
+                                            x1="2"
+                                            y1="12"
+                                            x2="22"
+                                            y2="12"></line><path
+                                            d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                                        ></path></svg
+                                    >
+                                </div>
+                                <span class="font-bold text-gray-900 text-sm"
+                                    >Nachhaltigkeit</span
+                                >
+                            </div>
+                        </div>
                     </div>
-                    <div
-                        class="rounded-3xl overflow-hidden shadow-lg h-80 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group"
-                    >
-                        <img
-                            src={int1.src}
-                            alt="Blick in das Atelier mit hochwertigen Stoffen und Garnen"
-                            width="600"
-                            height="400"
-                            loading="lazy"
-                            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
-                        />
-                    </div>
-                    <div
-                        class="rounded-3xl overflow-hidden shadow-lg h-80 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group"
-                    >
-                        <img
-                            src={int2.src}
-                            alt="Professionelle Nähmaschinen und Arbeitsplatz für Textilreparaturen"
-                            width="600"
-                            height="400"
-                            loading="lazy"
-                            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
-                        />
-                    </div>
-                    <div
-                        class="rounded-3xl overflow-hidden shadow-lg h-80 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group"
-                    >
-                        <img
-                            src={ext2.src}
-                            alt="Eingangsbereich der Schneiderei in Düsseldorf Eller - Barrierefrei zugänglich"
-                            width="600"
-                            height="400"
-                            loading="lazy"
-                            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
-                        />
+
+                    <!-- Image -->
+                    <div class="order-1 lg:order-2">
+                        <div
+                            class="relative rounded-[2rem] overflow-hidden shadow-2xl rotate-1 hover:rotate-0 transition-transform duration-500"
+                        >
+                            <img
+                                src={ownerImg.src}
+                                alt="Valentina Dubinsky im Atelier"
+                                class="w-full h-full object-cover"
+                            />
+                        </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Back to Home -->
-            <div class="text-center mb-12 mt-8">
+        <!-- 3. Values & Expertise (Cards) -->
+        <section class="py-24 bg-neutral-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">
+                        Unsere Philosophie
+                    </h2>
+                    <p class="text-gray-500 max-w-2xl mx-auto">
+                        Warum Kunden aus ganz Düsseldorf zu uns kommen.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Card 1 -->
+                    <div
+                        class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-lg transition-shadow border border-gray-100"
+                    >
+                        <div class="text-4xl mb-6">🌿</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">
+                            Nachhaltigkeit
+                        </h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Reparieren statt wegwerfen. Wir verlängern das Leben
+                            Ihrer Kleidung und sparen so wertvolle Ressourcen.
+                            Gut für die Umwelt, gut für Ihren Geldbeutel.
+                        </p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div
+                        class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-lg transition-shadow border border-gray-100"
+                    >
+                        <div class="text-4xl mb-6">✂️</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">
+                            Präzision
+                        </h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Ob feine Seide, robustes Leder oder der perfekte
+                            Sitz des Sakkos – wir arbeiten millimetergenau. Ihre
+                            Garderobe sitzt wie angegossen.
+                        </p>
+                    </div>
+                    <!-- Card 3 -->
+                    <div
+                        class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-lg transition-shadow border border-gray-100"
+                    >
+                        <div class="text-4xl mb-6">❤️</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">
+                            Persönlicher Service
+                        </h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Wir sind Nachbarn und Partner. Ehrliche Beratung,
+                            transparente Preise und ein Lächeln gehören bei uns
+                            zum Handwerk dazu.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. DHL Section (Complete Redesign: No Yellow, CI Integraton) -->
+        <section class="py-16 md:py-24 bg-white relative">
+            <div class="container mx-auto px-4 max-w-5xl">
+                <div
+                    class="bg-white rounded-3xl border border-gray-200 shadow-sm p-8 md:p-12 relative overflow-hidden"
+                >
+                    <!-- Top Badge / Logo Area -->
+                    <div class="flex justify-between items-start mb-8">
+                        <div>
+                            <h2
+                                class="text-2xl md:text-3xl font-bold text-gray-900 mb-2"
+                            >
+                                DHL Service in Düsseldorf-Eller: Ihr Partner vor
+                                Ort
+                            </h2>
+                            <p class="text-gray-500">
+                                Verbinden Sie Ihre Schneider-Termine mit Ihren
+                                Postgeschäften – effizient und unkompliziert.
+                            </p>
+                        </div>
+                        <!-- Mini DHL Logo Icon -->
+                        <div
+                            class="hidden md:flex flex-col items-center justify-center p-3 bg-gray-50 rounded-xl border border-gray-100"
+                        >
+                            <span
+                                class="text-xs font-bold text-gray-400 mb-1 tracking-widest uppercase"
+                                >Official</span
+                            >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                class="w-12 h-8 text-red-600"
+                                fill="currentColor"
+                            >
+                                <!-- Simple Text representation of DHL logo styling or just font -->
+                                <path d="M0 0h24v24H0z" fill="none"></path>
+                                <path
+                                    d="M11 15H9v2h2v-2zm2 0h-2v2h2v-2zm7.5-6.5l-2.5 7h-2.1l2.5-7h2.1zm-18 0l-2.5 7h-2.1l2.5-7h2.1zm8.7 0l-2.5 7h-2.1l2.5-7h2.1z"
+                                    stroke="currentColor"
+                                    stroke-width="2"></path>
+                                <!-- Note: Using generic path for visual rep. In production, use official SVG asset. -->
+                                <text
+                                    x="50%"
+                                    y="50%"
+                                    dominant-baseline="middle"
+                                    text-anchor="middle"
+                                    font-weight="900"
+                                    font-size="10"
+                                    fill="#d40511">DHL</text
+                                >
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- 2x2 Grid Benefits -->
+                    <div
+                        class="grid grid-cols-1 md:grid-cols-2 gap-y-10 gap-x-12"
+                    >
+                        <!-- Benefit 1 -->
+                        <div class="flex gap-4">
+                            <div
+                                class="mt-1 flex-shrink-0 w-12 h-12 bg-accent-warm/10 rounded-full flex items-center justify-center text-accent-warm"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="w-6 h-6"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
+                                    ></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 mb-1">
+                                    Paketannahme
+                                </h4>
+                                <p class="text-sm text-gray-500 leading-snug">
+                                    Bequeme Abgabe von Retouren & Paketen.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Benefit 2 -->
+                        <div class="flex gap-4">
+                            <div
+                                class="mt-1 flex-shrink-0 w-12 h-12 bg-accent-warm/10 rounded-full flex items-center justify-center text-accent-warm"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="w-6 h-6"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                                    ></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 mb-1">
+                                    Briefversand
+                                </h4>
+                                <p class="text-sm text-gray-500 leading-snug">
+                                    Verkauf von Briefmarken direkt vor Ort.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Benefit 3 -->
+                        <div class="flex gap-4">
+                            <div
+                                class="mt-1 flex-shrink-0 w-12 h-12 bg-accent-warm/10 rounded-full flex items-center justify-center text-accent-warm"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="w-6 h-6"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"
+                                    ></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 mb-1">
+                                    Parkplätze
+                                </h4>
+                                <p class="text-sm text-gray-500 leading-snug">
+                                    Stressfreies Parken direkt vor der Tür.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Benefit 4 -->
+                        <div class="flex gap-4">
+                            <div
+                                class="mt-1 flex-shrink-0 w-12 h-12 bg-accent-warm/10 rounded-full flex items-center justify-center text-accent-warm"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="w-6 h-6"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                                    ></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 mb-1">
+                                    Zeitersparnis
+                                </h4>
+                                <p class="text-sm text-gray-500 leading-snug">
+                                    Kombinieren Sie Post & Schneiderei.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CTA -->
+                    <div
+                        class="mt-10 pt-8 border-t border-gray-100 flex justify-center md:justify-start"
+                    >
+                        <a
+                            href="#footer-map"
+                            class="text-sm font-semibold text-accent-warm hover:text-accent-warm/80 transition-colors flex items-center gap-2"
+                        >
+                            Jetzt Standort auf Karte ansehen
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="w-4 h-4"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!-- Decorative Background Blob -->
+                    <div
+                        class="absolute -right-20 -top-20 w-64 h-64 bg-accent-warm/5 rounded-full blur-3xl pointer-events-none"
+                    >
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Gallery (Masonry Grid) -->
+        <section class="py-24 bg-neutral-50 mb-16">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">
+                    Einblick in unser Atelier
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Left Col -->
+                    <div class="flex flex-col gap-6">
+                        <div
+                            class="rounded-xl overflow-hidden shadow-md h-64 md:h-80"
+                        >
+                            <img
+                                src={ext1.src}
+                                alt="Außenansicht"
+                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                            />
+                        </div>
+                        <div class="rounded-xl overflow-hidden shadow-md h-64">
+                            <img
+                                src={int1.src}
+                                alt="Innenansicht"
+                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                            />
+                        </div>
+                    </div>
+                    <!-- Right Col -->
+                    <div class="flex flex-col gap-6">
+                        <div class="rounded-xl overflow-hidden shadow-md h-64">
+                            <img
+                                src={int2.src}
+                                alt="Details"
+                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                            />
+                        </div>
+                        <div
+                            class="rounded-xl overflow-hidden shadow-md h-64 md:h-80"
+                        >
+                            <img
+                                src={ext2.src}
+                                alt="Eingang"
+                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Footer CTA Banner -->
+        <section class="py-20 bg-accent-warm/10">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">
+                    Wir machen Unpassendes passend
+                </h2>
+                <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+                    Besuchen Sie uns direkt im Dillenburger Weg 1, 40229
+                    Düsseldorf-Eller.
+                </p>
                 <a
                     href="/"
-                    class="text-gray-500 hover:text-green-600 underline text-sm transition-colors"
+                    class="inline-block bg-gray-900 text-white px-8 py-4 rounded-full font-bold shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all"
                 >
-                    &larr; Zurück zur Startseite
+                    Preise & Öffnungszeiten ansehen
                 </a>
             </div>
-        </div>
+        </section>
     </main>
     <Footer />
 </Layout>
