@@ -39,7 +39,7 @@
       </h1>
       
       <p class="text-xl md:text-2xl text-secondary-deep/90 max-w-2xl mb-12 leading-relaxed font-sans font-medium [text-shadow:0_1px_10px_rgba(255,255,255,0.6)]">
-        Nachhaltige Reparaturen, professionelle Änderungen, <strong>Wäsche- & Bügelservice</strong> und maßgeschneiderte Lösungen im Herzen von Düsseldorf-Eller. <span class="text-[#F8A08C] font-semibold">Seit über 40 Jahren.</span>
+        Nachhaltige Reparaturen, professionelle Änderungen, <strong>Wäsche- & Bügelservice</strong> sowie <strong>DHL Service</strong> im Herzen von Düsseldorf-Eller. <span class="text-[#F8A08C] font-semibold">Seit über 40 Jahren.</span>
       </p>
 
       <!-- DHL Badge -->

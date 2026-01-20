@@ -62,11 +62,11 @@ import { ref } from 'vue';
 
 const prices = [
   { name: 'Hose kürzen', price: 'ab 8,00 €', duration: '1 Tag' },
-  { name: 'Hose neuer RV', price: 'ab 14,00 €', duration: '1-2 Tage' },
-  { name: 'Jacke neuer RV', price: 'ab 22,00 €', duration: '2 Tage' },
+  { name: 'Reißverschluss wechseln Hose', price: 'ab 14,00 €', duration: '1-2 Tage' },
+  { name: 'Reißverschluss wechseln Jacke', price: 'ab 22,00 €', duration: '2 Tage' },
   { name: 'Rock kürzen', price: 'ab 16,00 €', duration: '1-2 Tage' },
-  { name: 'Jacke Arm kürzen', price: 'ab 18,00 €', duration: '2 Tage' },
-  { name: 'Sakko Arm kürzen', price: 'ab 16,00 €', duration: '2 Tage' },
+  { name: 'Jacke Ärmel kürzen', price: 'ab 18,00 €', duration: '2 Tage' },
+  { name: 'Sakko Ärmel kürzen', price: 'ab 16,00 €', duration: '2 Tage' },
   { name: 'Decke kürzen (pro m)', price: 'ab 10,00 €', duration: '2 Tage' },
   { name: 'DHL Paketshop', price: 'Service', duration: 'Sofort' },
   { name: 'Reinigung & Wäscherei', price: 'Auf Anfrage', duration: 'Variiert' },

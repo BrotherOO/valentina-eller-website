@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.vue";
 import Hero from "../components/Hero.vue";
 import Services from "../components/Services.vue";
+import DhlImg from "../assets/images/DHL-PaketShop-450.jpg";
 import AboutTeaser from "../components/AboutTeaser.astro";
 import PriceList from "../components/PriceList.vue";
 import Testimonials from "../components/Testimonials.vue";
@@ -18,6 +19,113 @@ import Footer from "../components/Footer.astro";
 	<main>
 		<Hero client:load />
 		<Services />
+
+		<!-- DHL Section -->
+		<section class="py-24 bg-white relative overflow-hidden">
+			<div class="container mx-auto px-4">
+				<div
+					class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
+				>
+					<!-- Text Content -->
+					<div>
+						<div
+							class="inline-flex items-center gap-2 bg-[#ffcc00]/20 border border-[#ffcc00] text-[#d40511] px-4 py-1.5 rounded-full text-sm font-bold mb-6"
+						>
+							<span class="w-2 h-2 rounded-full bg-[#d40511]"
+							></span>
+							Offizieller Paketshop
+						</div>
+						<h2
+							class="text-3xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight"
+						>
+							DHL Paketshop in Düsseldorf-Eller – <span
+								class="text-[#d40511]">Ihr Partner vor Ort</span
+							>
+						</h2>
+						<p class="text-xl text-gray-600 mb-8 font-medium">
+							Pakete einfach abgeben und abholen – direkt in
+							Valentinas Änderungsschneiderei.
+						</p>
+						<div
+							class="prose prose-lg text-gray-500 mb-8 leading-relaxed"
+						>
+							<p>
+								Sie suchen einen zuverlässigen Ort, um Ihre
+								DHL-Pakete in Düsseldorf-Eller aufzugeben oder
+								abzuholen? Unser offizieller DHL Paketshop am
+								Dillenburger Weg 33a verbindet professionellen
+								Paket-Service mit persönlicher Betreuung.
+							</p>
+							<p>
+								Verbinden Sie das Nützliche mit dem Praktischen:
+								Während Sie Ihre Kleidung zur Änderung oder
+								Reparatur bringen, erledigen Sie gleich Ihre
+								Postgeschäfte. Dank der entspannten
+								Parkplatzsituation in unserer ruhigen Siedlung
+								können Sie auch größere Pakete stressfrei
+								ausladen.
+							</p>
+						</div>
+
+						<h3 class="text-2xl font-bold text-gray-900 mb-6">
+							Hier sind 10 Vorteile für Sie:
+						</h3>
+						<ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+							{
+								[
+									"Alles an einem Ort erledigen",
+									"Schnelle Abwicklung ohne Wartezeit",
+									"Entspannte Parkmöglichkeiten",
+									"Stressfreies Ausladen (auch schwerer Pakete)",
+									"Persönlicher & freundlicher Service",
+									"Kostenlose Retourenannahme",
+									"Sofortiger Kauf von Marken & Porto",
+									"Gute Erreichbarkeit in Eller",
+									"Verlässliche Annahmezeiten",
+									"Kompetente Beratung vor Ort",
+								].map((item) => (
+									<li class="flex items-start gap-3">
+										<span class="text-[#d40511] font-bold text-lg">
+											✓
+										</span>
+										<span class="text-gray-700 font-medium">
+											{item}
+										</span>
+									</li>
+								))
+							}
+						</ul>
+					</div>
+
+					<!-- Image -->
+					<div class="relative">
+						<div
+							class="absolute -inset-4 bg-[#ffcc00] rounded-[3rem] rotate-3 opacity-20 blur-lg"
+						>
+						</div>
+						<div
+							class="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white"
+						>
+							<img
+								src={DhlImg.src}
+								alt="DHL Paketshop in Valentinas Änderungsschneiderei"
+								class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
+							/>
+							<div
+								class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-8 text-white"
+							>
+								<p class="font-bold text-lg">
+									Dillenburger Weg 33a
+								</p>
+								<p class="text-[#ffcc00] font-bold">
+									40229 Düsseldorf
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 		<AboutTeaser />
 		<PriceList client:visible />
 		<Testimonials client:visible />
