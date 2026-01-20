@@ -38,14 +38,36 @@
         </span>.
       </h1>
       
-      <p class="text-xl md:text-2xl text-secondary-deep/90 max-w-2xl mb-12 leading-relaxed font-sans font-medium [text-shadow:0_1px_10px_rgba(255,255,255,0.6)]">
+      <p class="text-xl md:text-2xl text-secondary-deep/90 max-w-2xl mb-8 leading-relaxed font-sans font-medium [text-shadow:0_1px_10px_rgba(255,255,255,0.6)]">
         Nachhaltige Reparaturen, professionelle Änderungen, <strong>Wäsche- & Bügelservice</strong> sowie <strong>DHL Service</strong> im Herzen von Düsseldorf-Eller. <span class="text-[#F8A08C] font-semibold">Seit über 40 Jahren.</span>
       </p>
 
-      <!-- DHL Badge -->
-      <div class="mb-10 inline-flex items-center gap-3 bg-[#ffcc00] text-[#d40511] px-6 py-3 rounded-xl shadow-lg border-2 border-[#d40511]/10 transform hover:scale-105 transition-transform">
-          <span class="text-2xl font-bold">DHL</span>
-          <span class="font-bold text-lg text-gray-900 border-l border-black/10 pl-3">Offizieller Paketshop: Annahme, Versand & Briefmarken</span>
+      <!-- Feature Icons Strip (Moved up & Extended) -->
+      <div class="mb-12 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-12 text-secondary-deep/80 w-full max-w-4xl mx-auto">
+        <div class="flex flex-col items-center gap-2 group hover:text-[#F8A08C] transition-colors">
+            <div class="p-3 bg-accent-warm/20 rounded-full group-hover:bg-accent-warm/30 transition-colors">
+                 <MdiTapeMeasure class="text-2xl" />
+            </div>
+            <span class="text-xs uppercase tracking-widest font-bold font-sans">Präzision</span>
+        </div>
+        <div class="flex flex-col items-center gap-2 group hover:text-[#F8A08C] transition-colors">
+            <div class="p-3 bg-accent-warm/20 rounded-full group-hover:bg-accent-warm/30 transition-colors">
+                <MdiScissorsCutting class="text-2xl" />
+            </div>
+            <span class="text-xs uppercase tracking-widest font-bold font-sans">Maßarbeit</span>
+        </div>
+        <div class="flex flex-col items-center gap-2 group hover:text-[#F8A08C] transition-colors">
+            <div class="p-3 bg-accent-warm/20 rounded-full group-hover:bg-accent-warm/30 transition-colors">
+                <MdiIron class="text-2xl" />
+            </div>
+            <span class="text-xs uppercase tracking-widest font-bold font-sans">Wäscheservice</span>
+        </div>
+         <div class="flex flex-col items-center gap-2 group hover:text-[#F8A08C] transition-colors">
+            <div class="p-3 bg-accent-warm/20 rounded-full group-hover:bg-accent-warm/30 transition-colors">
+                <MdiPackageVariantClosed class="text-2xl" />
+            </div>
+            <span class="text-xs uppercase tracking-widest font-bold font-sans">Paketshop</span>
+        </div>
       </div>
       
       <div class="flex flex-col md:flex-row gap-6">
@@ -56,28 +78,6 @@
           Öffnungszeiten ansehen
         </a>
       </div>
-
-      <!-- Feature Icons Strip (Grid for consistent spacing) -->
-      <div class="mt-20 mb-16 md:mb-0 grid grid-cols-3 gap-8 md:gap-20 text-secondary-deep/60 w-full max-w-4xl mx-auto pb-12 md:pb-0">
-        <div class="flex flex-col items-center gap-3 group hover:text-[#F8A08C] transition-colors">
-            <div class="p-4 bg-accent-warm/20 rounded-full group-hover:bg-accent-warm/30 transition-colors">
-                 <MdiTapeMeasure class="text-3xl" />
-            </div>
-            <span class="text-xs uppercase tracking-widest font-bold font-sans">Präzision</span>
-        </div>
-        <div class="flex flex-col items-center gap-3 group hover:text-[#F8A08C] transition-colors">
-            <div class="p-4 bg-accent-warm/20 rounded-full group-hover:bg-accent-warm/30 transition-colors">
-                <MdiScissorsCutting class="text-3xl" />
-            </div>
-            <span class="text-xs uppercase tracking-widest font-bold font-sans">Maßarbeit</span>
-        </div>
-        <div class="flex flex-col items-center gap-3 group hover:text-[#F8A08C] transition-colors">
-            <div class="p-4 bg-accent-warm/20 rounded-full group-hover:bg-accent-warm/30 transition-colors">
-                <MdiIron class="text-3xl" />
-            </div>
-            <span class="text-xs uppercase tracking-widest font-bold font-sans">Wäscheservice</span>
-        </div>
-      </div>
     </div>
   </section>
 </template>
@@ -86,6 +86,7 @@
 import MdiTapeMeasure from '~icons/mdi/tape-measure';
 import MdiScissorsCutting from '~icons/mdi/scissors-cutting';
 import MdiIron from '~icons/mdi/iron';
+import MdiPackageVariantClosed from '~icons/mdi/package-variant-closed';
 import HeroBackground from './HeroBackground.vue';
 import ProfileImg from '../assets/schneiderinprofil.jpg';
 </script>
