@@ -8,6 +8,7 @@ import PriceList from "../components/PriceList.vue";
 import Testimonials from "../components/Testimonials.vue";
 import ContactInfo from "../components/ContactInfo.astro";
 import Footer from "../components/Footer.astro";
+import DhlImg from "../assets/images/0008769_dhl-express-shipping.jpeg";
 ---
 
 <Layout
@@ -164,65 +165,24 @@ import Footer from "../components/Footer.astro";
 							<div
 								class="bg-white p-8 rounded-[2rem] shadow-xl border border-gray-100 w-full max-w-sm flex flex-col items-center text-center"
 							>
+								<!-- Official Partner Badge -->
 								<span
-									class="text-xs font-bold text-gray-400 mb-4 tracking-widest uppercase block"
+									class="text-xs font-bold text-gray-900 mb-6 tracking-widest uppercase block bg-[#FFCC00] px-3 py-1 rounded shadow-sm"
 									>Offizieller Partner</span
 								>
-								<!-- Clean SVG Construction for DHL Logo -->
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									viewBox="0 0 200 50"
-									class="w-48 h-auto mb-6"
-									role="img"
-									aria-label="DHL Logo"
+
+								<!-- DHL Image -->
+								<div
+									class="w-48 h-auto mb-6 flex justify-center items-center"
 								>
-									<rect
+									<img
+										src={DhlImg.src}
+										alt="DHL Paketshop Logo Düsseldorf Eller"
+										class="object-contain max-h-20 max-w-full"
 										width="200"
-										height="50"
-										fill="#FFCC00"
-										rx="4"
-										ry="4"></rect>
-									<path
-										d="M40 38h-7l3-15h-8l-3 15h-7l5-25h22l-5 25z M60 38h-7l3-15h-8l-3 15h-7l5-25h7l-3 15h8l3-15h7l-5 25z M95 38h-20l5-25h7l-3 20h11l-1 5z"
-										fill="#D40511"
-										transform="translate(50, 2) scale(0.9) skewX(-10)"
-									></path>
-									<!-- Fallback Text if Path fails visually (though path is approximate geometric) -> Using purely text for safety if path is tricky? 
-                                    Actually, users asked for a clean SVG. I'll use a high quality Red text on Yellow-ish or Transparent logic?
-                                    User said: "Logo bleibt in Originalfarben (Red on Yellow usually), aber der Container erhält ein sauberes Lachs-Weiß".
-                                    So I will make the SVG transparent background, Red Text, simple geometric.
-                                    -->
-								</svg>
-								<!-- Retry with a simpler reliable SVG -->
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									viewBox="0 0 100 30"
-									class="w-40 h-auto mb-6"
-								>
-									<title>DHL</title>
-									<g
-										fill="#d40511"
-										font-family="Arial, Helvetica, sans-serif"
-										font-weight="900"
-										font-style="italic"
-									>
-										<text
-											x="0"
-											y="24"
-											font-size="28"
-											letter-spacing="-2">DHL</text
-										>
-										<line
-											x1="0"
-											y1="28"
-											x2="100"
-											y2="28"
-											stroke="#d40511"
-											stroke-width="2"
-											opacity="0.1"></line>
-										<!-- Decoration -->
-									</g>
-								</svg>
+										height="80"
+									/>
+								</div>
 
 								<div class="h-px w-full bg-gray-100 my-4"></div>
 								<p class="text-sm text-gray-500 font-medium">

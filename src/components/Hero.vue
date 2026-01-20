@@ -28,7 +28,7 @@
       </div>
 
       <h1 class="text-4xl md:text-6xl font-serif font-bold text-secondary-deep mb-6 tracking-tight leading-tight [text-shadow:0_2px_20px_rgba(255,255,255,0.8)]">
-        Änderungsschneiderei & <span class="text-[#d40511]">DHL</span> Paketshop<br class="hidden md:block" />
+        Änderungsschneiderei & <span class="text-[#F8A08C]">DHL</span> Paketshop<br class="hidden md:block" />
         in <span class="text-[#F8A08C] relative inline-block">
             Düsseldorf-Eller
             <!-- Underline decoration -->
@@ -71,8 +71,8 @@
       </div>
       
       <div class="flex flex-col md:flex-row gap-6">
-        <a href="/#preise" class="bg-[#F8A08C] hover:bg-[#e08e7b] text-white px-10 py-5 rounded-full font-bold text-lg transition-all shadow-[0_10px_25px_rgba(248,160,140,0.25)] hover:shadow-[0_15px_35px_rgba(248,160,140,0.35)] transform hover:-translate-y-1">
-          Preise ansehen
+        <a href="#dienstleistungen" class="bg-[#F8A08C] hover:bg-[#e08e7b] text-white px-10 py-5 rounded-full font-bold text-lg transition-all shadow-[0_10px_25px_rgba(248,160,140,0.25)] hover:shadow-[0_15px_35px_rgba(248,160,140,0.35)] transform hover:-translate-y-1">
+          Leistungen entdecken
         </a>
         <a href="/#oeffnungszeiten" class="bg-transparent hover:bg-secondary-deep/5 text-secondary-deep border-2 border-secondary-deep/20 px-10 py-5 rounded-full font-bold text-lg transition-all shadow-sm hover:shadow-lg">
           Öffnungszeiten ansehen

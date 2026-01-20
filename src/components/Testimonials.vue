@@ -14,13 +14,21 @@
 
          <!-- Slides Window -->
          <div 
-            class="relative w-full max-w-3xl min-h-[450px] flex items-center justify-center"
+            class="relative w-full max-w-3xl min-h-[480px] flex items-center justify-center px-8 md:px-0"
             @touchstart="handleTouchStart"
             @touchend="handleTouchEnd"
           >
+           
+           <!-- Desktop Arrows (Absolute Positioned for "Outside" feel) -->
+           <button @click="prevSlide" class="hidden md:flex absolute -left-16 lg:-left-24 top-1/2 -translate-y-1/2 p-4 rounded-full bg-white shadow-lg text-gray-400 hover:text-accent-warm hover:scale-110 transition-all border border-gray-100 z-10" aria-label="Vorherige Bewertung">
+             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6">
+                 <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+             </svg>
+           </button>
+
            <Transition name="fade" mode="out-in">
              <div :key="currentIndex" class="w-full flex justify-center">
-                <div class="bg-white p-8 md:p-12 rounded-3xl shadow-xl relative w-full text-center flex flex-col items-center border border-gray-50">
+                <div class="bg-white p-8 md:p-12 rounded-3xl shadow-xl relative w-full text-center flex flex-col items-center border border-gray-50 h-full min-h-[420px]">
                      <!-- Quote Icon -->
                      <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-white border-2 border-[#FFF0F3] rounded-full flex items-center justify-center text-4xl text-accent-warm font-serif shadow-sm z-20">
                         &rdquo;
@@ -33,7 +41,7 @@
                         </svg>
                      </div>
     
-                     <p class="text-lg md:text-2xl text-gray-700 italic mb-8 leading-relaxed max-w-2xl mx-auto min-h-[120px] flex items-center justify-center">
+                     <p class="text-lg md:text-2xl text-gray-700 italic mb-8 leading-relaxed max-w-2xl mx-auto flex-grow flex items-center justify-center">
                         {{ reviews[currentIndex].text }}
                      </p>
                      
@@ -47,6 +55,14 @@
                 </div>
              </div>
            </Transition>
+
+            <!-- Desktop Arrows (Absolute Positioned for "Outside" feel) -->
+           <button @click="nextSlide" class="hidden md:flex absolute -right-16 lg:-right-24 top-1/2 -translate-y-1/2 p-4 rounded-full bg-white shadow-lg text-gray-400 hover:text-accent-warm hover:scale-110 transition-all border border-gray-100 z-10" aria-label="Nächste Bewertung">
+             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6">
+                 <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+             </svg>
+           </button>
+
          </div>
 
          <!-- Right Arrow (Desktop) -->
