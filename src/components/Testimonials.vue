@@ -5,12 +5,7 @@
 
       <div class="relative flex items-center justify-center gap-4 md:gap-12">
          
-         <!-- Left Arrow (Desktop) -->
-         <button @click="prevSlide" class="hidden md:flex p-4 rounded-full bg-white shadow-lg text-gray-400 hover:text-accent-warm hover:scale-110 transition-all border border-gray-100 z-10" aria-label="Vorherige Bewertung">
-             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6">
-                 <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-             </svg>
-         </button>
+
 
          <!-- Slides Window -->
          <div 
@@ -65,12 +60,7 @@
 
          </div>
 
-         <!-- Right Arrow (Desktop) -->
-         <button @click="nextSlide" class="hidden md:flex p-4 rounded-full bg-white shadow-lg text-gray-400 hover:text-accent-warm hover:scale-110 transition-all border border-gray-100 z-10" aria-label="Nächste Bewertung">
-             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6">
-                 <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-             </svg>
-         </button>
+
 
       </div>
 
