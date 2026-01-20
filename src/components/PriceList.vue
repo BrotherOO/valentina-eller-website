@@ -1,7 +1,7 @@
 <template>
   <section id="preise" class="py-24 bg-white scroll-mt-20">
     <div class="container mx-auto px-4">
-      <div class="text-center mb-16">
+      <div class="text-center mb-8">
         <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-4">Preisübersicht</h2>
         <p class="text-gray-500">Transparente Preise für erstklassiges Handwerk. Alle Preise sind Richtwerte und können je nach Aufwand variieren.</p>
       </div>
