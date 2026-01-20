@@ -20,106 +20,97 @@ import Footer from "../components/Footer.astro";
 		<Hero client:load />
 		<Services />
 
-		<!-- DHL Section -->
-		<section class="py-24 bg-white relative overflow-hidden">
+		<!-- DHL Section (Redesign: Neutral/Trust) -->
+		<section class="py-24 bg-neutral-50/50">
 			<div class="container mx-auto px-4">
 				<div
 					class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
 				>
 					<!-- Text Content -->
-					<div>
+					<div class="order-2 lg:order-1">
 						<div
-							class="inline-flex items-center gap-2 bg-[#ffcc00]/20 border border-[#ffcc00] text-[#d40511] px-4 py-1.5 rounded-full text-sm font-bold mb-6"
+							class="inline-flex items-center gap-2 bg-white border border-gray-200 text-gray-500 px-3 py-1.5 rounded-full text-xs font-bold mb-6 shadow-sm uppercase tracking-wider"
 						>
-							<span class="w-2 h-2 rounded-full bg-[#d40511]"
+							<span class="w-2 h-2 rounded-full bg-accent-warm"
 							></span>
-							Offizieller Paketshop
+							Partner vor Ort
 						</div>
 						<h2
-							class="text-3xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight"
+							class="text-3xl font-bold text-gray-900 mb-6 leading-tight"
 						>
-							DHL Paketshop in Düsseldorf-Eller – <span
-								class="text-[#d40511]">Ihr Partner vor Ort</span
-							>
+							DHL Paketshop in Düsseldorf-Eller
 						</h2>
-						<p class="text-xl text-gray-600 mb-8 font-medium">
-							Pakete einfach abgeben und abholen – direkt in
-							Valentinas Änderungsschneiderei.
-						</p>
-						<div
-							class="prose prose-lg text-gray-500 mb-8 leading-relaxed"
-						>
-							<p>
-								Sie suchen einen zuverlässigen Ort, um Ihre
-								DHL-Pakete in Düsseldorf-Eller aufzugeben oder
-								abzuholen? Unser offizieller DHL Paketshop am
-								Dillenburger Weg 33a verbindet professionellen
-								Paket-Service mit persönlicher Betreuung.
-							</p>
-							<p>
-								Verbinden Sie das Nützliche mit dem Praktischen:
-								Während Sie Ihre Kleidung zur Änderung oder
-								Reparatur bringen, erledigen Sie gleich Ihre
-								Postgeschäfte. Dank der entspannten
-								Parkplatzsituation in unserer ruhigen Siedlung
-								können Sie auch größere Pakete stressfrei
-								ausladen.
-							</p>
-						</div>
 
-						<h3 class="text-2xl font-bold text-gray-900 mb-6">
-							Hier sind 10 Vorteile für Sie:
-						</h3>
-						<ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
-							{
-								[
-									"Alles an einem Ort erledigen",
-									"Schnelle Abwicklung ohne Wartezeit",
-									"Entspannte Parkmöglichkeiten",
-									"Stressfreies Ausladen (auch schwerer Pakete)",
-									"Persönlicher & freundlicher Service",
-									"Kostenlose Retourenannahme",
-									"Sofortiger Kauf von Marken & Porto",
-									"Gute Erreichbarkeit in Eller",
-									"Verlässliche Annahmezeiten",
-									"Kompetente Beratung vor Ort",
-								].map((item) => (
-									<li class="flex items-start gap-3">
-										<span class="text-[#d40511] font-bold text-lg">
-											✓
-										</span>
-										<span class="text-gray-700 font-medium">
-											{item}
-										</span>
-									</li>
-								))
-							}
-						</ul>
+						<!-- Clean List of Benefits -->
+						<div
+							class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100"
+						>
+							<ul class="space-y-4">
+								{
+									[
+										"Paketabgabe direkt mit Änderungsservice verbinden",
+										"Schnelle Abwicklung ohne lange Warteschlangen",
+										"Entspannte Parkmöglichkeiten direkt am Haus",
+										"Stressfreies Ausladen auch bei größeren Paketen",
+										"Persönlicher und freundlicher Service",
+										"Kostenlose Annahme von Retouren",
+										"Sofortiger Kauf von Paketmarken und Porto",
+										"Gute Erreichbarkeit im Stadtteil Eller",
+										"Verlässliche Annahmezeiten (auch Samstags)",
+										"Alles an einem Ort erledigen",
+									].map((item) => (
+										<li class="flex items-start gap-3 text-gray-700">
+											<span class="text-accent-warm mt-0.5">
+												<svg
+													class="w-5 h-5"
+													fill="none"
+													stroke="currentColor"
+													viewBox="0 0 24 24"
+												>
+													<path
+														stroke-linecap="round"
+														stroke-linejoin="round"
+														stroke-width="2"
+														d="M5 13l4 4L19 7"
+													/>
+												</svg>
+											</span>
+											<span class="text-sm font-medium">
+												{item}
+											</span>
+										</li>
+									))
+								}
+							</ul>
+						</div>
 					</div>
 
-					<!-- Image -->
-					<div class="relative">
-						<div
-							class="absolute -inset-4 bg-[#ffcc00] rounded-[3rem] rotate-3 opacity-20 blur-lg"
-						>
-						</div>
-						<div
-							class="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white"
-						>
-							<img
-								src={DhlImg.src}
-								alt="DHL Paketshop in Valentinas Änderungsschneiderei"
-								class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
-							/>
+					<!-- Image (Optimized & Discreet) -->
+					<div
+						class="relative order-1 lg:order-2 flex justify-center lg:justify-end"
+					>
+						<div class="relative w-full max-w-md">
 							<div
-								class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-8 text-white"
+								class="absolute inset-0 bg-accent-warm/5 rounded-[2.5rem] rotate-6 transform scale-95"
 							>
-								<p class="font-bold text-lg">
-									Dillenburger Weg 33a
-								</p>
-								<p class="text-[#ffcc00] font-bold">
-									40229 Düsseldorf
-								</p>
+							</div>
+							<div
+								class="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-lg border-4 border-white bg-white"
+							>
+								<img
+									src={DhlImg.src}
+									alt="DHL Paketshop Annahme in Düsseldorf Eller"
+									class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity"
+								/>
+								<!-- Discreet Logo Overlay -->
+								<div
+									class="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-lg shadow-sm border border-gray-100"
+								>
+									<span
+										class="text-[10px] font-bold text-gray-400 tracking-widest uppercase"
+										>Offizieller Partner</span
+									>
+								</div>
 							</div>
 						</div>
 					</div>

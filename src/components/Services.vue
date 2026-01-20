@@ -20,7 +20,7 @@
             <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent-warm"></span>Auch für Jeans</li>
           </ul>
           <div class="flex justify-between items-center text-sm font-semibold">
-             <span class="text-secondary-deep">ab 12€</span>
+             <span class="text-secondary-deep">ab 8€</span>
           </div>
         </div>
 
@@ -78,12 +78,7 @@
 
       </div>
 
-      <div class="mt-12 text-center">
-        <a href="#kontakt" class="inline-flex items-center font-semibold text-green-700 hover:text-green-900 transition-colors">
-            Unverbindliche Preisanfrage stellen
-            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-        </a>
-      </div>
+
     </div>
   </section>
 </template>
