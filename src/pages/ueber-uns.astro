@@ -8,52 +8,49 @@ import ext2 from "../assets/ausenansicht2.jpg";
 import int1 from "../assets/innenansicht1.jpg";
 import int2 from "../assets/innenansicht2.jpg";
 
-// Assets
-const dhlLogo =
-    "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/DHL_Logo.svg/200px-DHL_Logo.svg.png"; // Using a placeholder or external URL if specific asset not found, but better to omit or use simple text/SVG if possible. Proceding with pure SVG approach for icons as requested.
+// No external assets needed for icons, using inline SVGs for stability
 ---
 
 <Layout
-    title="Über Valentina Dubinsky – Ihre Änderungsschneiderei in Düsseldorf-Eller"
-    description="Seit über 40 Jahren: Ihre Änderungsschneiderei in Düsseldorf-Eller. Nachhaltig, präzise und mit Herz. Leder, Brautkleider, Hosen & mehr."
+    title="Valentina Dubinskaya – Ihre persönliche Schneiderin in Düsseldorf-Eller"
+    description="Handwerk aus Leidenschaft seit 2010 in Eller. Ihre Expertin für Änderungsschneiderei, Lederreparatur, Brautmode & DHL Paketshop. Jetzt Leistungen entdecken!"
 >
     <Header client:load />
 
-    <main class="pt-0">
-        <!-- 1. Hero Section (SEO & CI Fix) -->
+    <main class="pt-0 bg-neutral-50/30">
+        <!-- 1. Hero Section: Persönliche Begrüßung & Zeitstrahl -->
         <section
-            class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-accent-warm/5"
+            class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-white"
         >
             <div
-                class="absolute inset-0 bg-gradient-to-br from-white via-accent-warm/10 to-transparent"
+                class="absolute inset-0 bg-gradient-to-br from-[#FFF0F3] via-white to-transparent opacity-80"
             >
             </div>
             <div class="container mx-auto px-4 relative z-10">
                 <div class="max-w-4xl mx-auto text-center">
                     <span
-                        class="inline-block py-1 px-3 rounded-full bg-white border border-accent-warm/20 text-accent-warm text-xs font-bold uppercase tracking-wider mb-6 shadow-sm"
+                        class="inline-block py-1 px-4 rounded-full bg-white border border-[#FF91A4]/30 text-[#FF91A4] text-xs font-bold uppercase tracking-wider mb-6 shadow-sm"
                     >
-                        Seit 1984 in Eller
+                        Seit 2010 Ihr Atelier im Dillenburger Weg
                     </span>
                     <h1
                         class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight"
                     >
-                        Traditionelles Handwerk & Präzision: <br
+                        Valentina Dubinskaya – <br
                             class="hidden md:block"
-                        />Ihre Änderungsschneiderei in Düsseldorf-Eller
+                        />Ihre persönliche Schneiderin in Düsseldorf-Eller.
                     </h1>
                     <p
-                        class="text-xl text-gray-600 mb-10 leading-relaxed max-w-2xl mx-auto"
+                        class="text-xl text-gray-600 mb-10 leading-relaxed max-w-3xl mx-auto font-medium"
                     >
-                        Seit über 40 Jahren machen wir Unpassendes passend. Wir
-                        retten Ihre Lieblingsstücke mit Meisterhandwerk und
-                        Leidenschaft.
+                        Handwerk aus Leidenschaft. Seit 1984 im Beruf und seit
+                        2010 mit eigenem Atelier für Sie vor Ort.
                     </p>
                     <a
-                        href="/#leistungen"
-                        class="inline-flex items-center gap-2 bg-accent-warm text-white px-8 py-4 rounded-full font-bold shadow-lg hover:shadow-xl hover:scale-105 transition-all"
+                        href="/"
+                        class="inline-flex items-center gap-2 bg-[#FF91A4] text-white px-8 py-4 rounded-full font-bold shadow-lg hover:shadow-[#FF91A4]/40 hover:scale-105 transition-all"
                     >
-                        Unsere Leistungen entdecken
+                        Meine Leistungen entdecken
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="20"
@@ -71,7 +68,7 @@ const dhlLogo =
             </div>
         </section>
 
-        <!-- 2. The Story Section (Storytelling & Trust) -->
+        <!-- 2. Sektion: Unsere Philosophie (Herzlich & Familiär) -->
         <section class="py-24 bg-white">
             <div class="container mx-auto px-4">
                 <div
@@ -79,38 +76,61 @@ const dhlLogo =
                 >
                     <!-- Text -->
                     <div class="order-2 lg:order-1">
+                        <div
+                            class="inline-flex items-center gap-2 text-[#FF91A4] mb-4"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                ><path
+                                    d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"
+                                ></path></svg
+                            >
+                            <span
+                                class="font-bold uppercase tracking-wider text-sm"
+                                >Herzlich & Familiär</span
+                            >
+                        </div>
                         <h2 class="text-3xl font-bold text-gray-900 mb-6">
-                            Mehr als nur Nadel und Faden
+                            Meisterbetrieb mit Seele
                         </h2>
                         <div class="prose prose-lg text-gray-600 mb-8">
-                            <p class="mb-4">
-                                Willkommen bei Valentina Dubinsky. Was vor 40
-                                Jahren als kleine Passion begann, ist heute eine
-                                Institution in Düsseldorf-Eller. Für uns ist
-                                Kleidung nicht nur Stoff – sie ist Erinnerung,
-                                Ausdruck und ein Stück Heimat.
+                            <p
+                                class="mb-6 font-medium text-lg italic text-gray-800"
+                            >
+                                „Bei mir sind Sie keine Nummer. In meinem
+                                kleinen Meisterbetrieb wird jedes Kleidungsstück
+                                mit Liebe zum Detail und handwerklicher
+                                Präzision behandelt.“
                             </p>
                             <p>
-                                Wir glauben an <strong
-                                    >Nachhaltigkeit durch Langlebigkeit</strong
-                                >. In einer Welt der Fast Fashion setzen wir
-                                bewusst auf Reparatur und Pflege. Ob das geerbte
-                                Brautkleid oder die geliebte Lederjacke: Wir
-                                behandeln jedes Stück mit dem Respekt, den es
-                                verdient.
+                                In meiner Werkstatt setze ich auf Qualität statt
+                                Quantität. Mit <strong
+                                    >5 spezialisierten Nähmaschinen</strong
+                                > kann ich jedes Material – von feinster Seide bis
+                                zu robustem Leder – fachgerecht bearbeiten. Jede Naht
+                                sitzt, jeder Stich ist durchdacht.
                             </p>
                         </div>
 
                         <!-- Icons Grid -->
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                            <div class="flex flex-col gap-2">
-                                <div
-                                    class="w-10 h-10 rounded-full bg-accent-warm/10 flex items-center justify-center text-accent-warm"
-                                >
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                            <div
+                                class="flex flex-col gap-3 p-4 rounded-2xl bg-[#FFF0F3]/50 border border-[#FFF0F3]"
+                            >
+                                <div class="text-[#FF91A4]">
+                                    <!-- mdi:heart-half-full -->
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
-                                        width="20"
-                                        height="20"
+                                        width="32"
+                                        height="32"
                                         viewBox="0 0 24 24"
                                         fill="none"
                                         stroke="currentColor"
@@ -118,65 +138,75 @@ const dhlLogo =
                                         stroke-linecap="round"
                                         stroke-linejoin="round"
                                         ><path
-                                            d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
-                                        ></path><polyline
-                                            points="3.27 6.96 12 12.01 20.73 6.96"
-                                        ></polyline><line
-                                            x1="12"
-                                            y1="22.08"
-                                            x2="12"
+                                            d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"
+                                        ></path><path
+                                            d="M12 5 9.04 7.96a2.17 2.17 0 0 0 0 3.08c.86.86 2.26.86 3.12 0L12 11.2V5Z"
+                                        ></path></svg
+                                    >
+                                </div>
+                                <span class="font-bold text-gray-900 text-sm"
+                                    >Familiäre Atmosphäre</span
+                                >
+                            </div>
+                            <div
+                                class="flex flex-col gap-3 p-4 rounded-2xl bg-[#FFF0F3]/50 border border-[#FFF0F3]"
+                            >
+                                <div class="text-[#FF91A4]">
+                                    <!-- mdi:sewing-machine -->
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="32"
+                                        height="32"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        ><path
+                                            d="M21 9V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v10h11"
+                                        ></path><circle cx="16" cy="15" r="3"
+                                        ></circle><line
+                                            x1="2"
+                                            y1="16"
+                                            x2="22"
+                                            y2="16"></line><line
+                                            x1="10"
+                                            y1="4"
+                                            x2="13"
+                                            y2="9"></line><line
+                                            x1="9"
+                                            y1="16"
+                                            x2="9"
                                             y2="12"></line></svg
                                     >
                                 </div>
                                 <span class="font-bold text-gray-900 text-sm"
-                                    >Meisterhandwerk</span
+                                    >5 Spezial-Maschinen</span
                                 >
                             </div>
-                            <div class="flex flex-col gap-2">
-                                <div
-                                    class="w-10 h-10 rounded-full bg-accent-warm/10 flex items-center justify-center text-accent-warm"
-                                >
+                            <div
+                                class="flex flex-col gap-3 p-4 rounded-2xl bg-[#FFF0F3]/50 border border-[#FFF0F3]"
+                            >
+                                <div class="text-[#FF91A4]">
+                                    <!-- mdi:Leaf -->
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
-                                        width="20"
-                                        height="20"
+                                        width="32"
+                                        height="32"
                                         viewBox="0 0 24 24"
                                         fill="none"
                                         stroke="currentColor"
                                         stroke-width="2"
                                         stroke-linecap="round"
                                         stroke-linejoin="round"
-                                        ><circle cx="12" cy="12" r="10"
-                                        ></circle><path d="M12 6v6l4 2"
-                                        ></path></svg
-                                    >
-                                </div>
-                                <span class="font-bold text-gray-900 text-sm"
-                                    >40 Jahre Erfahrung</span
-                                >
-                            </div>
-                            <div class="flex flex-col gap-2">
-                                <div
-                                    class="w-10 h-10 rounded-full bg-accent-warm/10 flex items-center justify-center text-accent-warm"
-                                >
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="20"
-                                        height="20"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        ><circle cx="12" cy="12" r="10"
-                                        ></circle><line
-                                            x1="2"
-                                            y1="12"
-                                            x2="22"
-                                            y2="12"></line><path
-                                            d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
-                                        ></path></svg
+                                        ><path
+                                            d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 13-1.8 17.29A3.6 3.6 0 0 1 11.28 20Z"
+                                        ></path><line
+                                            x1="16"
+                                            y1="8"
+                                            x2="10"
+                                            y2="14"></line></svg
                                     >
                                 </div>
                                 <span class="font-bold text-gray-900 text-sm"
@@ -189,12 +219,16 @@ const dhlLogo =
                     <!-- Image -->
                     <div class="order-1 lg:order-2">
                         <div
-                            class="relative rounded-[2rem] overflow-hidden shadow-2xl rotate-1 hover:rotate-0 transition-transform duration-500"
+                            class="relative rounded-[2rem] overflow-hidden shadow-2xl rotate-1 group"
                         >
+                            <div
+                                class="absolute inset-0 bg-[#FF91A4]/10 mix-blend-overlay"
+                            >
+                            </div>
                             <img
                                 src={ownerImg.src}
-                                alt="Valentina Dubinsky im Atelier"
-                                class="w-full h-full object-cover"
+                                alt="Valentina Dubinskaya - Inhaberin der Änderungsschneiderei in Düsseldorf Eller"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                             />
                         </div>
                     </div>
@@ -202,344 +236,434 @@ const dhlLogo =
             </div>
         </section>
 
-        <!-- 3. Values & Expertise (Cards) -->
+        <!-- 3. SEO Content Block (Dienstleistungen & Expertise) -->
+        <section class="py-24 bg-[#FFF0F3]/30">
+            <div class="container mx-auto px-4 max-w-6xl">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">
+                        Meine Leidenschaft für Ihr Lieblingsstück
+                    </h2>
+                    <p class="text-gray-500 max-w-3xl mx-auto text-lg">
+                        Als Ihre persönliche Schneiderin in Düsseldorf Eller
+                        sorge ich dafür, dass Ihre Kleidung perfekt sitzt. Seit
+                        2010 führe ich meine Schneiderei mit Leidenschaft und
+                        rette täglich Textilien vor dem Wegwerfen.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                    <!-- Block 1: Handwerk & Technik -->
+                    <div
+                        class="bg-white p-8 rounded-3xl shadow-sm border border-white hover:border-[#FF91A4]/30 transition-colors"
+                    >
+                        <div class="flex items-start gap-4 mb-4">
+                            <div
+                                class="p-3 bg-[#FFF0F3] rounded-xl text-[#FF91A4]"
+                            >
+                                <!-- mdi:sewing-machine -->
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="28"
+                                    height="28"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    ><path
+                                        d="M21 9V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v10h11"
+                                    ></path><circle cx="16" cy="15" r="3"
+                                    ></circle><line
+                                        x1="2"
+                                        y1="16"
+                                        x2="22"
+                                        y2="16"></line><line
+                                        x1="10"
+                                        y1="4"
+                                        x2="13"
+                                        y2="9"></line></svg
+                                >
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mt-2">
+                                Handwerk trifft Spezialtechnik
+                            </h3>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            In meiner Änderungsschneiderei nutze ich fünf
+                            spezialisierte Nähmaschinen, um selbst
+                            anspruchsvolle Aufgaben wie eine <strong
+                                >Lederreparatur</strong
+                            > oder das <strong
+                                >Jeans kürzen mit Originalsaum</strong
+                            > perfekt umzusetzen. Mein Ziel ist eine Textilreparatur,
+                            die man nicht sieht, aber spürt – für mehr Freude an nachhaltiger
+                            Mode.
+                        </p>
+                        <a
+                            href="/#preise"
+                            class="text-sm font-bold text-[#FF91A4] hover:underline"
+                            >Direkt zu den Preisen für Hose kürzen &rarr;</a
+                        >
+                    </div>
+
+                    <!-- Block 2: Heimtextilien -->
+                    <div
+                        class="bg-white p-8 rounded-3xl shadow-sm border border-white hover:border-[#FF91A4]/30 transition-colors"
+                    >
+                        <div class="flex items-start gap-4 mb-4">
+                            <div
+                                class="p-3 bg-[#FFF0F3] rounded-xl text-[#FF91A4]"
+                            >
+                                <!-- mdi:curtains -->
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="28"
+                                    height="28"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    ><path d="M20 2v20"></path><path d="M4 2v20"
+                                    ></path><path d="M12 2v10"></path><path
+                                        d="M8 2v2c0 1.1.9 2 2 2h4a2 2 0 0 1 2 2v2"
+                                    ></path><path d="M12 20a4 4 0 0 1-4-4V2"
+                                    ></path><path d="M12 20a4 4 0 0 0 4-4V2"
+                                    ></path></svg
+                                >
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mt-2">
+                                Heimtextilien & Wohnen
+                            </h3>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            Nicht nur Kleidung braucht Pflege. Ich helfe Ihnen
+                            dabei, Ihr Zuhause schöner zu machen. Ob
+                            Kissenbezüge oder professionelles <strong
+                                >Vorhänge kürzen</strong
+                            > – ich sorge für den passenden Fall Ihrer Heimtextilien
+                            in Düsseldorf. Bringen Sie Ihre Maße mit, ich kümmere
+                            mich um den Rest.
+                        </p>
+                        <a
+                            href="/#kontakt"
+                            class="text-sm font-bold text-[#FF91A4] hover:underline"
+                            >Jetzt Termin vereinbaren &rarr;</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Expanded DHL Service (Groß & Informativ) -->
+        <section class="py-24 bg-white relative overflow-hidden">
+            <div class="container mx-auto px-4 max-w-6xl">
+                <div
+                    class="bg-[#FFF0F3]/30 rounded-[2.5rem] border border-[#FF91A4]/20 p-8 md:p-16 relative"
+                >
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                        <!-- Links: Text -->
+                        <div>
+                            <div
+                                class="inline-flex items-center gap-2 mb-6 bg-white px-4 py-2 rounded-full shadow-sm border border-[#FF91A4]/20"
+                            >
+                                <span class="w-2 h-2 rounded-full bg-[#FF91A4]"
+                                ></span>
+                                <span
+                                    class="text-xs font-bold text-gray-600 uppercase tracking-widest"
+                                    >Offizieller Partner</span
+                                >
+                            </div>
+                            <h2
+                                class="text-3xl md:text-4xl font-bold text-gray-900 mb-6"
+                            >
+                                Ihr zuverlässiger DHL Paketshop in
+                                Düsseldorf-Eller
+                            </h2>
+                            <p
+                                class="text-lg text-gray-600 mb-8 leading-relaxed"
+                            >
+                                Suchen Sie einen <strong
+                                    >Paketshop in der Nähe</strong
+                                >, um schnell eine Retoure abzugeben oder <strong
+                                    >Briefmarken zu kaufen</strong
+                                >? Kombinieren Sie Ihren Weg zu mir! Während ich
+                                Ihren Reißverschluss repariere, können Sie
+                                bequem Ihr DHL Paket abgeben. Sparen Sie sich
+                                zusätzliche Wege und Wartezeit.
+                            </p>
+
+                            <ul class="space-y-6">
+                                <li class="flex items-center gap-4">
+                                    <div
+                                        class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-[#FF91A4] shadow-sm"
+                                    >
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="24"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            ><path d="M16.5 9.4 7.55 4.24"
+                                            ></path><path
+                                                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
+                                            ></path><polyline
+                                                points="3.29 7 12 12.01 20.7 7"
+                                            ></polyline><line
+                                                x1="12"
+                                                y1="22"
+                                                x2="12"
+                                                y2="12"></line></svg
+                                        >
+                                    </div>
+                                    <div>
+                                        <strong class="block text-gray-900"
+                                            >Paketannahme & Retouren</strong
+                                        >
+                                        <span class="text-sm text-gray-500"
+                                            >Unkomplizierte Abwicklung</span
+                                        >
+                                    </div>
+                                </li>
+                                <li class="flex items-center gap-4">
+                                    <div
+                                        class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-[#FF91A4] shadow-sm"
+                                    >
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="24"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            ><path
+                                                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                                            ></path><polyline
+                                                points="22,6 12,13 2,6"
+                                            ></polyline></svg
+                                        >
+                                    </div>
+                                    <div>
+                                        <strong class="block text-gray-900"
+                                            >Briefversand & Marken</strong
+                                        >
+                                        <span class="text-sm text-gray-500"
+                                            >Direkt vor Ort kaufen</span
+                                        >
+                                    </div>
+                                </li>
+                                <li class="flex items-center gap-4">
+                                    <div
+                                        class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-[#FF91A4] shadow-sm"
+                                    >
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="24"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            ><path
+                                                d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"
+                                            ></path><circle cx="7" cy="17" r="2"
+                                            ></circle><path d="M9 17h6"
+                                            ></path><circle
+                                                cx="17"
+                                                cy="17"
+                                                r="2"></circle></svg
+                                        >
+                                    </div>
+                                    <div>
+                                        <strong class="block text-gray-900"
+                                            >Stressfreies Parken</strong
+                                        >
+                                        <span class="text-sm text-gray-500"
+                                            >Direkt vor der Tür halten</span
+                                        >
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Rechts: Visual / Logo Icon -->
+                        <div
+                            class="relative flex items-center justify-center lg:justify-end"
+                        >
+                            <div
+                                class="bg-white p-8 rounded-[2rem] shadow-xl border border-gray-100 w-full max-w-sm flex flex-col items-center text-center"
+                            >
+                                <span
+                                    class="text-xs font-bold text-gray-400 mb-4 tracking-widest uppercase block"
+                                    >Offizieller Partner</span
+                                >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    class="w-32 h-20 text-[#d40511] mb-6"
+                                    fill="currentColor"
+                                >
+                                    <path
+                                        d="M11 15H9v2h2v-2zm2 0h-2v2h2v-2zm7.5-6.5l-2.5 7h-2.1l2.5-7h2.1zm-18 0l-2.5 7h-2.1l2.5-7h2.1zm8.7 0l-2.5 7h-2.1l2.5-7h2.1z"
+                                    ></path>
+                                    <title>DHL Logo</title>
+                                </svg>
+                                <div class="h-px w-full bg-gray-100 my-4"></div>
+                                <p class="text-sm text-gray-500 font-medium">
+                                    Annahme, Versand & Verkauf
+                                </p>
+                                <p class="text-xs text-gray-400 mt-2">
+                                    Dillenburger Weg 1, Eller
+                                </p>
+                            </div>
+
+                            <!-- Decor -->
+                            <div
+                                class="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-[#d40511]/5 rounded-full blur-3xl"
+                            >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Warum Valentina? (Trust-Grid) -->
         <section class="py-24 bg-neutral-50">
             <div class="container mx-auto px-4">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl font-bold text-gray-900 mb-4">
-                        Unsere Philosophie
+                        Warum Kunden uns vertrauen
                     </h2>
-                    <p class="text-gray-500 max-w-2xl mx-auto">
-                        Warum Kunden aus ganz Düsseldorf zu uns kommen.
-                    </p>
                 </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+                >
                     <!-- Card 1 -->
                     <div
-                        class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-lg transition-shadow border border-gray-100"
+                        class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
                     >
-                        <div class="text-4xl mb-6">🌿</div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">
-                            Nachhaltigkeit
-                        </h3>
-                        <p class="text-gray-600 leading-relaxed">
-                            Reparieren statt wegwerfen. Wir verlängern das Leben
-                            Ihrer Kleidung und sparen so wertvolle Ressourcen.
-                            Gut für die Umwelt, gut für Ihren Geldbeutel.
+                        <h4 class="font-bold text-lg text-gray-900 mb-2">
+                            40 Jahre Erfahrung
+                        </h4>
+                        <p class="text-sm text-gray-600">
+                            Meisterhaftes Wissen im Textilhandwerk seit 1984.
                         </p>
                     </div>
                     <!-- Card 2 -->
                     <div
-                        class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-lg transition-shadow border border-gray-100"
+                        class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
                     >
-                        <div class="text-4xl mb-6">✂️</div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">
-                            Präzision
-                        </h3>
-                        <p class="text-gray-600 leading-relaxed">
-                            Ob feine Seide, robustes Leder oder der perfekte
-                            Sitz des Sakkos – wir arbeiten millimetergenau. Ihre
-                            Garderobe sitzt wie angegossen.
+                        <h4 class="font-bold text-lg text-gray-900 mb-2">
+                            Express-Service
+                        </h4>
+                        <p class="text-sm text-gray-600">
+                            Schnelle Hilfe bei kleinen Rissen oder Säumen.
                         </p>
                     </div>
                     <!-- Card 3 -->
                     <div
-                        class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-lg transition-shadow border border-gray-100"
+                        class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
                     >
-                        <div class="text-4xl mb-6">❤️</div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">
-                            Persönlicher Service
-                        </h3>
-                        <p class="text-gray-600 leading-relaxed">
-                            Wir sind Nachbarn und Partner. Ehrliche Beratung,
-                            transparente Preise und ein Lächeln gehören bei uns
-                            zum Handwerk dazu.
+                        <h4 class="font-bold text-lg text-gray-900 mb-2">
+                            Transparente Preise
+                        </h4>
+                        <p class="text-sm text-gray-600">
+                            Faire Kalkulation ohne versteckte Kosten.
+                        </p>
+                    </div>
+                    <!-- Card 4 -->
+                    <div
+                        class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
+                    >
+                        <h4 class="font-bold text-lg text-gray-900 mb-2">
+                            Lokale Nähe
+                        </h4>
+                        <p class="text-sm text-gray-600">
+                            Ihre Schneiderin direkt im Herzen von Eller.
                         </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 4. DHL Section (Complete Redesign: No Yellow, CI Integraton) -->
-        <section class="py-16 md:py-24 bg-white relative">
-            <div class="container mx-auto px-4 max-w-5xl">
-                <div
-                    class="bg-white rounded-3xl border border-gray-200 shadow-sm p-8 md:p-12 relative overflow-hidden"
-                >
-                    <!-- Top Badge / Logo Area -->
-                    <div class="flex justify-between items-start mb-8">
-                        <div>
-                            <h2
-                                class="text-2xl md:text-3xl font-bold text-gray-900 mb-2"
-                            >
-                                DHL Service in Düsseldorf-Eller: Ihr Partner vor
-                                Ort
-                            </h2>
-                            <p class="text-gray-500">
-                                Verbinden Sie Ihre Schneider-Termine mit Ihren
-                                Postgeschäften – effizient und unkompliziert.
-                            </p>
-                        </div>
-                        <!-- Mini DHL Logo Icon -->
-                        <div
-                            class="hidden md:flex flex-col items-center justify-center p-3 bg-gray-50 rounded-xl border border-gray-100"
-                        >
-                            <span
-                                class="text-xs font-bold text-gray-400 mb-1 tracking-widest uppercase"
-                                >Official</span
-                            >
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24"
-                                class="w-12 h-8 text-red-600"
-                                fill="currentColor"
-                            >
-                                <!-- Simple Text representation of DHL logo styling or just font -->
-                                <path d="M0 0h24v24H0z" fill="none"></path>
-                                <path
-                                    d="M11 15H9v2h2v-2zm2 0h-2v2h2v-2zm7.5-6.5l-2.5 7h-2.1l2.5-7h2.1zm-18 0l-2.5 7h-2.1l2.5-7h2.1zm8.7 0l-2.5 7h-2.1l2.5-7h2.1z"
-                                    stroke="currentColor"
-                                    stroke-width="2"></path>
-                                <!-- Note: Using generic path for visual rep. In production, use official SVG asset. -->
-                                <text
-                                    x="50%"
-                                    y="50%"
-                                    dominant-baseline="middle"
-                                    text-anchor="middle"
-                                    font-weight="900"
-                                    font-size="10"
-                                    fill="#d40511">DHL</text
-                                >
-                            </svg>
-                        </div>
-                    </div>
-
-                    <!-- 2x2 Grid Benefits -->
-                    <div
-                        class="grid grid-cols-1 md:grid-cols-2 gap-y-10 gap-x-12"
-                    >
-                        <!-- Benefit 1 -->
-                        <div class="flex gap-4">
-                            <div
-                                class="mt-1 flex-shrink-0 w-12 h-12 bg-accent-warm/10 rounded-full flex items-center justify-center text-accent-warm"
-                            >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    class="w-6 h-6"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                >
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                        d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
-                                    ></path>
-                                </svg>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-gray-900 mb-1">
-                                    Paketannahme
-                                </h4>
-                                <p class="text-sm text-gray-500 leading-snug">
-                                    Bequeme Abgabe von Retouren & Paketen.
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Benefit 2 -->
-                        <div class="flex gap-4">
-                            <div
-                                class="mt-1 flex-shrink-0 w-12 h-12 bg-accent-warm/10 rounded-full flex items-center justify-center text-accent-warm"
-                            >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    class="w-6 h-6"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                >
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                                    ></path>
-                                </svg>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-gray-900 mb-1">
-                                    Briefversand
-                                </h4>
-                                <p class="text-sm text-gray-500 leading-snug">
-                                    Verkauf von Briefmarken direkt vor Ort.
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Benefit 3 -->
-                        <div class="flex gap-4">
-                            <div
-                                class="mt-1 flex-shrink-0 w-12 h-12 bg-accent-warm/10 rounded-full flex items-center justify-center text-accent-warm"
-                            >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    class="w-6 h-6"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                >
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                        d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"
-                                    ></path>
-                                </svg>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-gray-900 mb-1">
-                                    Parkplätze
-                                </h4>
-                                <p class="text-sm text-gray-500 leading-snug">
-                                    Stressfreies Parken direkt vor der Tür.
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Benefit 4 -->
-                        <div class="flex gap-4">
-                            <div
-                                class="mt-1 flex-shrink-0 w-12 h-12 bg-accent-warm/10 rounded-full flex items-center justify-center text-accent-warm"
-                            >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    class="w-6 h-6"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                >
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                                    ></path>
-                                </svg>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-gray-900 mb-1">
-                                    Zeitersparnis
-                                </h4>
-                                <p class="text-sm text-gray-500 leading-snug">
-                                    Kombinieren Sie Post & Schneiderei.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- CTA -->
-                    <div
-                        class="mt-10 pt-8 border-t border-gray-100 flex justify-center md:justify-start"
-                    >
-                        <a
-                            href="#footer-map"
-                            class="text-sm font-semibold text-accent-warm hover:text-accent-warm/80 transition-colors flex items-center gap-2"
-                        >
-                            Jetzt Standort auf Karte ansehen
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                class="w-4 h-4"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                            >
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                        </a>
-                    </div>
-
-                    <!-- Decorative Background Blob -->
-                    <div
-                        class="absolute -right-20 -top-20 w-64 h-64 bg-accent-warm/5 rounded-full blur-3xl pointer-events-none"
-                    >
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 5. Gallery (Masonry Grid) -->
-        <section class="py-24 bg-neutral-50 mb-16">
+        <!-- 6. Galerie & Abschluss -->
+        <section class="py-24 bg-white">
             <div class="container mx-auto px-4">
-                <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">
-                    Einblick in unser Atelier
+                <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">
+                    Einblick ins Atelier
                 </h2>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <!-- Left Col -->
-                    <div class="flex flex-col gap-6">
-                        <div
-                            class="rounded-xl overflow-hidden shadow-md h-64 md:h-80"
-                        >
-                            <img
-                                src={ext1.src}
-                                alt="Außenansicht"
-                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-                            />
-                        </div>
-                        <div class="rounded-xl overflow-hidden shadow-md h-64">
-                            <img
-                                src={int1.src}
-                                alt="Innenansicht"
-                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-                            />
-                        </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-20">
+                    <div
+                        class="rounded-xl overflow-hidden shadow-lg h-80 group"
+                    >
+                        <img
+                            src={ext1.src}
+                            alt="Änderungsschneiderei Düsseldorf Eller Außenansicht"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                        />
                     </div>
-                    <!-- Right Col -->
-                    <div class="flex flex-col gap-6">
-                        <div class="rounded-xl overflow-hidden shadow-md h-64">
-                            <img
-                                src={int2.src}
-                                alt="Details"
-                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-                            />
-                        </div>
-                        <div
-                            class="rounded-xl overflow-hidden shadow-md h-64 md:h-80"
-                        >
-                            <img
-                                src={ext2.src}
-                                alt="Eingang"
-                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-                            />
-                        </div>
+                    <div
+                        class="rounded-xl overflow-hidden shadow-lg h-80 group"
+                    >
+                        <img
+                            src={int1.src}
+                            alt="Schneiderei Arbeitsplatz Nähmaschine"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                        />
+                    </div>
+                    <div
+                        class="rounded-xl overflow-hidden shadow-lg h-80 group"
+                    >
+                        <img
+                            src={int2.src}
+                            alt="Stoffauswahl und Garne"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                        />
+                    </div>
+                    <div
+                        class="rounded-xl overflow-hidden shadow-lg h-80 group"
+                    >
+                        <img
+                            src={ext2.src}
+                            alt="Eingang Dillenburger Weg"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                        />
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- 6. Footer CTA Banner -->
-        <section class="py-20 bg-accent-warm/10">
-            <div class="container mx-auto px-4 text-center">
-                <h2 class="text-3xl font-bold text-gray-900 mb-6">
-                    Wir machen Unpassendes passend
-                </h2>
-                <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-                    Besuchen Sie uns direkt im Dillenburger Weg 1, 40229
-                    Düsseldorf-Eller.
-                </p>
-                <a
-                    href="/"
-                    class="inline-block bg-gray-900 text-white px-8 py-4 rounded-full font-bold shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all"
+                <!-- Final CTA Banner -->
+                <div
+                    class="bg-[#FF91A4]/10 rounded-3xl p-12 text-center border border-[#FF91A4]/20"
                 >
-                    Preise & Öffnungszeiten ansehen
-                </a>
+                    <h3
+                        class="text-2xl md:text-3xl font-bold text-gray-900 mb-4"
+                    >
+                        Haben Sie ein Lieblingsstück, das Hilfe braucht?
+                    </h3>
+                    <p class="text-gray-600 mb-8 max-w-xl mx-auto">
+                        Kommen Sie vorbei! Ich berate Sie gerne persönlich und
+                        finde die beste Lösung für Ihre Kleidung.
+                    </p>
+                    <a
+                        href="/#kontakt"
+                        class="inline-block bg-gray-900 text-white px-8 py-4 rounded-full font-bold shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all"
+                    >
+                        Anfahrt & Kontakt
+                    </a>
+                </div>
             </div>
         </section>
     </main>
