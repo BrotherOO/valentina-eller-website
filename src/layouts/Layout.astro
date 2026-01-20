@@ -3,6 +3,7 @@ import "../styles/global.css";
 import favicon from "../assets/valentina_favicon.png";
 import CookieBanner from "../components/CookieBanner.vue";
 import ClickRipple from "../components/ClickRipple.astro"; // Import ClickRipple
+import Analytics from '@vercel/analytics/astro';
 
 interface Props {
 	title?: string;
@@ -105,5 +106,6 @@ const {
 		<slot />
 		<CookieBanner client:load />
 		<ClickRipple />
+		<Analytics />
 	</body>
 </html>
