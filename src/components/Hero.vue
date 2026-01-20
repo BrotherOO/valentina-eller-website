@@ -27,15 +27,15 @@
           </div>
       </div>
 
-      <h1 class="text-5xl md:text-7xl font-serif font-bold text-secondary-deep mb-6 tracking-tight leading-tight [text-shadow:0_2px_20px_rgba(255,255,255,0.8)]">
-        Ihre Lieblingskleidung – <br class="hidden md:block" />
-        <span class="text-[#F8A08C] relative inline-block">
-            neu geboren
+      <h1 class="text-4xl md:text-6xl font-serif font-bold text-secondary-deep mb-6 tracking-tight leading-tight [text-shadow:0_2px_20px_rgba(255,255,255,0.8)]">
+        Änderungsschneiderei & <span class="text-[#d40511]">DHL</span> Paketshop<br class="hidden md:block" />
+        in <span class="text-[#F8A08C] relative inline-block">
+            Düsseldorf-Eller
             <!-- Underline decoration -->
             <svg class="absolute w-full h-3 -bottom-1 left-0 text-[#F8A08C] opacity-60" viewBox="0 0 100 10" preserveAspectRatio="none">
                 <path d="M0 5 Q 50 10 100 5" stroke="currentColor" stroke-width="4" fill="none" />
             </svg>
-        </span>.
+        </span>
       </h1>
       
       <p class="text-xl md:text-2xl text-secondary-deep/90 max-w-2xl mb-8 leading-relaxed font-sans font-medium [text-shadow:0_1px_10px_rgba(255,255,255,0.6)]">

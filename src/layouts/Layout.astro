@@ -23,6 +23,15 @@ const {
 		<link rel="icon" type="image/png" href={favicon.src} />
 		<meta name="generator" content={Astro.generator} />
 		<meta name="description" content={description} />
+
+		<!-- OpenGraph Tags -->
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:type" content="website" />
+		<meta property="og:image" content="/og-image.jpg" />
+		<!-- Assuming a default OG image exists or we should add one, using a placeholder for now -->
+		<meta property="og:locale" content="de_DE" />
+
 		<meta
 			http-equiv="Content-Security-Policy"
 			content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://api.dicebear.com; frame-src https://www.google.com; connect-src 'self'; object-src 'none'; base-uri 'self';"
