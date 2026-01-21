@@ -1,15 +1,17 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Footer from "../components/Footer.astro";
+import Header from "../components/Header.vue";
 ---
 
 <Layout
     title="Impressum – Valentina Änderungsschneiderei"
     description="Rechtliche Angaben und Impressum."
 >
+    <Header client:load />
     <main class="fixed-nav-spacing pt-32 pb-20 container mx-auto px-4 md:px-8">
         <div
-            class="prose prose-lg mx-auto bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-gray-100 max-w-3xl"
+            class="prose prose-lg mx-auto bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-gray-100 max-w-3xl break-words"
         >
             <h1 class="text-3xl font-bold mb-8 text-secondary-deep font-serif">
                 Impressum
@@ -56,7 +58,7 @@ import Footer from "../components/Footer.astro";
                     href="https://ec.europa.eu/consumers/odr/"
                     target="_blank"
                     rel="noopener"
-                    class="text-green-600 hover:underline"
+                    class="text-[#e94470] hover:underline"
                     >https://ec.europa.eu/consumers/odr/</a
                 >.<br />
                 Unsere E-Mail-Adresse finden Sie oben im Impressum.

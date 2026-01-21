@@ -40,13 +40,9 @@
                         {{ reviews[currentIndex].text }}
                      </p>
                      
-                     <div class="flex flex-col items-center w-full mt-auto">
-                        <div class="w-16 h-16 bg-gray-100 rounded-full mb-3 overflow-hidden shadow-sm border border-gray-100">
-                             <img :src="`https://api.dicebear.com/9.x/avataaars/svg?seed=${reviews[currentIndex].name}`" alt="Avatar" class="w-full h-full object-cover" />
+                        <div class="flex flex-col items-center w-full mt-auto">
+                           <p class="font-bold text-gray-900 text-lg">{{ reviews[currentIndex].name }}</p>
                         </div>
-                        <p class="font-bold text-gray-900 text-lg">{{ reviews[currentIndex].name }}</p>
-                        <p class="text-sm text-gray-500 uppercase tracking-widest font-medium">{{ reviews[currentIndex].type }}</p>
-                     </div>
                 </div>
              </div>
            </Transition>
