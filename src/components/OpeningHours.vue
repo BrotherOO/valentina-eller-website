@@ -102,28 +102,29 @@ const isSunday = computed(() => currentDay.value === 0);
 // Status Logic
 const status = computed(() => {
     const t = timeFloat.value;
+    const d = currentDay.value;
+
+    const nextWorkdayText = (d === 6) ? ", öffnet am Montag" : ", öffnet morgen";
 
     // 0. Sunday
     if (isSunday.value) {
-         return { msg: "Heute geschlossen", type: "closed" };
+         return { msg: "Sonntag geschlossen", type: "closed" };
     }
 
     // 1. Long Days (Mo, Di, Do, Fr)
     if (isLongDayGroup.value) {
-        if (t < 9) return { msg: "Heute geschlossen", type: "closed" };
-        if (t < 10) return { msg: "Öffnet demnächst um 10:00 Uhr", type: "soon" }; // 09:00 - 09:59
-        if (t < 13) return { msg: "Jetzt geöffnet", type: "open" }; // 10:00 - 12:59
-        if (t < 15) return { msg: "Mittagspause – Geöffnet ab 15:00 Uhr", type: "lunch" }; // 13:00 - 14:59
-        if (t < 18) return { msg: "Jetzt geöffnet", type: "open" }; // 15:00 - 17:59
-        return { msg: "Heute geschlossen", type: "closed" }; // >= 18:00
+        if (t < 10) return { msg: "Öffnet gleich", type: "soon" };
+        if (t < 13) return { msg: "Geöffnet", type: "open" };
+        if (t < 15) return { msg: "Mittagspause – wir öffnen gleich wieder", type: "lunch" };
+        if (t < 18) return { msg: "Geöffnet", type: "open" };
+        return { msg: `Heute bereits geschlossen${nextWorkdayText}`, type: "closed" }; // >= 18:00
     }
 
     // 2. Short Days (Wed, Sat)
     if (isWednesday.value || isSaturday.value) {
-        if (t < 9) return { msg: "Heute geschlossen", type: "closed" };
-        if (t < 10) return { msg: "Öffnet demnächst um 10:00 Uhr", type: "soon" };
-        if (t < 13) return { msg: "Jetzt geöffnet", type: "open" };
-        return { msg: "Heute geschlossen", type: "closed" }; // >= 13:00
+        if (t < 10) return { msg: "Öffnet gleich", type: "soon" };
+        if (t < 13) return { msg: "Geöffnet", type: "open" };
+        return { msg: `Heute bereits geschlossen${nextWorkdayText}`, type: "closed" }; // >= 13:00
     }
 
     return { msg: "Geschlossen", type: "closed" };

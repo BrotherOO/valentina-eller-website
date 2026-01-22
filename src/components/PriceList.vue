@@ -2,7 +2,7 @@
   <section id="preise" class="py-24 bg-white scroll-mt-20">
     <div class="container mx-auto px-4">
       <div class="text-center mb-4">
-        <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-4">Preisübersicht</h2>
+        <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-4">Faire Festpreise für Ihr Handwerk</h2>
         <p class="text-gray-500">Transparente Preise für erstklassiges Handwerk. Alle Preise sind Richtwerte und können je nach Aufwand variieren.</p>
       </div>
 
@@ -61,9 +61,9 @@
 import { ref } from 'vue';
 
 const prices = [
-  { name: 'Hose kürzen', price: 'ab 8,00 €', duration: '1 Tag' },
-  { name: 'Reißverschluss wechseln Hose', price: 'ab 14,00 €', duration: '1-2 Tage' },
-  { name: 'Reißverschluss wechseln Jacke', price: 'ab 22,00 €', duration: '2 Tage' },
+  { name: 'Hose kürzen / enger machen', price: 'ab 8,00 €', duration: '1 Tag' },
+  { name: 'Kleid / Abendmode anpassen', price: 'ab 20,00 €', duration: 'Nach Aufwand' },
+  { name: 'Reißverschluss austauschen (Jacke/Hose)', price: 'ab 14,00 €', duration: '1-2 Tage' },
   { name: 'Rock kürzen', price: 'ab 16,00 €', duration: '1-2 Tage' },
   { name: 'Jacke Ärmel kürzen', price: 'ab 18,00 €', duration: '2 Tage' },
   { name: 'Sakko Ärmel kürzen', price: 'ab 16,00 €', duration: '2 Tage' },

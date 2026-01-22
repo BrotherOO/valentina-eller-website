@@ -2,8 +2,8 @@
   <section id="dienstleistungen" class="py-20 bg-white">
     <div class="container mx-auto px-4">
       <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-5xl font-bold text-gray-800 mb-4">Unsere Dienstleistungen</h2>
-        <p class="text-gray-500 max-w-2xl mx-auto">Von einfachen Anpassungen bis hin zu komplexen Reparaturen – wir kümmern uns um jedes Detail Ihrer Garderobe.</p>
+        <h2 class="text-3xl md:text-5xl font-bold text-gray-800 mb-4">Unsere Schneider-Dienstleistungen</h2>
+        <p class="text-gray-500 max-w-2xl mx-auto">Wir retten Ihre Lieblingsstücke. Von einfachen Anpassungen bis hin zu komplexen Reparaturen – wir kümmern uns um jedes Detail Ihrer Garderobe.</p>
       </div>
 
       <!-- 4-Card Grid Layout -->
@@ -13,8 +13,8 @@
           <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-accent-warm mb-6 shadow-sm group-hover:scale-110 transition-transform">
              <MdiRuler class="text-2xl" />
           </div>
-          <h3 class="text-xl font-bold text-gray-900 mb-2">Hosen & Ärmel kürzen</h3>
-          <p class="text-gray-500 text-sm mb-4 leading-relaxed">Perfekte Länge für den perfekten Fall. Originalsaum oder neuer Abschluss.</p>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Hose kürzen & ändern</h3>
+          <p class="text-gray-500 text-sm mb-4 leading-relaxed">Perfekte Länge für den perfekten Fall. Hosen enger machen, Originalsaum erhalten oder neuer Abschluss.</p>
           <ul class="text-sm text-gray-600 space-y-2 mb-6">
             <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent-warm"></span>Schnell & sauber</li>
             <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent-warm"></span>Originalsaum möglich</li>
@@ -30,8 +30,8 @@
           <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-accent-warm mb-6 shadow-sm group-hover:scale-110 transition-transform">
              <MdiZipper class="text-2xl" />
           </div>
-          <h3 class="text-xl font-bold text-gray-900 mb-2">Änderungen & Reparaturen</h3>
-          <p class="text-gray-500 text-sm mb-4 leading-relaxed">Wir passen Ihre Kleidung an oder retten Lieblingsstücke mit fachgerechten Reparaturen.</p>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Kleid anpassen & Reparatur</h3>
+          <p class="text-gray-500 text-sm mb-4 leading-relaxed">Wir passen Ihr Kleid oder Abendmode an und retten Lieblingsstücke mit fachgerechten Reparaturen.</p>
           <ul class="text-sm text-gray-600 space-y-2 mb-6">
             <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent-warm"></span>Taille & Passform</li>
             <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent-warm"></span>Reißverschlüsse</li>
