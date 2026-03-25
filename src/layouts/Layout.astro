@@ -30,13 +30,13 @@ const {
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
 		<meta property="og:type" content="website" />
-		<meta property="og:image" content="/og-image.jpg" />
+		<meta property="og:image" content="/logo.png" />
 		<!-- Assuming a default OG image exists or we should add one, using a placeholder for now -->
 		<meta property="og:locale" content="de_DE" />
 
 		<meta
 			http-equiv="Content-Security-Policy"
-			content="default-src 'self'; script-src 'self' 'unsafe-inline' https://*.clarity.ms https://www.clarity.ms https://c.bing.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://api.dicebear.com https://*.clarity.ms https://www.clarity.ms https://c.bing.com; frame-src https://www.google.com; connect-src 'self' https://*.clarity.ms https://www.clarity.ms https://c.bing.com; object-src 'none'; base-uri 'self';"
+			content="default-src 'self'; script-src 'self' 'unsafe-inline' https://*.clarity.ms https://www.clarity.ms https://c.bing.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://api.dicebear.com https://*.clarity.ms https://www.clarity.ms https://c.bing.com https://*.google-analytics.com https://*.googletagmanager.com; frame-src https://www.google.com; connect-src 'self' https://*.clarity.ms https://www.clarity.ms https://c.bing.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; object-src 'none'; base-uri 'self';"
 		/>
 		<meta http-equiv="X-Content-Type-Options" content="nosniff" />
 		<meta name="referrer" content="strict-origin-when-cross-origin" />
@@ -98,6 +98,15 @@ const {
 				],
 				"priceRange": "€"
 			}
+		</script>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-RGGR8CFCYQ"></script>
+		<script is:inline>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'G-RGGR8CFCYQ');
 		</script>
 		<script type="text/javascript" is:inline>
 			(function (c, l, a, r, i, t, y) {

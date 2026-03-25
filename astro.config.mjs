@@ -4,9 +4,12 @@ import vue from '@astrojs/vue';
 import tailwindcss from '@tailwindcss/vite';
 import Icons from 'unplugin-icons/vite';
 
+import sitemap from '@astrojs/sitemap';
+
 // https://astro.build/config
 export default defineConfig({
-  integrations: [vue()],
+  site: 'https://www.schneiderei-eller.de',
+  integrations: [vue(), sitemap()],
 
   vite: {
     plugins: [
