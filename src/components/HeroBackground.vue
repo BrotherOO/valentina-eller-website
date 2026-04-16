@@ -25,8 +25,8 @@ interface SilkProps {
 }
 
 const props = withDefaults(defineProps<SilkProps>(), {
-  speed: 6.0, // Lively fluttering
-  scale: 1,
+  speed: 4.5, // Elegantes, langsameres Wehen
+  scale: 1.5, // Mehr Wellen, stoffähnlichere Dichte
   color: '#F8A08C', // Orange-Salmon
   noiseIntensity: 0.5,
   rotation: 0,
@@ -103,11 +103,11 @@ void main() {
                                    0.02 * tOffset) +
                            sin(20.0 * (tex.x + tex.y - 0.1 * tOffset)));
 
-  // Mix white to ensure shadows aren't pitch black, keeping it pastel
-  vec3 mixedColor = mix(uColor, vec3(1.0), 0.2);
+  // Weniger Weiß beimischen, damit die Farbe tiefer wirkt
+  vec3 mixedColor = mix(uColor, vec3(1.0), 0.15);
   
-  // Apply pattern but clamp minimum brightness to 0.5
-  float brightness = 0.5 + 0.5 * pattern;
+  // Kontrast erhöhen: Tiefere Schatten (0.35) für klarere Stofferhebungen
+  float brightness = 0.35 + 0.65 * pattern;
   
   vec4 col = vec4(mixedColor, 1.0) * vec4(brightness) - rnd / 20.0 * uNoiseIntensity;
   col.a = 1.0;
