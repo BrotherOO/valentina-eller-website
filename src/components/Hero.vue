@@ -27,19 +27,23 @@
           </div>
       </div>
 
-      <h1 class="text-4xl md:text-6xl font-serif font-bold text-secondary-deep mb-6 tracking-tight leading-tight [text-shadow:0_2px_20px_rgba(255,255,255,0.8)]">
-        Änderungsschneiderei & <span class="text-[#F8A08C]">DHL</span> Paketshop<br class="hidden md:block" />
-        in <span class="text-[#F8A08C] relative inline-block">
+      <h1 class="text-4xl md:text-6xl font-serif font-bold text-secondary-deep mb-4 tracking-tight leading-tight [text-shadow:0_2px_20px_rgba(255,255,255,0.8)]">
+        Änderungsschneiderei<br class="hidden md:block" />
+        <span class="text-[#F8A08C] relative inline-block">
             Düsseldorf-Eller
             <!-- Underline decoration -->
             <svg class="absolute w-full h-3 -bottom-1 left-0 text-[#F8A08C] opacity-60" viewBox="0 0 100 10" preserveAspectRatio="none">
                 <path d="M0 5 Q 50 10 100 5" stroke="currentColor" stroke-width="4" fill="none" />
             </svg>
-        </span>
+        </span><br class="hidden md:block" />
+        – Valentinas Nähstube
       </h1>
+      <h2 class="text-2xl md:text-3xl font-serif font-semibold text-secondary-deep/90 mb-6 tracking-tight leading-tight [text-shadow:0_1px_10px_rgba(255,255,255,0.6)]">
+        Änderungsschneiderei & offizieller DHL Paketshop in Eller
+      </h2>
       
       <p class="text-xl md:text-2xl text-secondary-deep/90 max-w-2xl mb-8 leading-relaxed font-sans font-medium [text-shadow:0_1px_10px_rgba(255,255,255,0.6)]">
-        Nachhaltige Reparaturen, professionelle Änderungen, <strong>Wäsche- & Bügelservice</strong> sowie <strong>DHL Service</strong> im Herzen von Düsseldorf-Eller. <span class="text-[#F8A08C] font-semibold">Seit über 40 Jahren.</span>
+        Als Schneiderei im Herzen von Düsseldorf-Eller bieten wir professionelle Textilpflege und Änderungen für Ihre Lieblingskleidung. Nachhaltige Reparaturen, professionelle Anpassungen, <strong>Wäsche- & Bügelservice</strong> sowie <strong>DHL Service</strong> aus einer Hand. <span class="text-[#F8A08C] font-semibold">Seit über 40 Jahren.</span>
       </p>
 
       <!-- Feature Icons Strip (Moved up & Extended) -->

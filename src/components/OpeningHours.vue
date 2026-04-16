@@ -17,9 +17,9 @@
         <span class="font-medium">Mo, Di, Do, Fr</span>
         <div class="flex flex-col text-right">
              <!-- Morning Slot: Bold if Open AND it is morning slot -->
-             <span :class="{ 'text-gray-900 font-extrabold scale-105 origin-right': isLongDayGroup && isMorningOpen }">10:00 - 13:00</span>
+             <span :class="{ 'text-green-600 font-extrabold scale-105 origin-right': isLongDayGroup && isMorningOpen }">10:00 - 13:00</span>
              <!-- Afternoon Slot: Bold if Open AND it is afternoon slot -->
-             <span :class="{ 'text-gray-900 font-extrabold scale-105 origin-right': isLongDayGroup && isAfternoonOpen }">15:00 - 18:00</span>
+             <span :class="{ 'text-green-600 font-extrabold scale-105 origin-right': isLongDayGroup && isAfternoonOpen }">15:00 - 18:00</span>
         </div>
       </li>
 
@@ -28,14 +28,14 @@
           :class="{ 'font-bold text-gray-900 bg-[#FFF0F3]/30 px-2 -mx-2 rounded-lg': isWednesday }">
         <span class="font-medium">Mittwoch</span>
         <!-- Wednesday only has morning slot -->
-        <span :class="{ 'text-gray-900 font-extrabold scale-105 origin-right': isWednesday && isMorningOpen }">10:00 - 13:00</span>
+        <span :class="{ 'text-green-600 font-extrabold scale-105 origin-right': isWednesday && isMorningOpen }">10:00 - 13:00</span>
       </li>
 
       <!-- Saturday -->
       <li class="flex justify-between pt-2 transition-colors duration-300"
            :class="{ 'font-bold text-gray-900 bg-[#FFF0F3]/30 px-2 -mx-2 rounded-lg': isSaturday }">
         <span class="font-medium">Samstag</span>
-        <span :class="{ 'text-gray-900 font-extrabold scale-105 origin-right': isSaturday && isMorningOpen }">10:00 - 13:00</span>
+        <span :class="{ 'text-green-600 font-extrabold scale-105 origin-right': isSaturday && isMorningOpen }">10:00 - 13:00</span>
       </li>
     </ul>
 
@@ -100,11 +100,16 @@ const isSaturday = computed(() => currentDay.value === 6);
 const isSunday = computed(() => currentDay.value === 0);
 
 // Status Logic
+const getNextWorkdayText = (d: number): string => {
+    if (d === 5) return ", öffnet am Samstag";   // Freitag nach 18h → Sa
+    if (d === 6) return ", öffnet am Montag";    // Samstag → Mo
+    if (d === 3) return ", öffnet morgen";       // Mittwoch → Do
+    return ", öffnet morgen";
+};
+
 const status = computed(() => {
     const t = timeFloat.value;
     const d = currentDay.value;
-
-    const nextWorkdayText = (d === 6) ? ", öffnet am Montag" : ", öffnet morgen";
 
     // 0. Sunday
     if (isSunday.value) {
@@ -117,14 +122,14 @@ const status = computed(() => {
         if (t < 13) return { msg: "Geöffnet", type: "open" };
         if (t < 15) return { msg: "Mittagspause – wir öffnen gleich wieder", type: "lunch" };
         if (t < 18) return { msg: "Geöffnet", type: "open" };
-        return { msg: `Heute bereits geschlossen${nextWorkdayText}`, type: "closed" }; // >= 18:00
+        return { msg: `Heute bereits geschlossen${getNextWorkdayText(d)}`, type: "closed" }; // >= 18:00
     }
 
     // 2. Short Days (Wed, Sat)
     if (isWednesday.value || isSaturday.value) {
         if (t < 10) return { msg: "Öffnet gleich", type: "soon" };
         if (t < 13) return { msg: "Geöffnet", type: "open" };
-        return { msg: `Heute bereits geschlossen${nextWorkdayText}`, type: "closed" }; // >= 13:00
+        return { msg: `Heute bereits geschlossen${getNextWorkdayText(d)}`, type: "closed" }; // >= 13:00
     }
 
     return { msg: "Geschlossen", type: "closed" };
@@ -153,22 +158,22 @@ const isAfternoonOpen = computed(() => {
 
 
 const statusClasses = computed(() => {
-    switch (status.value.type) {
-        case 'open': return 'bg-green-100 text-green-700 border border-green-200'; 
-        case 'soon': return 'bg-orange-100 text-orange-700 border border-orange-200';
-        case 'lunch': return 'bg-orange-100 text-orange-700 border border-orange-200';
-        case 'closed': return 'bg-red-100 text-red-700 border border-red-200';
-        default: return 'bg-gray-50 text-gray-500';
-    }
+    const map: Record<string, string> = {
+        open:   'bg-green-100 text-green-700 border border-green-200',
+        soon:   'bg-orange-100 text-orange-700 border border-orange-200',
+        lunch:  'bg-orange-100 text-orange-700 border border-orange-200',
+        closed: 'bg-red-100 text-red-700 border border-red-200',
+    };
+    return map[status.value.type] ?? 'bg-gray-50 text-gray-500';
 });
 
 const statusDotClass = computed(() => {
-     switch (status.value.type) {
-        case 'open': return 'bg-green-500'; 
-        case 'soon': return 'bg-orange-500';
-        case 'lunch': return 'bg-orange-500';
-        case 'closed': return 'bg-red-500';
-        default: return 'bg-gray-400';
-    }
+    const map: Record<string, string> = {
+        open:   'bg-green-500',
+        soon:   'bg-orange-500',
+        lunch:  'bg-orange-500',
+        closed: 'bg-red-500',
+    };
+    return map[status.value.type] ?? 'bg-gray-400';
 });
 </script>

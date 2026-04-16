@@ -11,7 +11,7 @@ interface Props {
 }
 
 const {
-	title = "Änderungsschneiderei & DHL Paketshop Düsseldorf-Eller",
+	title = "Änderungsschneiderei Düsseldorf-Eller | Valentinas Nähstube",
 	description = "Reparaturen und Anpassungen für Kleidung aller Art in Düsseldorf-Eller.",
 } = Astro.props;
 ---
@@ -54,51 +54,22 @@ const {
 		<title>{title}</title>
 
 		<script type="application/ld+json">
-			{
-				"@context": "https://schema.org",
-				"@type": "LocalBusiness",
-				"name": "Valentina Dubinskys Änderungsschneiderei",
-				"image": "/logo.png",
-				"telephone": "0211 91737673",
-				"address": {
-					"@type": "PostalAddress",
-					"streetAddress": "Dillenburger Weg 33a",
-					"addressLocality": "Düsseldorf",
-					"postalCode": "40229",
-					"addressCountry": "DE"
-				},
-				"openingHoursSpecification": [
-					{
-						"@type": "OpeningHoursSpecification",
-						"dayOfWeek": [
-							"Monday",
-							"Tuesday",
-							"Thursday",
-							"Friday"
-						],
-						"opens": "10:00",
-						"closes": "13:00"
-					},
-					{
-						"@type": "OpeningHoursSpecification",
-						"dayOfWeek": [
-							"Monday",
-							"Tuesday",
-							"Thursday",
-							"Friday"
-						],
-						"opens": "15:00",
-						"closes": "18:00"
-					},
-					{
-						"@type": "OpeningHoursSpecification",
-						"dayOfWeek": ["Wednesday", "Saturday"],
-						"opens": "10:00",
-						"closes": "13:00"
-					}
-				],
-				"priceRange": "€"
-			}
+		{
+		  "@context": "https://schema.org",
+		  "@type": "LocalBusiness",
+		  "name": "Valentina Änderungsschneiderei",
+		  "address": {
+		    "@type": "PostalAddress",
+		    "streetAddress": "Dillenburger Weg 33a",
+		    "addressLocality": "Düsseldorf",
+		    "postalCode": "40229",
+		    "addressCountry": "DE"
+		  },
+		  "telephone": "+49-021191737673",
+		  "url": "https://www.schneiderei-eller.de",
+		  "openingHours": ["Mo,Tu,Th,Fr 10:00-13:00", "Mo,Tu,Th,Fr 15:00-18:00", "We 10:00-13:00", "Sa 10:00-13:00"],
+		  "priceRange": "€€"
+		}
 		</script>
 		<!-- Google tag (gtag.js) -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-RGGR8CFCYQ"></script>
