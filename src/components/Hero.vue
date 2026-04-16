@@ -1,5 +1,5 @@
 <template>
-  <section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+  <section class="relative min-h-[100dvh] flex items-center justify-center overflow-hidden">
     <!-- Silk Background Effect -->
     <HeroBackground />
     
@@ -10,24 +10,25 @@
        <div class="absolute bottom-20 right-10 w-[500px] h-[500px] bg-white rounded-full mix-blend-overlay filter blur-3xl opacity-60 animate-pulse-slow delay-1000"></div>
     </div>
 
-    <div class="container mx-auto px-4 z-20 relative text-center flex flex-col items-center pt-32 md:pt-20 pb-16 md:pb-0">
+    <!-- Ensure padding adjustments for centering -->
+    <div class="container mx-auto px-4 z-20 relative text-center flex flex-col items-center pt-24 md:pt-[10vh] pb-10">
       <!-- Profile Image -->
-      <div class="mb-8 relative group">
+      <div class="mb-4 md:mb-6 relative group">
           <div class="absolute -inset-1 bg-gradient-to-r from-[#F8A08C] to-[#e08e7b] rounded-full opacity-60 group-hover:opacity-100 blur transition duration-500"></div>
           <img 
             :src="ProfileImg.src" 
             alt="Valentina Dubinsky - Ihre erfahrene Änderungsschneiderin in Düsseldorf-Eller" 
-            width="112" 
-            height="112"
+            width="96" 
+            height="96"
             fetchpriority="high"
-            class="relative w-28 h-28 rounded-full border-4 border-white shadow-xl object-cover transform transition duration-500 hover:scale-105" 
+            class="relative w-20 h-20 md:w-24 md:h-24 rounded-full border-4 border-white shadow-xl object-cover transform transition duration-500 hover:scale-105" 
           />
-          <div class="absolute -right-8 top-0 bg-white/90 backdrop-blur px-3 py-1 rounded-full shadow-sm text-xs font-bold text-gray-600 rotate-12">
+          <div class="absolute -right-8 top-0 bg-white/90 backdrop-blur px-3 py-1 rounded-full shadow-sm text-[10px] md:text-xs font-bold text-gray-600 rotate-12">
              Ihre Schneiderin
           </div>
       </div>
 
-      <h1 class="text-4xl md:text-6xl font-serif font-bold text-secondary-deep mb-4 tracking-tight leading-tight [text-shadow:0_2px_20px_rgba(255,255,255,0.8)]">
+      <h1 class="text-3xl md:text-5xl lg:text-[3.5rem] font-serif font-bold text-secondary-deep mb-3 tracking-tight leading-tight [text-shadow:0_2px_20px_rgba(255,255,255,0.8)]">
         Änderungsschneiderei<br class="hidden md:block" />
         <span class="text-[#F8A08C] relative inline-block">
             Düsseldorf-Eller
@@ -38,48 +39,48 @@
         </span><br class="hidden md:block" />
         – Valentinas Nähstube
       </h1>
-      <h2 class="text-2xl md:text-3xl font-serif font-semibold text-secondary-deep/90 mb-6 tracking-tight leading-tight [text-shadow:0_1px_10px_rgba(255,255,255,0.6)]">
+      <h2 class="text-xl md:text-2xl font-serif font-semibold text-secondary-deep/90 mb-4 tracking-tight leading-tight [text-shadow:0_1px_10px_rgba(255,255,255,0.6)]">
         Änderungsschneiderei & offizieller DHL Paketshop in Eller
       </h2>
       
-      <p class="text-xl md:text-2xl text-secondary-deep/90 max-w-2xl mb-8 leading-relaxed font-sans font-medium [text-shadow:0_1px_10px_rgba(255,255,255,0.6)]">
+      <p class="text-lg md:text-xl text-secondary-deep/90 max-w-2xl mb-6 md:mb-8 leading-relaxed font-sans font-medium [text-shadow:0_1px_10px_rgba(255,255,255,0.6)]">
         Als Schneiderei im Herzen von Düsseldorf-Eller bieten wir professionelle Textilpflege und Änderungen für Ihre Lieblingskleidung. Nachhaltige Reparaturen, professionelle Anpassungen, <strong>Wäsche- & Bügelservice</strong> sowie <strong>DHL Service</strong> aus einer Hand. <span class="text-[#F8A08C] font-semibold">Seit über 40 Jahren.</span>
       </p>
 
-      <!-- Feature Icons Strip (Moved up & Extended) -->
-      <div class="mb-12 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-12 text-secondary-deep/80 w-full max-w-4xl mx-auto">
-        <div class="flex flex-col items-center gap-2 group hover:text-[#F8A08C] transition-colors">
-            <div class="p-3 bg-accent-warm/20 rounded-full group-hover:bg-accent-warm/30 transition-colors">
-                 <MdiTapeMeasure class="text-2xl" />
+      <!-- Feature Icons Strip (Compact) -->
+      <div class="mb-6 md:mb-8 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 text-secondary-deep/80 w-full max-w-3xl mx-auto">
+        <div class="flex flex-col items-center gap-1.5 md:gap-2 group hover:text-[#F8A08C] transition-colors">
+            <div class="p-2 md:p-3 bg-accent-warm/20 rounded-full group-hover:bg-accent-warm/30 transition-colors">
+                 <MdiTapeMeasure class="text-xl md:text-2xl" />
             </div>
-            <span class="text-xs uppercase tracking-widest font-bold font-sans">Präzision</span>
+            <span class="text-[10px] md:text-xs uppercase tracking-widest font-bold font-sans">Präzision</span>
         </div>
-        <div class="flex flex-col items-center gap-2 group hover:text-[#F8A08C] transition-colors">
-            <div class="p-3 bg-accent-warm/20 rounded-full group-hover:bg-accent-warm/30 transition-colors">
-                <MdiScissorsCutting class="text-2xl" />
+        <div class="flex flex-col items-center gap-1.5 md:gap-2 group hover:text-[#F8A08C] transition-colors">
+            <div class="p-2 md:p-3 bg-accent-warm/20 rounded-full group-hover:bg-accent-warm/30 transition-colors">
+                <MdiScissorsCutting class="text-xl md:text-2xl" />
             </div>
-            <span class="text-xs uppercase tracking-widest font-bold font-sans">Maßarbeit</span>
+            <span class="text-[10px] md:text-xs uppercase tracking-widest font-bold font-sans">Maßarbeit</span>
         </div>
-        <div class="flex flex-col items-center gap-2 group hover:text-[#F8A08C] transition-colors">
-            <div class="p-3 bg-accent-warm/20 rounded-full group-hover:bg-accent-warm/30 transition-colors">
-                <MdiIron class="text-2xl" />
+        <div class="flex flex-col items-center gap-1.5 md:gap-2 group hover:text-[#F8A08C] transition-colors">
+            <div class="p-2 md:p-3 bg-accent-warm/20 rounded-full group-hover:bg-accent-warm/30 transition-colors">
+                <MdiIron class="text-xl md:text-2xl" />
             </div>
-            <span class="text-xs uppercase tracking-widest font-bold font-sans">Wäscheservice</span>
+            <span class="text-[10px] md:text-xs uppercase tracking-widest font-bold font-sans">Wäsche</span>
         </div>
-         <div class="flex flex-col items-center gap-2 group hover:text-[#F8A08C] transition-colors">
-            <div class="p-3 bg-accent-warm/20 rounded-full group-hover:bg-accent-warm/30 transition-colors">
-                <MdiPackageVariantClosed class="text-2xl" />
+         <div class="flex flex-col items-center gap-1.5 md:gap-2 group hover:text-[#F8A08C] transition-colors">
+            <div class="p-2 md:p-3 bg-accent-warm/20 rounded-full group-hover:bg-accent-warm/30 transition-colors">
+                <MdiPackageVariantClosed class="text-xl md:text-2xl" />
             </div>
-            <span class="text-xs uppercase tracking-widest font-bold font-sans">Paketshop</span>
+            <span class="text-[10px] md:text-xs uppercase tracking-widest font-bold font-sans">DHL</span>
         </div>
       </div>
       
-      <div class="flex flex-col md:flex-row gap-6">
-        <a href="#dienstleistungen" class="bg-[#F8A08C] hover:bg-[#e08e7b] text-white px-10 py-5 rounded-full font-bold text-lg transition-all shadow-[0_10px_25px_rgba(248,160,140,0.25)] hover:shadow-[0_15px_35px_rgba(248,160,140,0.35)] transform hover:-translate-y-1">
+      <div class="flex flex-wrap justify-center gap-3 md:gap-4">
+        <a href="#dienstleistungen" class="bg-[#F8A08C] hover:bg-[#e08e7b] text-white px-8 md:px-10 py-3.5 md:py-4 rounded-full font-bold text-base md:text-lg transition-all shadow-[0_10px_25px_rgba(248,160,140,0.25)] hover:shadow-[0_15px_35px_rgba(248,160,140,0.35)] transform hover:-translate-y-1">
           Leistungen entdecken
         </a>
-        <a href="/#oeffnungszeiten" class="bg-transparent hover:bg-secondary-deep/5 text-secondary-deep border-2 border-secondary-deep/20 px-10 py-5 rounded-full font-bold text-lg transition-all shadow-sm hover:shadow-lg">
-          Öffnungszeiten ansehen
+        <a href="/#oeffnungszeiten" class="bg-transparent hover:bg-secondary-deep/5 text-secondary-deep border-2 border-secondary-deep/20 px-8 md:px-10 py-3.5 md:py-4 rounded-full font-bold text-base md:text-lg transition-all shadow-sm hover:shadow-lg">
+          Öffnungszeiten
         </a>
       </div>
     </div>
