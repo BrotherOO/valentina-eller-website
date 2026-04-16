@@ -25,10 +25,10 @@ interface SilkProps {
 }
 
 const props = withDefaults(defineProps<SilkProps>(), {
-  speed: 3.0,
-  scale: 4.5,
-  color: '#F2A090',
-  noiseIntensity: 0.35,
+  speed: 4.5, // Elegantes, langsameres Wehen
+  scale: 1.5, // Mehr Wellen, stoffähnlichere Dichte
+  color: '#F8A08C', // Orange-Salmon
+  noiseIntensity: 0.5,
   rotation: 0,
   className: '',
   style: () => ({})
@@ -95,25 +95,21 @@ void main() {
   vec2 tex = uv * uScale;
   float tOffset = uSpeed * uTime;
 
-  tex.y += 0.015 * sin(10.0 * tex.x - tOffset * 0.5);
-  tex.x += 0.008 * sin(6.0 * tex.y - tOffset * 0.3);
+  tex.y += 0.03 * sin(8.0 * tex.x - tOffset);
 
-  // Enge parallele Längsfalten (wie Stoff-Rippen)
-  float folds = sin(tex.x * 6.0 + sin(tex.y * 2.5 + tOffset * 0.3) * 0.8);
-  
-  // Feine Querstruktur (Gewebetextur)
-  float weave = sin(tex.y * 12.0 + tOffset * 0.15) * 0.25;
-  
-  // Leichte Unregelmäßigkeit (kein Stoff ist perfekt)
-  float drift = sin(tex.x * 3.0 + tex.y * 1.5 - tOffset * 0.2) * 0.3;
-  
-  float pattern = 0.55 + 0.3 * folds + 0.1 * weave + 0.05 * drift;
-  vec3 warmWhite = vec3(1.0, 0.97, 0.93);
-  vec3 mixedColor = mix(uColor, warmWhite, 0.10);
+  float pattern = 0.6 +
+                  0.4 * sin(5.0 * (tex.x + tex.y +
+                                   cos(3.0 * tex.x + 5.0 * tex.y) +
+                                   0.02 * tOffset) +
+                           sin(20.0 * (tex.x + tex.y - 0.1 * tOffset)));
 
-  // Scharfer Kontrast für Faltenrelief
-  float brightness = 0.25 + 0.75 * pow(clamp(pattern, 0.0, 1.0), 1.4);
-  vec4 col = vec4(mixedColor * brightness, 1.0) - rnd / 25.0 * uNoiseIntensity;
+  // Weniger Weiß beimischen, damit die Farbe tiefer wirkt
+  vec3 mixedColor = mix(uColor, vec3(1.0), 0.15);
+  
+  // Kontrast erhöhen: Tiefere Schatten (0.35) für klarere Stofferhebungen
+  float brightness = 0.35 + 0.65 * pattern;
+  
+  vec4 col = vec4(mixedColor, 1.0) * vec4(brightness) - rnd / 20.0 * uNoiseIntensity;
   col.a = 1.0;
   gl_FragColor = col;
 }
