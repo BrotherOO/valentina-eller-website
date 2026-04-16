@@ -1,6 +1,7 @@
 <template>
   <div ref="containerRef" class="absolute inset-0 -z-10 overflow-hidden bg-transparent">
     <div class="absolute inset-0 pointer-events-none opacity-[0.05] bg-noise z-0"></div>
+    <FabricOverlay />
     
     <!-- Top Gradient (Menu Readability) -->
     <div class="absolute top-0 left-0 w-full h-48 bg-gradient-to-b from-white/90 via-white/50 to-transparent pointer-events-none z-10"></div>
@@ -13,6 +14,7 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted, watch, type CSSProperties, ref } from 'vue';
 import { Renderer, Program, Mesh, Plane, Camera } from 'ogl';
+import FabricOverlay from './FabricOverlay.vue';
 
 interface SilkProps {
   speed?: number;
@@ -106,8 +108,8 @@ void main() {
   // Weniger Weiß beimischen, damit die Farbe tiefer wirkt
   vec3 mixedColor = mix(uColor, vec3(1.0), 0.15);
   
-  // Kontrast erhöhen: Tiefere Schatten (0.35) für klarere Stofferhebungen
-  float brightness = 0.35 + 0.65 * pattern;
+  // Kontrast erhöhen: Tiefere Schatten (0.30) für klarere Stofferhebungen
+  float brightness = 0.30 + 0.70 * pattern;
   
   vec4 col = vec4(mixedColor, 1.0) * vec4(brightness) - rnd / 20.0 * uNoiseIntensity;
   col.a = 1.0;
