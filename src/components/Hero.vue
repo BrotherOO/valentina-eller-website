@@ -12,39 +12,42 @@
 
     <!-- Ensure padding adjustments for centering -->
     <div class="container mx-auto px-4 z-20 relative text-center flex flex-col items-center pt-24 md:pt-[10vh] pb-10">
-      <!-- Profile Image -->
-      <div class="mb-4 md:mb-6 relative group">
-          <div class="absolute -inset-1 bg-gradient-to-r from-[#F8A08C] to-[#e08e7b] rounded-full opacity-60 group-hover:opacity-100 blur transition duration-500"></div>
+      <!-- Profile Image - Enlarged & Warm -->
+      <div class="mb-8 md:mb-10 relative group max-w-[140px]">
+          <div class="absolute -inset-2 bg-gradient-to-r from-[#F8A08C] to-[#e08e7b] rounded-full opacity-60 group-hover:opacity-100 blur-md transition duration-500"></div>
           <img 
             :src="ProfileImg.src" 
             alt="Valentina Dubinsky - Ihre erfahrene Änderungsschneiderin in Düsseldorf-Eller" 
-            width="96" 
-            height="96"
+            width="140" 
+            height="140"
             fetchpriority="high"
-            class="relative w-20 h-20 md:w-24 md:h-24 rounded-full border-4 border-white shadow-xl object-cover transform transition duration-500 hover:scale-105" 
+            class="relative w-32 h-32 md:w-[140px] md:h-[140px] rounded-full border-4 border-white shadow-xl object-cover transform transition duration-500 hover:scale-105" 
           />
-          <div class="absolute -right-8 top-0 bg-white/90 backdrop-blur px-3 py-1 rounded-full shadow-sm text-[10px] md:text-xs font-bold text-gray-600 rotate-12">
+          <div class="absolute -right-4 md:-right-8 top-0 bg-white/95 backdrop-blur px-4 py-1.5 rounded-full shadow-sm text-[11px] md:text-sm font-bold text-gray-700 rotate-12">
              Ihre Schneiderin
           </div>
       </div>
 
-      <h1 class="text-3xl md:text-5xl lg:text-[3.5rem] font-serif font-bold text-secondary-deep mb-3 tracking-tight leading-tight [text-shadow:0_2px_20px_rgba(255,255,255,0.8)]">
-        Änderungsschneiderei<br class="hidden md:block" />
+      <!-- H1 shortened to one line for SEO -->
+      <h1 class="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-secondary-deep mb-4 md:mb-5 tracking-tight leading-tight [text-shadow:0_2px_20px_rgba(255,255,255,0.8)]">
+        Änderungsschneiderei
         <span class="text-[#F8A08C] relative inline-block">
             Düsseldorf-Eller
             <!-- Underline decoration -->
             <svg class="absolute w-full h-3 -bottom-1 left-0 text-[#F8A08C] opacity-60" viewBox="0 0 100 10" preserveAspectRatio="none">
                 <path d="M0 5 Q 50 10 100 5" stroke="currentColor" stroke-width="4" fill="none" />
             </svg>
-        </span><br class="hidden md:block" />
-        – Valentinas Nähstube
+        </span>
       </h1>
-      <h2 class="text-xl md:text-2xl font-serif font-semibold text-secondary-deep/90 mb-4 tracking-tight leading-tight [text-shadow:0_1px_10px_rgba(255,255,255,0.6)]">
-        Änderungsschneiderei & offizieller DHL Paketshop in Eller
+      
+      <!-- H2 Tagline -->
+      <h2 class="text-lg md:text-2xl font-serif font-medium text-secondary-deep/80 mb-6 md:mb-8 tracking-wide max-w-2xl [text-shadow:0_1px_10px_rgba(255,255,255,0.6)]">
+        Valentinas Nähstube – Handwerk mit Liebe seit 40 Jahren
       </h2>
       
-      <p class="text-lg md:text-xl text-secondary-deep/90 max-w-2xl mb-6 md:mb-8 leading-relaxed font-sans font-medium [text-shadow:0_1px_10px_rgba(255,255,255,0.6)]">
-        Als Schneiderei im Herzen von Düsseldorf-Eller bieten wir professionelle Textilpflege und Änderungen für Ihre Lieblingskleidung. Nachhaltige Reparaturen, professionelle Anpassungen, <strong>Wäsche- & Bügelservice</strong> sowie <strong>DHL Service</strong> aus einer Hand. <span class="text-[#F8A08C] font-semibold">Seit über 40 Jahren.</span>
+      <!-- One-Liner (Warm) -->
+      <p class="text-base md:text-xl text-secondary-deep/90 max-w-2xl mb-10 md:mb-12 leading-relaxed font-sans font-medium italic [text-shadow:0_1px_10px_rgba(255,255,255,0.6)]">
+        "Ihre Kleidung in den besten Händen – persönlich, präzise, mit Liebe zum Detail."
       </p>
 
       <!-- Feature Icons Strip (Compact) -->
