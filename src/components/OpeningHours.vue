@@ -3,11 +3,7 @@
     <h3 id="oeffnungszeiten" class="text-3xl font-bold text-gray-900 mb-8 scroll-mt-24 flex items-center justify-between flex-wrap gap-4">
       Öffnungszeiten
       <!-- Live Status Badge -->
-      <div v-if="statusMessage" class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs md:text-sm font-bold shadow-sm transition-all duration-500"
-        :class="statusClasses">
-        <span class="w-2 h-2 rounded-full animate-pulse" :class="statusDotClass"></span>
-        {{ statusMessage }}
-      </div>
+      <OpeningStatusBadge />
     </h3>
 
     <ul class="space-y-4 text-lg text-gray-600">
@@ -67,113 +63,8 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted, onUnmounted } from 'vue';
+import { useOpeningHours } from '../composables/useOpeningHours';
+import OpeningStatusBadge from './OpeningStatusBadge.vue';
 
-const now = ref(new Date());
-let timer: ReturnType<typeof setInterval>;
-
-const startTimer = () => {
-    now.value = new Date();
-    timer = setInterval(() => {
-        now.value = new Date();
-    }, 1000 * 60); // Update every minute
-};
-
-onMounted(() => {
-    startTimer();
-});
-
-onUnmounted(() => {
-    if (timer) clearInterval(timer);
-});
-
-// Helpers
-const currentDay = computed(() => now.value.getDay()); // 0=Sun, 1=Mo, ... 6=Sat
-const currentHour = computed(() => now.value.getHours());
-const currentMinute = computed(() => now.value.getMinutes());
-const timeFloat = computed(() => currentHour.value + currentMinute.value / 60);
-
-// Day Groups
-const isLongDayGroup = computed(() => [1, 2, 4, 5].includes(currentDay.value)); // Mo, Di, Do, Fr
-const isWednesday = computed(() => currentDay.value === 3);
-const isSaturday = computed(() => currentDay.value === 6);
-const isSunday = computed(() => currentDay.value === 0);
-
-// Status Logic
-const getNextWorkdayText = (d: number): string => {
-    if (d === 5) return ", öffnet am Samstag";   // Freitag nach 18h → Sa
-    if (d === 6) return ", öffnet am Montag";    // Samstag → Mo
-    if (d === 3) return ", öffnet morgen";       // Mittwoch → Do
-    return ", öffnet morgen";
-};
-
-const status = computed(() => {
-    const t = timeFloat.value;
-    const d = currentDay.value;
-
-    // 0. Sunday
-    if (isSunday.value) {
-         return { msg: "Sonntag geschlossen", type: "closed" };
-    }
-
-    // 1. Long Days (Mo, Di, Do, Fr)
-    if (isLongDayGroup.value) {
-        if (t < 10) return { msg: "Öffnet gleich", type: "soon" };
-        if (t < 13) return { msg: "Geöffnet", type: "open" };
-        if (t < 15) return { msg: "Mittagspause – wir öffnen gleich wieder", type: "lunch" };
-        if (t < 18) return { msg: "Geöffnet", type: "open" };
-        return { msg: `Heute bereits geschlossen${getNextWorkdayText(d)}`, type: "closed" }; // >= 18:00
-    }
-
-    // 2. Short Days (Wed, Sat)
-    if (isWednesday.value || isSaturday.value) {
-        if (t < 10) return { msg: "Öffnet gleich", type: "soon" };
-        if (t < 13) return { msg: "Geöffnet", type: "open" };
-        return { msg: `Heute bereits geschlossen${getNextWorkdayText(d)}`, type: "closed" }; // >= 13:00
-    }
-
-    return { msg: "Geschlossen", type: "closed" };
-});
-
-const statusMessage = computed(() => status.value.msg);
-
-// Slot Highlighting Logic
-// Only highlight specific time slots if the store is currently OPEN in that slot.
-// If status is 'lunch', 'soon' or 'closed', no time slot should be highlighted text-wise.
-
-const isMorningOpen = computed(() => {
-    // True only if status is open AND we are in the morning block
-    if (status.value.type !== 'open') return false;
-    return timeFloat.value < 13.5; // Technically 13:00, but using < 13.5 ensures coverage if logic shifts slighly, but strictly < 13 is safer for "Open".
-    // Wait, status 'open' for Long Days is 10-13 and 15-18.
-    // If t=11, type='open', t < 13 -> True.
-    // If t=16, type='open', t < 13 -> False.
-    // This correctly highlights only the active slot.
-});
-
-const isAfternoonOpen = computed(() => {
-    if (status.value.type !== 'open') return false;
-    return timeFloat.value >= 14.5; // 15:00 onwards
-});
-
-
-const statusClasses = computed(() => {
-    const map: Record<string, string> = {
-        open:   'bg-green-100 text-green-700 border border-green-200',
-        soon:   'bg-orange-100 text-orange-700 border border-orange-200',
-        lunch:  'bg-orange-100 text-orange-700 border border-orange-200',
-        closed: 'bg-red-100 text-red-700 border border-red-200',
-    };
-    return map[status.value.type] ?? 'bg-gray-50 text-gray-500';
-});
-
-const statusDotClass = computed(() => {
-    const map: Record<string, string> = {
-        open:   'bg-green-500',
-        soon:   'bg-orange-500',
-        lunch:  'bg-orange-500',
-        closed: 'bg-red-500',
-    };
-    return map[status.value.type] ?? 'bg-gray-400';
-});
+const { isLongDayGroup, isWednesday, isSaturday, isMorningOpen, isAfternoonOpen } = useOpeningHours();
 </script>
