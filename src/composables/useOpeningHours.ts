@@ -93,24 +93,24 @@ export function useOpeningHours() {
         return timeFloat.value >= 14.5;
     });
 
-    const statusClasses = computed(() => {
+    const statusStyle = computed(() => {
         const map: Record<string, string> = {
-            open:   'bg-green-100 text-green-700 border border-green-200',
-            soon:   'bg-orange-100 text-orange-700 border border-orange-200',
-            lunch:  'bg-orange-100 text-orange-700 border border-orange-200',
-            closed: 'bg-red-100 text-red-700 border border-red-200',
+            open:   'background:#dcfce7; color:#15803d; border:1px solid #bbf7d0',
+            soon:   'background:#ffedd5; color:#c2410c; border:1px solid #fed7aa',
+            lunch:  'background:#ffedd5; color:#c2410c; border:1px solid #fed7aa',
+            closed: 'background:#fee2e2; color:#b91c1c; border:1px solid #fecaca',
         };
-        return map[status.value.type] ?? 'bg-gray-50 text-gray-500';
+        return map[status.value.type] ?? 'background:#f9fafb; color:#6b7280; border:1px solid #e5e7eb';
     });
 
-    const statusDotClass = computed(() => {
+    const statusDotStyle = computed(() => {
         const map: Record<string, string> = {
-            open:   'bg-green-500',
-            soon:   'bg-orange-500',
-            lunch:  'bg-orange-500',
-            closed: 'bg-red-500',
+            open:   'background:#22c55e',
+            soon:   'background:#f97316',
+            lunch:  'background:#f97316',
+            closed: 'background:#ef4444',
         };
-        return map[status.value.type] ?? 'bg-gray-400';
+        return map[status.value.type] ?? 'background:#9ca3af';
     });
 
     return {
@@ -123,7 +123,7 @@ export function useOpeningHours() {
         statusMessage,
         isMorningOpen,
         isAfternoonOpen,
-        statusClasses,
-        statusDotClass
+        statusStyle,
+        statusDotStyle
     };
 }
