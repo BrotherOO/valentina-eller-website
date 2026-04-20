@@ -12,7 +12,7 @@ interface Props {
 
 const {
 	title = "Änderungsschneiderei Düsseldorf-Eller | Valentinas Nähstube",
-	description = "Reparaturen und Anpassungen für Kleidung aller Art in Düsseldorf-Eller.",
+	description = "Professionelle Änderungsschneiderei in Düsseldorf-Eller. Hose kürzen ab 8€, Lederreparatur & offizieller DHL Paketshop. Einfach vorbeikommen – keine Anmeldung nötig!",
 } = Astro.props;
 ---
 
@@ -30,8 +30,10 @@ const {
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
 		<meta property="og:type" content="website" />
-		<meta property="og:image" content="/logo.png" />
-		<!-- Assuming a default OG image exists or we should add one, using a placeholder for now -->
+		<meta property="og:image" content="/_astro/schneiderinprofil.CXnuNw3p.jpg" />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<meta property="og:image:alt" content="Valentina Dubinskaya – Ihre Schneiderin in Düsseldorf-Eller" />
 		<meta property="og:locale" content="de_DE" />
 
 		<meta
@@ -95,7 +97,7 @@ const {
 		    "https://www.kaufda.de/Filialen/Duesseldorf/Chemische-Reinigung-Eller-Dillenburger-Weg-DHL-Paketshop/v-f1024825947",
 		    "https://aenderungsschneidereiindernaehe.com/eintrag/deutschland/nordrhein-westfalen/duesseldorf/dubinskiy-valentina/"
 		  ],
-		  "priceRange": "€€",
+		  "priceRange": "€",
 		  "description": "Professionelle Änderungsschneiderei in Düsseldorf-Eller. Hose kürzen ab 8€, Lederreparatur & offizieller DHL Paketshop. Seit 40 Jahren."
 		}
 		</script>
