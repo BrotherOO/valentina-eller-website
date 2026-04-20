@@ -57,18 +57,46 @@ const {
 		{
 		  "@context": "https://schema.org",
 		  "@type": "LocalBusiness",
-		  "name": "Valentina Änderungsschneiderei",
+		  "name": "Valentinas Nähstube – Änderungsschneiderei & DHL Paketshop",
+		  "url": "https://www.schneiderei-eller.de",
+		  "telephone": "+49-211-91737673",
 		  "address": {
 		    "@type": "PostalAddress",
 		    "streetAddress": "Dillenburger Weg 33a",
 		    "addressLocality": "Düsseldorf",
+		    "addressRegion": "Nordrhein-Westfalen",
 		    "postalCode": "40229",
 		    "addressCountry": "DE"
 		  },
-		  "telephone": "+49-021191737673",
-		  "url": "https://www.schneiderei-eller.de",
-		  "openingHours": ["Mo,Tu,Th,Fr 10:00-13:00", "Mo,Tu,Th,Fr 15:00-18:00", "We 10:00-13:00", "Sa 10:00-13:00"],
-		  "priceRange": "€€"
+		  "openingHoursSpecification": [
+		    {
+		      "@type": "OpeningHoursSpecification",
+		      "dayOfWeek": ["Monday","Tuesday","Thursday","Friday"],
+		      "opens": "10:00",
+		      "closes": "13:00"
+		    },
+		    {
+		      "@type": "OpeningHoursSpecification",
+		      "dayOfWeek": ["Monday","Tuesday","Thursday","Friday"],
+		      "opens": "15:00",
+		      "closes": "18:00"
+		    },
+		    {
+		      "@type": "OpeningHoursSpecification",
+		      "dayOfWeek": ["Wednesday","Saturday"],
+		      "opens": "10:00",
+		      "closes": "13:00"
+		    }
+		  ],
+		  "sameAs": [
+		    "https://www.dasoertliche.de/Themen/Dubinskiy-Valentina-Düsseldorf-Eller-Dillenburger-Weg",
+		    "https://www.gelbeseiten.de/gsbiz/13f65120-2717-4113-a1a8-fe6073e44ac7",
+		    "https://adresse.dastelefonbuch.de/Düsseldorf/1-Änderungsschneidereien-Valentina-Dubinskiy-Düsseldorf-Dillenburger-Weg.html",
+		    "https://www.kaufda.de/Filialen/Duesseldorf/Chemische-Reinigung-Eller-Dillenburger-Weg-DHL-Paketshop/v-f1024825947",
+		    "https://aenderungsschneidereiindernaehe.com/eintrag/deutschland/nordrhein-westfalen/duesseldorf/dubinskiy-valentina/"
+		  ],
+		  "priceRange": "€€",
+		  "description": "Professionelle Änderungsschneiderei in Düsseldorf-Eller. Hose kürzen ab 8€, Lederreparatur & offizieller DHL Paketshop. Seit 40 Jahren."
 		}
 		</script>
 		<!-- Google tag (gtag.js) -->
