@@ -52,7 +52,7 @@
           <!-- CTAs -->
           <div class="flex flex-col sm:flex-row gap-4">
             <a href="#kontakt" class="bg-[#F8A08C] hover:bg-[#e08e7b] text-white px-8 lg:px-10 py-4 lg:py-4 rounded-full font-bold text-base lg:text-lg transition-all shadow-xl hover:shadow-2xl border-2 border-[#F8A08C] text-center inline-block group">
-              Jetzt Termin vereinbaren <span class="inline-block transition-transform group-hover:translate-x-1">&rarr;</span>
+              Öffnungszeiten & Adresse <span class="inline-block transition-transform group-hover:translate-x-1">&rarr;</span>
             </a>
             <a href="#preise" class="bg-white/80 backdrop-blur hover:bg-white text-secondary-deep border-2 border-secondary-deep/10 px-8 lg:px-10 py-4 lg:py-4 rounded-full font-bold text-base lg:text-lg transition-all shadow-sm hover:shadow-md text-center inline-block">
               Preise ansehen

@@ -95,22 +95,22 @@ export function useOpeningHours() {
 
     const statusStyle = computed(() => {
         const map: Record<string, string> = {
-            open:   'background:#dcfce7; color:#15803d; border:1px solid #bbf7d0',
-            soon:   'background:#ffedd5; color:#c2410c; border:1px solid #fed7aa',
-            lunch:  'background:#ffedd5; color:#c2410c; border:1px solid #fed7aa',
-            closed: 'background:#fee2e2; color:#b91c1c; border:1px solid #fecaca',
+            open:   'bg-green-100 text-green-700 border-green-200',
+            soon:   'bg-orange-100 text-orange-700 border-orange-200',
+            lunch:  'bg-orange-100 text-orange-700 border-orange-200',
+            closed: 'bg-red-100 text-red-700 border-red-200',
         };
-        return map[status.value.type] ?? 'background:#f9fafb; color:#6b7280; border:1px solid #e5e7eb';
+        return map[status.value.type] ?? 'bg-gray-50 text-gray-500 border-gray-200';
     });
 
     const statusDotStyle = computed(() => {
         const map: Record<string, string> = {
-            open:   'background:#22c55e',
-            soon:   'background:#f97316',
-            lunch:  'background:#f97316',
-            closed: 'background:#ef4444',
+            open:   'bg-green-500',
+            soon:   'bg-orange-500',
+            lunch:  'bg-orange-500',
+            closed: 'bg-red-500',
         };
-        return map[status.value.type] ?? 'background:#9ca3af';
+        return map[status.value.type] ?? 'bg-gray-400';
     });
 
     return {
