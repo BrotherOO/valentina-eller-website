@@ -4,6 +4,7 @@ import { ref, computed, onMounted, onUnmounted } from 'vue';
 const now = ref(new Date());
 let timer: ReturnType<typeof setInterval> | null = null;
 let subscribers = 0;
+const isHydrated = ref(false);
 
 export function useOpeningHours() {
     const startTimer = () => {
@@ -26,6 +27,7 @@ export function useOpeningHours() {
     };
 
     onMounted(() => {
+        isHydrated.value = true;
         startTimer();
     });
 
@@ -124,6 +126,7 @@ export function useOpeningHours() {
         isMorningOpen,
         isAfternoonOpen,
         statusStyle,
-        statusDotStyle
+        statusDotStyle,
+        isHydrated
     };
 }

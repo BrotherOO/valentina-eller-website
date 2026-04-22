@@ -65,7 +65,7 @@
         <div class="relative order-1 lg:order-2 flex justify-center lg:justify-end mt-4 lg:mt-0">
              <!-- The floating OpeningStatusBadge -->
              <!-- Positioned top-left overlapping slightly to break the frame -->
-             <div class="absolute -top-4 -left-2 md:-top-6 md:-left-4 lg:-top-6 lg:-left-6 z-30 transform hover:scale-105 transition-transform shadow-2xl rounded-full bg-white/50 backdrop-blur-md p-1 border border-white/50">
+             <div v-if="isHydrated" class="absolute -top-4 -left-2 md:-top-6 md:-left-4 lg:-top-6 lg:-left-6 z-30 transform hover:scale-105 transition-transform shadow-2xl rounded-full bg-white/50 backdrop-blur-md p-1 border border-white/50">
                  <OpeningStatusBadge />
              </div>
              
@@ -96,4 +96,7 @@ import MdiPackageVariantClosed from '~icons/mdi/package-variant-closed';
 import HeroBackground from './HeroBackground.vue';
 import OpeningStatusBadge from './OpeningStatusBadge.vue';
 import WorkspaceImg from '../assets/schneiderinprofil.jpg';
+import { useOpeningHours } from '../composables/useOpeningHours';
+
+const { isHydrated } = useOpeningHours();
 </script>
