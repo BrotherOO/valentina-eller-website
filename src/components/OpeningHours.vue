@@ -7,31 +7,58 @@
     </h3>
 
     <ul class="space-y-4 text-lg text-gray-600">
-      <!-- Mo, Di, Do, Fr -->
+      <!-- Montag -->
       <li class="flex justify-between border-b border-gray-100 pb-2 transition-colors duration-300"
-          :class="{ 'font-bold text-gray-900 bg-[#FFF0F3]/30 px-2 -mx-2 rounded-lg': isLongDayGroup }">
-        <span class="font-medium">Mo, Di, Do, Fr</span>
+          :class="{ 'text-green-600 font-bold bg-[#FFF0F3]/30 px-2 -mx-2 rounded-lg': isCurrentDay(1) }">
+        <span class="font-medium">Montag</span>
         <div class="flex flex-col text-right">
-             <!-- Morning Slot: Bold if Open AND it is morning slot -->
-             <span :class="{ 'text-green-600 font-extrabold scale-105 origin-right': isLongDayGroup && isMorningOpen }">10:00 - 13:00</span>
-             <!-- Afternoon Slot: Bold if Open AND it is afternoon slot -->
-             <span :class="{ 'text-green-600 font-extrabold scale-105 origin-right': isLongDayGroup && isAfternoonOpen }">15:00 - 18:00</span>
+             <span :class="{ 'text-green-600 font-extrabold scale-105 origin-right': isCurrentDay(1) && isMorningOpen }">10:00 - 13:00</span>
+             <span :class="{ 'text-green-600 font-extrabold scale-105 origin-right': isCurrentDay(1) && isAfternoonOpen }">15:00 - 18:00</span>
         </div>
       </li>
 
-      <!-- Wednesday -->
+      <!-- Dienstag -->
       <li class="flex justify-between border-b border-gray-100 pb-2 transition-colors duration-300"
-          :class="{ 'font-bold text-gray-900 bg-[#FFF0F3]/30 px-2 -mx-2 rounded-lg': isWednesday }">
-        <span class="font-medium">Mittwoch</span>
-        <!-- Wednesday only has morning slot -->
-        <span :class="{ 'text-green-600 font-extrabold scale-105 origin-right': isWednesday && isMorningOpen }">10:00 - 13:00</span>
+          :class="{ 'text-green-600 font-bold bg-[#FFF0F3]/30 px-2 -mx-2 rounded-lg': isCurrentDay(2) }">
+        <span class="font-medium">Dienstag</span>
+        <div class="flex flex-col text-right">
+             <span :class="{ 'text-green-600 font-extrabold scale-105 origin-right': isCurrentDay(2) && isMorningOpen }">10:00 - 13:00</span>
+             <span :class="{ 'text-green-600 font-extrabold scale-105 origin-right': isCurrentDay(2) && isAfternoonOpen }">15:00 - 18:00</span>
+        </div>
       </li>
 
-      <!-- Saturday -->
+      <!-- Mittwoch -->
+      <li class="flex justify-between border-b border-gray-100 pb-2 transition-colors duration-300"
+          :class="{ 'text-green-600 font-bold bg-[#FFF0F3]/30 px-2 -mx-2 rounded-lg': isCurrentDay(3) }">
+        <span class="font-medium">Mittwoch</span>
+        <span :class="{ 'text-green-600 font-extrabold scale-105 origin-right': isCurrentDay(3) && isMorningOpen }">10:00 - 13:00</span>
+      </li>
+
+      <!-- Donnerstag -->
+      <li class="flex justify-between border-b border-gray-100 pb-2 transition-colors duration-300"
+          :class="{ 'text-green-600 font-bold bg-[#FFF0F3]/30 px-2 -mx-2 rounded-lg': isCurrentDay(4) }">
+        <span class="font-medium">Donnerstag</span>
+        <div class="flex flex-col text-right">
+             <span :class="{ 'text-green-600 font-extrabold scale-105 origin-right': isCurrentDay(4) && isMorningOpen }">10:00 - 13:00</span>
+             <span :class="{ 'text-green-600 font-extrabold scale-105 origin-right': isCurrentDay(4) && isAfternoonOpen }">15:00 - 18:00</span>
+        </div>
+      </li>
+
+      <!-- Freitag -->
+      <li class="flex justify-between border-b border-gray-100 pb-2 transition-colors duration-300"
+          :class="{ 'text-green-600 font-bold bg-[#FFF0F3]/30 px-2 -mx-2 rounded-lg': isCurrentDay(5) }">
+        <span class="font-medium">Freitag</span>
+        <div class="flex flex-col text-right">
+             <span :class="{ 'text-green-600 font-extrabold scale-105 origin-right': isCurrentDay(5) && isMorningOpen }">10:00 - 13:00</span>
+             <span :class="{ 'text-green-600 font-extrabold scale-105 origin-right': isCurrentDay(5) && isAfternoonOpen }">15:00 - 18:00</span>
+        </div>
+      </li>
+
+      <!-- Samstag -->
       <li class="flex justify-between pt-2 transition-colors duration-300"
-           :class="{ 'font-bold text-gray-900 bg-[#FFF0F3]/30 px-2 -mx-2 rounded-lg': isSaturday }">
+           :class="{ 'text-green-600 font-bold bg-[#FFF0F3]/30 px-2 -mx-2 rounded-lg': isCurrentDay(6) }">
         <span class="font-medium">Samstag</span>
-        <span :class="{ 'text-green-600 font-extrabold scale-105 origin-right': isSaturday && isMorningOpen }">10:00 - 13:00</span>
+        <span :class="{ 'text-green-600 font-extrabold scale-105 origin-right': isCurrentDay(6) && isMorningOpen }">10:00 - 13:00</span>
       </li>
     </ul>
 
@@ -66,5 +93,7 @@
 import { useOpeningHours } from '../composables/useOpeningHours';
 import OpeningStatusBadge from './OpeningStatusBadge.vue';
 
-const { isLongDayGroup, isWednesday, isSaturday, isMorningOpen, isAfternoonOpen } = useOpeningHours();
+const { currentDay, isMorningOpen, isAfternoonOpen } = useOpeningHours();
+
+const isCurrentDay = (dayNumber: number) => currentDay.value === dayNumber;
 </script>

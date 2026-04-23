@@ -117,6 +117,7 @@ export function useOpeningHours() {
 
     return {
         now,
+        currentDay,
         isLongDayGroup,
         isWednesday,
         isSaturday,
