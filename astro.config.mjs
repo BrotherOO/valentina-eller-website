@@ -9,7 +9,22 @@ import sitemap from '@astrojs/sitemap';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://www.schneiderei-eller.de',
-  integrations: [vue(), sitemap()],
+  integrations: [
+    vue(), 
+    sitemap({
+      serialize(item) {
+        if (item.url === 'https://www.schneiderei-eller.de/') {
+          item.changefreq = 'weekly';
+          item.priority = 1.0;
+        } else {
+          item.changefreq = 'monthly';
+          item.priority = 0.8;
+        }
+        item.lastmod = new Date().toISOString();
+        return item;
+      }
+    })
+  ],
 
   vite: {
     plugins: [
