@@ -20,8 +20,9 @@
             <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent-warm"></span>Originalsaum möglich</li>
             <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent-warm"></span>Auch für Jeans</li>
           </ul>
-          <div class="flex justify-between items-center text-sm font-semibold">
+          <div class="flex justify-between items-center text-sm font-semibold mt-auto pt-4 border-t border-transparent group-hover:border-accent-warm/10 transition-colors">
              <span class="text-secondary-deep">ab 8€</span>
+             <a href="/hose-kuerzen-duesseldorf" class="text-accent-warm hover:text-[#e94470] transition-colors">Mehr erfahren &rarr;</a>
           </div>
         </div>
 
@@ -37,8 +38,9 @@
             <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent-warm"></span>Reißverschlüsse</li>
             <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent-warm"></span>Risse & Löcher</li>
           </ul>
-          <div class="flex justify-between items-center text-sm font-semibold">
+          <div class="flex justify-between items-center text-sm font-semibold mt-auto pt-4 border-t border-transparent group-hover:border-accent-warm/10 transition-colors">
              <span class="text-secondary-deep">Individuell</span>
+             <a href="/reissverschluss-reparieren-duesseldorf" class="text-accent-warm hover:text-[#e94470] transition-colors">Mehr erfahren & Preise &rarr;</a>
           </div>
         </div>
 
