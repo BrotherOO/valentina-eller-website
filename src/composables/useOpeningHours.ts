@@ -9,7 +9,6 @@ const isHydrated = ref(false);
 export function useOpeningHours() {
     const startTimer = () => {
         if (subscribers === 0) {
-            now.value = new Date();
             timer = setInterval(() => {
                 now.value = new Date();
             }, 1000 * 60); // Update every minute
@@ -28,6 +27,7 @@ export function useOpeningHours() {
 
     onMounted(() => {
         isHydrated.value = true;
+        now.value = new Date();
         startTimer();
     });
 
