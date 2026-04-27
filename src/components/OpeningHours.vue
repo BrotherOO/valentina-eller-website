@@ -93,7 +93,7 @@
 import { useOpeningHours } from '../composables/useOpeningHours';
 import OpeningStatusBadge from './OpeningStatusBadge.vue';
 
-const { currentDay, isMorningOpen, isAfternoonOpen } = useOpeningHours();
+const { currentDay, isMorningOpen, isAfternoonOpen, isHydrated } = useOpeningHours();
 
-const isCurrentDay = (dayNumber: number) => currentDay.value === dayNumber;
+const isCurrentDay = (dayNumber: number) => isHydrated.value && currentDay.value === dayNumber;
 </script>
