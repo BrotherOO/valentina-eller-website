@@ -65,18 +65,58 @@ import Footer from "../components/Footer.astro";
                 <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden mb-4">
                     <table class="w-full text-left">
                         <tbody class="divide-y divide-gray-100">
-                            <tr class="hover:bg-gray-50 transition-colors"><td class="p-4 text-gray-800">Schieber (Zipper) erneuern</td><td class="p-4 font-bold text-[#e94470] text-right whitespace-nowrap">ab 8 €</td></tr>
-                            <tr class="hover:bg-gray-50 transition-colors"><td class="p-4 text-gray-800">Stopper / Anschlag ersetzen</td><td class="p-4 font-bold text-[#e94470] text-right whitespace-nowrap">ab 5 €</td></tr>
-                            <tr class="hover:bg-gray-50 transition-colors"><td class="p-4 text-gray-800">Reißverschluss Hose/Jeans (komplett)</td><td class="p-4 font-bold text-[#e94470] text-right whitespace-nowrap">ab 15 €</td></tr>
-                            <tr class="hover:bg-gray-50 transition-colors"><td class="p-4 text-gray-800">Reißverschluss Jacke/Hoodie (komplett)</td><td class="p-4 font-bold text-[#e94470] text-right whitespace-nowrap">ab 20 €</td></tr>
-                            <tr class="hover:bg-gray-50 transition-colors"><td class="p-4 text-gray-800">Reißverschluss Kleid (unsichtbar)</td><td class="p-4 font-bold text-[#e94470] text-right whitespace-nowrap">ab 18 €</td></tr>
-
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="p-4 text-gray-800">
+                                    <span class="font-bold block">Reißverschluss Jacke / Hose erneuern</span>
+                                    <span class="text-sm text-gray-500">Dauer: 1–2 Tage</span>
+                                </td>
+                                <td class="p-4 font-bold text-[#e94470] text-right">ab 35 € (Leder)<br><span class="text-sm font-normal text-gray-500">ab 18 € (Stoff)</span></td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="p-4 text-gray-800">
+                                    <span class="font-bold block">Reißverschluss Kleid erneuern</span>
+                                    <span class="text-sm text-gray-500">Dauer: 1–2 Tage</span>
+                                </td>
+                                <td class="p-4 font-bold text-[#e94470] text-right whitespace-nowrap">ab 18 €</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="p-4 text-gray-800">
+                                    <span class="font-bold block">Reißverschluss Lederjacke erneuern</span>
+                                    <span class="text-sm text-gray-500">Dauer: 1–2 Tage</span>
+                                </td>
+                                <td class="p-4 font-bold text-[#e94470] text-right whitespace-nowrap">ab 35 €</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="p-4 text-gray-800">
+                                    <span class="font-bold block">Reißverschluss Tasche reparieren</span>
+                                    <span class="text-sm text-gray-500">Dauer: Variiert</span>
+                                </td>
+                                <td class="p-4 font-bold text-[#e94470] text-right whitespace-nowrap">Auf Anfrage</td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
-                <p class="text-sm text-gray-500 italic">
-                    * Endpreis nach Besichtigung vor Ort – bei aufwendigen Materialien oder schwer zugänglichen Nähten kann der Preis abweichen. Kostenvoranschlag immer vor der Reparatur.
-                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                        <h3 class="font-bold text-[#122738] mb-2 flex items-center gap-2">
+                            <span aria-hidden="true">💶</span> Was kostet ein Reißverschluss?
+                        </h3>
+                        <p class="text-sm text-gray-600">Der Preis hängt vom Material (Stoff/Leder) und der Länge ab. Mindestpreis ab 18 €.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                        <h3 class="font-bold text-[#122738] mb-2 flex items-center gap-2">
+                            <span aria-hidden="true">⏱️</span> Wie lange dauert es?
+                        </h3>
+                        <p class="text-sm text-gray-600">In der Regel 1–2 Werktage. Express am selben Tag nach Absprache möglich.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                        <h3 class="font-bold text-[#122738] mb-2 flex items-center gap-2">
+                            <span aria-hidden="true">📅</span> Muss ich einen Termin machen?
+                        </h3>
+                        <p class="text-sm text-gray-600">Nein – einfach vorbeikommen. Adresse: Dillenburger Weg 33A, 40229 Düsseldorf-Eller.</p>
+                    </div>
+                </div>
             </section>
 
             <!-- Reparieren statt wegwerfen -->

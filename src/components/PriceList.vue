@@ -50,7 +50,7 @@
         </div>
         
         <div class="mt-8 text-center text-xs text-gray-400">
-            * Preise inkl. MwSt. Endgültiger Preis nach Begutachtung vor Ort.
+            Alle Preise sind Mindestpreise. Der genaue Preis wird vor Ort besprochen. Kein Termin nötig – einfach vorbeikommen.
         </div>
       </div>
     </div>
@@ -61,13 +61,21 @@
 import { ref } from 'vue';
 
 const prices = [
-  { name: 'Hose kürzen / enger machen', price: 'ab 8,00 €', duration: '1 Tag' },
-  { name: 'Kleid / Abendmode anpassen', price: 'ab 20,00 €', duration: 'Nach Aufwand' },
-  { name: 'Reißverschluss austauschen (Jacke/Hose)', price: 'ab 14,00 €', duration: '1-2 Tage' },
-  { name: 'Rock kürzen', price: 'ab 16,00 €', duration: '1-2 Tage' },
-  { name: 'Jacke Ärmel kürzen', price: 'ab 18,00 €', duration: '2 Tage' },
-  { name: 'Sakko Ärmel kürzen', price: 'ab 16,00 €', duration: '2 Tage' },
-  { name: 'Decke kürzen (pro m)', price: 'ab 10,00 €', duration: '2 Tage' },
+  { name: 'Hose kürzen – normaler Saum', price: 'ab 18,00 €', duration: '1 Tag' },
+  { name: 'Hose kürzen – mit Stoßband (Anzughose)', price: 'ab 18,00 €', duration: '1 Tag' },
+  { name: 'Hose kürzen – mit Umschlag', price: 'ab 16,00 €', duration: '1 Tag' },
+  { name: 'Hose kürzen – mit Schlitz', price: 'ab 16,00 €', duration: '1 Tag' },
+  { name: 'Hose weiter machen (Bund + Beine)', price: '18,00 €', duration: '1–2 Tage' },
+  { name: 'Kleid / Abendmode enger nähen', price: 'ab 14,00 €', duration: 'Nach Aufwand' },
+  { name: 'Kleid – Reißverschluss erneuern', price: '18,00 €', duration: '1–2 Tage' },
+  { name: 'Sakko enger nähen + kürzen', price: 'ab 18,00 €', duration: '2 Tage' },
+  { name: 'Sakko – neues Futter', price: 'ab 22,00 €', duration: '2 Tage' },
+  { name: 'Mantel kürzen', price: 'ab 25,00 €', duration: '2 Tage' },
+  { name: 'Mantel – neues Futter', price: 'ab 35,00 €', duration: '2–3 Tage' },
+  { name: 'Lederjacke – Reißverschluss erneuern', price: 'ab 35,00 €', duration: '1–2 Tage' },
+  { name: 'Lederjacke – neues Futter', price: 'ab 30,00 €', duration: '2 Tage' },
+  { name: 'Hemd waschen & von Hand bügeln', price: '3,50 €', duration: 'Sofort / 1 Tag' },
+  { name: 'Rock kürzen', price: 'ab 16,00 €', duration: '1–2 Tage' },
   { name: 'DHL Paketshop', price: 'Service', duration: 'Sofort' },
   { name: 'Reinigung & Wäscherei', price: 'Auf Anfrage', duration: 'Variiert' },
   { name: 'Flicken / Riss reparieren', price: 'Auf Anfrage', duration: 'Variiert' },
