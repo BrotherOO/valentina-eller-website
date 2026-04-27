@@ -1,0 +1,320 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.vue";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout
+    title="DHL Paketshop & Packstation Düsseldorf Eller | Valentina"
+    description="Ihr zuverlässiger DHL Paketshop & Annahmestelle in Düsseldorf-Eller. Päckchen versenden, Retouren abgeben, Briefmarken kaufen. Keine Wartezeiten, einfach vorbeikommen!"
+>
+    <Header client:load />
+
+    <main class="pt-32 pb-20 bg-neutral-50/30">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <!-- H1 & Intro -->
+            <div class="inline-flex items-center gap-2 mb-6 bg-white px-4 py-2 rounded-full shadow-sm border border-[#FFCC00]/50">
+                <span class="w-2 h-2 rounded-full bg-[#d40511]"></span>
+                <span class="text-xs font-bold text-gray-600 uppercase tracking-widest">Offizieller DHL Partner</span>
+            </div>
+            
+            <h1 class="text-3xl md:text-5xl font-bold text-[#122738] mb-6">
+                DHL Paketshop Düsseldorf-Eller – Pakete einfach abgeben
+            </h1>
+            <p class="text-xl text-gray-600 mb-12 leading-relaxed">
+                Bequeme Paketabgabe und Briefmarkenverkauf direkt in Valentinas Nähstube im Dillenburger Weg.<br/>
+                Kombinieren Sie Ihre Textilreparaturen mit Ihren täglichen Postwegen. Keine langen Warteschlangen, stets freundlicher Service und stressfreie Parkmöglichkeiten direkt vor der Tür.
+            </p>
+
+            <!-- Unsere DHL Services -->
+            <section class="mb-16">
+                <h2 class="text-2xl font-bold text-[#122738] mb-6">Unsere Post & DHL Services vor Ort</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex items-start gap-3">
+                        <span class="text-2xl" aria-hidden="true">📦</span>
+                        <div>
+                            <strong class="block text-gray-900">Päckchen & Pakete</strong>
+                            <span class="text-sm text-gray-600">Annahme aller DHL Formate bis 31,5 kg</span>
+                        </div>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex items-start gap-3">
+                        <span class="text-2xl" aria-hidden="true">✉️</span>
+                        <div>
+                            <strong class="block text-gray-900">Briefmarkenverkauf</strong>
+                            <span class="text-sm text-gray-600">Postkarten, Standardbriefe, Groß- & Maxibriefe</span>
+                        </div>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex items-start gap-3">
+                        <span class="text-2xl" aria-hidden="true">🔄</span>
+                        <div>
+                            <strong class="block text-gray-900">Retouren & Rücksendungen</strong>
+                            <span class="text-sm text-gray-600">Bequem abgeben, auch mit QR-Code</span>
+                        </div>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex items-start gap-3">
+                        <span class="text-2xl" aria-hidden="true">🚚</span>
+                        <div>
+                            <strong class="block text-gray-900">Tägliche Abholung</strong>
+                            <span class="text-sm text-gray-600">Zügiger Weiterversand durch DHL Logistik</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Preise Pakete -->
+            <section class="mb-12">
+                <div class="flex items-center justify-between mb-6 flex-wrap gap-4">
+                    <h2 class="text-2xl font-bold text-[#122738]">Preise: Päckchen & Pakete</h2>
+                    <a href="https://www.dhl.de/de/privatkunden/pakete-versenden/online-frankieren.html" target="_blank" rel="noopener noreferrer" class="text-sm font-bold text-[#d40511] hover:underline flex items-center gap-1">
+                        Offizielle DHL Preisliste ansehen ↗
+                    </a>
+                </div>
+                
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden mb-4">
+                    <table class="w-full text-left text-sm md:text-base">
+                        <thead class="bg-gray-50 border-b border-gray-100">
+                            <tr>
+                                <th class="p-4 font-semibold text-gray-900">Format & Gewicht</th>
+                                <th class="p-4 font-semibold text-gray-900 hidden sm:table-cell">Maße (L x B x H)</th>
+                                <th class="p-4 font-semibold text-gray-900 text-right">Online-Preis</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-100">
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="p-4 text-gray-800">
+                                    <span class="font-bold block">Päckchen S</span>
+                                    <span class="text-sm text-gray-500">bis 2 kg (ohne Haftung)</span>
+                                </td>
+                                <td class="p-4 text-gray-600 hidden sm:table-cell">max. 35 x 25 x 10 cm</td>
+                                <td class="p-4 font-bold text-[#122738] text-right whitespace-nowrap">4,19 €</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="p-4 text-gray-800">
+                                    <span class="font-bold block">Päckchen M</span>
+                                    <span class="text-sm text-gray-500">bis 2 kg (ohne Haftung)</span>
+                                </td>
+                                <td class="p-4 text-gray-600 hidden sm:table-cell">max. 60 x 30 x 15 cm</td>
+                                <td class="p-4 font-bold text-[#122738] text-right whitespace-nowrap">5,19 €</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="p-4 text-gray-800">
+                                    <span class="font-bold block">Paket 2 kg</span>
+                                    <span class="text-sm text-gray-500">mit Sendungsverfolgung</span>
+                                </td>
+                                <td class="p-4 text-gray-600 hidden sm:table-cell">max. 60 x 30 x 15 cm</td>
+                                <td class="p-4 font-bold text-[#122738] text-right whitespace-nowrap">6,19 €</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition-colors bg-[#FFCC00]/5">
+                                <td class="p-4 text-gray-800 relative">
+                                    <span class="absolute -top-3 left-4 bg-[#FFCC00] text-[#122738] text-[10px] font-bold px-2 py-0.5 rounded uppercase">Topseller</span>
+                                    <span class="font-bold block mt-2">Paket 5 kg</span>
+                                    <span class="text-sm text-gray-500">mit Sendungsverfolgung</span>
+                                </td>
+                                <td class="p-4 text-gray-600 hidden sm:table-cell">max. 120 x 60 x 60 cm</td>
+                                <td class="p-4 font-bold text-[#122738] text-right whitespace-nowrap">7,69 €</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="p-4 text-gray-800">
+                                    <span class="font-bold block">Paket 10 kg</span>
+                                    <span class="text-sm text-gray-500">mit Sendungsverfolgung</span>
+                                </td>
+                                <td class="p-4 text-gray-600 hidden sm:table-cell">max. 120 x 60 x 60 cm</td>
+                                <td class="p-4 font-bold text-[#122738] text-right whitespace-nowrap">10,49 €</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="p-4 text-gray-800">
+                                    <span class="font-bold block">Paket 20 kg</span>
+                                    <span class="text-sm text-gray-500">mit Sendungsverfolgung</span>
+                                </td>
+                                <td class="p-4 text-gray-600 hidden sm:table-cell">max. 120 x 60 x 60 cm</td>
+                                <td class="p-4 font-bold text-[#122738] text-right whitespace-nowrap">18,99 €</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="p-4 text-gray-800">
+                                    <span class="font-bold block">Paket 31,5 kg</span>
+                                    <span class="text-sm text-gray-500">mit Sendungsverfolgung</span>
+                                </td>
+                                <td class="p-4 text-gray-600 hidden sm:table-cell">max. 120 x 60 x 60 cm</td>
+                                <td class="p-4 font-bold text-[#122738] text-right whitespace-nowrap">23,99 €</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Preise Express-Versand -->
+            <section class="mb-12">
+                <div class="flex items-center justify-between mb-6 flex-wrap gap-4">
+                    <h2 class="text-2xl font-bold text-[#122738]">Express-Versand National</h2>
+                    <span class="text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-full">Zustellung am nächsten Tag</span>
+                </div>
+                
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden mb-4">
+                    <table class="w-full text-left text-sm md:text-base">
+                        <thead class="bg-gray-50 border-b border-gray-100">
+                            <tr>
+                                <th class="p-4 font-semibold text-gray-900">Format & Gewicht</th>
+                                <th class="p-4 font-semibold text-gray-900 hidden sm:table-cell">Maße (L x B x H)</th>
+                                <th class="p-4 font-semibold text-gray-900 text-right">Online-Preis</th>
+                                <th class="p-4 font-semibold text-gray-900 text-right hidden sm:table-cell">Filialpreis</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-100">
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="p-4 text-gray-800 font-bold">bis 0,5 kg</td>
+                                <td class="p-4 text-gray-600 hidden sm:table-cell">bis 35 x 25 x 3 cm</td>
+                                <td class="p-4 font-bold text-[#122738] text-right whitespace-nowrap">13,00 €</td>
+                                <td class="p-4 text-gray-500 text-right whitespace-nowrap hidden sm:table-cell">15,50 €</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="p-4 text-gray-800 font-bold">bis 2 kg</td>
+                                <td class="p-4 text-gray-600 hidden sm:table-cell">bis 35 x 25 x 10 cm</td>
+                                <td class="p-4 font-bold text-[#122738] text-right whitespace-nowrap">17,00 €</td>
+                                <td class="p-4 text-gray-500 text-right whitespace-nowrap hidden sm:table-cell">19,50 €</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="p-4 text-gray-800 font-bold">bis 5 kg</td>
+                                <td class="p-4 text-gray-600 hidden sm:table-cell">bis 60 x 30 x 15 cm</td>
+                                <td class="p-4 font-bold text-[#122738] text-right whitespace-nowrap">18,00 €</td>
+                                <td class="p-4 text-gray-500 text-right whitespace-nowrap hidden sm:table-cell">19,50 €</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="p-4 text-gray-800 font-bold">bis 10 kg</td>
+                                <td class="p-4 text-gray-600 hidden sm:table-cell">bis 120 x 60 x 60 cm</td>
+                                <td class="p-4 font-bold text-[#122738] text-right whitespace-nowrap">30,00 €</td>
+                                <td class="p-4 text-gray-500 text-right whitespace-nowrap hidden sm:table-cell">32,50 €</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="p-4 text-gray-800 font-bold">bis 20 kg</td>
+                                <td class="p-4 text-gray-600 hidden sm:table-cell">bis 120 x 60 x 60 cm</td>
+                                <td class="p-4 font-bold text-[#122738] text-right whitespace-nowrap">36,00 €</td>
+                                <td class="p-4 text-gray-500 text-right whitespace-nowrap hidden sm:table-cell">38,50 €</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="p-4 text-gray-800 font-bold">bis 31,5 kg</td>
+                                <td class="p-4 text-gray-600 hidden sm:table-cell">bis 120 x 60 x 60 cm</td>
+                                <td class="p-4 font-bold text-[#122738] text-right whitespace-nowrap">54,00 €</td>
+                                <td class="p-4 text-gray-500 text-right whitespace-nowrap hidden sm:table-cell">56,50 €</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Preise Briefe -->
+            <section class="mb-8">
+                <div class="flex items-center justify-between mb-6 flex-wrap gap-4">
+                    <h2 class="text-2xl font-bold text-[#122738]">Briefe, Postkarten & Warensendungen</h2>
+                    <a href="https://www.deutschepost.de/de/b/briefmarken.html" target="_blank" rel="noopener noreferrer" class="text-sm font-bold text-[#d40511] hover:underline flex items-center gap-1">
+                        Deutsche Post Briefmarken ↗
+                    </a>
+                </div>
+                
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden mb-4">
+                    <table class="w-full text-left text-sm md:text-base">
+                        <thead class="bg-gray-50 border-b border-gray-100">
+                            <tr>
+                                <th class="p-4 font-semibold text-gray-900">Format</th>
+                                <th class="p-4 font-semibold text-gray-900 hidden sm:table-cell">Details</th>
+                                <th class="p-4 font-semibold text-gray-900 text-right">Preis</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-100">
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="p-4 text-gray-800 font-bold">Postkarte</td>
+                                <td class="p-4 text-gray-600 hidden sm:table-cell">Grüße & Kurznachrichten</td>
+                                <td class="p-4 font-bold text-[#122738] text-right whitespace-nowrap">0,95 €</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="p-4 text-gray-800 font-bold">Standardbrief</td>
+                                <td class="p-4 text-gray-600 hidden sm:table-cell">bis 20 g (ca. 3 DIN A4 Seiten)</td>
+                                <td class="p-4 font-bold text-[#122738] text-right whitespace-nowrap">0,95 €</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="p-4 text-gray-800 font-bold">Kompaktbrief</td>
+                                <td class="p-4 text-gray-600 hidden sm:table-cell">bis 50 g (ca. 8 DIN A4 Seiten)</td>
+                                <td class="p-4 font-bold text-[#122738] text-right whitespace-nowrap">1,10 €</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="p-4 text-gray-800 font-bold">Großbrief</td>
+                                <td class="p-4 text-gray-600 hidden sm:table-cell">bis 500 g (max. 35,3 x 25 x 2 cm)</td>
+                                <td class="p-4 font-bold text-[#122738] text-right whitespace-nowrap">1,80 €</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="p-4 text-gray-800 font-bold">Warensendung</td>
+                                <td class="p-4 text-gray-600 hidden sm:table-cell">bis 1.000 g (max. 35,3 x 25 x 5 cm)</td>
+                                <td class="p-4 font-bold text-[#122738] text-right whitespace-nowrap">2,70 €</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="p-4 text-gray-800 font-bold">Maxibrief</td>
+                                <td class="p-4 text-gray-600 hidden sm:table-cell">bis 1.000 g (max. 35,3 x 25 x 5 cm)</td>
+                                <td class="p-4 font-bold text-[#122738] text-right whitespace-nowrap">2,90 €</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="p-4 mt-2 mb-16 bg-[#FFCC00]/10 border border-[#FFCC00]/30 rounded-lg text-sm text-gray-600 flex items-start gap-3">
+                    <span class="text-xl">ℹ️</span>
+                    <div>
+                        <strong>Hinweis:</strong> Alle angegebenen Preise basieren auf den offiziellen Angaben der DHL und Deutschen Post (Stand: <strong>27.04.2026</strong>). Da DHL die Tarife gelegentlich anpasst, können wir keine Gewähr für die ständige Richtigkeit übernehmen. Den aktuell gültigen Preis erfahren Sie immer direkt bei uns im Shop oder auf der offiziellen DHL-Website.
+                    </div>
+                </div>
+            </section>
+
+            <!-- Vorteile Paketabgabe -->
+            <section class="mb-16">
+                <h2 class="text-2xl font-bold text-[#122738] mb-6">Pakete abgeben leicht gemacht</h2>
+                <div class="prose prose-lg text-gray-600">
+                    <p>
+                        Nutzen Sie den Komfort unseres integrierten DHL Paketshops in Düsseldorf-Eller. Egal, ob Sie eine Online-Bestellung zurücksenden möchten, ein Geschenk an die Familie verschicken oder dringend Briefmarken benötigen – bei uns erledigen Sie das ganz nebenbei.
+                    </p>
+                    <p>
+                        Besonders praktisch: Sie können uns Ihre Änderungsarbeiten wie <a href="/hose-kuerzen-duesseldorf" class="text-[#e94470] hover:underline">Hose kürzen</a> oder <a href="/reissverschluss-reparieren-duesseldorf" class="text-[#e94470] hover:underline">Reißverschluss reparieren</a> anvertrauen und im selben Atemzug Ihre Postgeschäfte erledigen.
+                    </p>
+                </div>
+                
+                <div class="mt-8 bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col sm:flex-row gap-6 items-center sm:items-start">
+                    <div class="w-16 h-16 bg-[#FFCC00]/20 rounded-full flex items-center justify-center text-3xl shrink-0">
+                        📱
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg text-gray-900 mb-2">Muss ich das Label ausdrucken?</h3>
+                        <p class="text-gray-600">
+                            Nein, das ist nicht zwingend erforderlich! Wenn Sie online frankieren oder eine Retoure anmelden, erhalten Sie oft einen <strong>QR-Code auf Ihr Smartphone</strong>. Zeigen Sie uns diesen einfach beim Abgeben vor – wir drucken das Versandlabel kostenlos für Sie aus und kleben es sicher auf Ihr Paket.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Anfahrt & Öffnungszeiten -->
+            <section class="mb-16 bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                <h2 class="text-2xl font-bold text-[#122738] mb-6">Anfahrt & Öffnungszeiten</h2>
+                <div class="text-gray-700 space-y-2 mb-8">
+                    <p class="font-bold text-gray-900">Valentinas Nähstube & DHL Shop</p>
+                    <p>Dillenburger Weg 33A, 40229 Düsseldorf-Eller</p>
+                    <p>Telefon: <a href="tel:021191737673" class="text-[#e94470] hover:underline">0211 91737673</a></p>
+                    <div class="mt-4">
+                        <p>Mo, Di, Do, Fr: 10:00–13:00 und 15:00–18:00</p>
+                        <p>Mittwoch & Samstag: 10:00–13:00</p>
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-gray-100 text-sm">
+                        <p>Kostenlose und stressfreie Parkmöglichkeiten für die schnelle Paketabgabe direkt vor der Tür.</p>
+                        <p>Auch erreichbar mit Bus und Bahn – Haltestelle Eller Mitte.</p>
+                    </div>
+                </div>
+
+                <a
+                    href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x47b8cb99cead1003:0xcdc5770cd9c9ea36"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-2 bg-[#d40511] text-white px-8 py-4 rounded-full font-bold shadow-lg hover:shadow-xl hover:scale-105 hover:bg-[#aa040e] transition-all"
+                >
+                    Route in Google Maps planen &rarr;
+                </a>
+            </section>
+
+        </div>
+    </main>
+    <Footer />
+</Layout>
