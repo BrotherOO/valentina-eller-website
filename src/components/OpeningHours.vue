@@ -90,10 +90,16 @@
 </template>
 
 <script setup lang="ts">
+import { ref, onMounted } from 'vue';
 import { useOpeningHours } from '../composables/useOpeningHours';
 import OpeningStatusBadge from './OpeningStatusBadge.vue';
 
-const { currentDay, isMorningOpen, isAfternoonOpen, isHydrated } = useOpeningHours();
+const { currentDay, isMorningOpen, isAfternoonOpen } = useOpeningHours();
 
-const isCurrentDay = (dayNumber: number) => isHydrated.value && currentDay.value === dayNumber;
+const isMounted = ref(false);
+onMounted(() => {
+    isMounted.value = true;
+});
+
+const isCurrentDay = (dayNumber: number) => isMounted.value && currentDay.value === dayNumber;
 </script>
