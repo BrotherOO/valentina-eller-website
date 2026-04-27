@@ -68,6 +68,8 @@ const prices = [
   { name: 'Hose weiter machen (Bund + Beine)', price: '18,00 €', duration: '1–2 Tage' },
   { name: 'Kleid / Abendmode enger nähen', price: 'ab 14,00 €', duration: 'Nach Aufwand' },
   { name: 'Kleid – Reißverschluss erneuern', price: '18,00 €', duration: '1–2 Tage' },
+  { name: 'Reißverschluss erneuern (Stoff)', price: 'ab 18,00 €', duration: '1–2 Tage' },
+  { name: 'Reißverschluss erneuern (Leder)', price: 'ab 35,00 €', duration: '1–2 Tage' },
   { name: 'Sakko enger nähen + kürzen', price: 'ab 18,00 €', duration: '2 Tage' },
   { name: 'Sakko – neues Futter', price: 'ab 22,00 €', duration: '2 Tage' },
   { name: 'Mantel kürzen', price: 'ab 25,00 €', duration: '2 Tage' },
