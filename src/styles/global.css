@@ -29,3 +29,7 @@
     background: radial-gradient(circle at center, var(--color-primary-bg) 0%, #FFFFFF 100%);
   }
 }
+
+html {
+  scroll-padding-top: 8rem;
+}
