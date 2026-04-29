@@ -8,11 +8,12 @@ import ClockOutline from '~icons/mdi/clock-outline';
 import Flash from '~icons/mdi/flash';
 import CalendarCheck from '~icons/mdi/calendar-check';
 import CheckCircle from '~icons/mdi/check-circle';
-import Needle from '~icons/mdi/needle';
+import Scissors from '~icons/mdi/content-cut';
 import PackageVariantClosed from '~icons/mdi/package-variant-closed';
 import { Image } from "astro:assets";
 import sewingMachineImg from "../assets/sewing_machine.png";
 import tailoringToolsImg from "../assets/tailoring_tools.png";
+import PriceList from "../components/PriceList.vue";
 ---
 
 <Layout
@@ -117,7 +118,7 @@ import tailoringToolsImg from "../assets/tailoring_tools.png";
                         <span class="font-semibold text-gray-800">Fertig in 1–2 Tagen</span>
                     </div>
                     <div class="flex flex-col items-center gap-2">
-                        <Needle class="text-3xl text-[#e94470]" />
+                        <Scissors class="text-3xl text-[#e94470]" />
                         <span class="font-semibold text-gray-800">Seit über 40 Jahren</span>
                     </div>
                     <div class="flex flex-col items-center gap-2">
@@ -147,42 +148,8 @@ import tailoringToolsImg from "../assets/tailoring_tools.png";
             </div>
         </section>
 
-        <!-- 3. LEISTUNGEN -->
-        <section id="preise" class="container mx-auto px-4 max-w-6xl mb-20">
-            <h2 class="text-3xl font-bold text-[#122738] mb-10 text-center">Unsere Leistungen im Überblick</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">Hose kürzen</h3>
-                    <p class="text-[#e94470] font-bold text-lg mb-2">ab 8 €</p>
-                    <p class="text-sm text-gray-600 flex items-center gap-1.5"><ClockOutline class="text-[#e94470]" /> fertig in 1 Tag</p>
-                </div>
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">Kleid & Abendmode anpassen</h3>
-                    <p class="text-[#e94470] font-bold text-lg mb-2">ab 14 €</p>
-                    <p class="text-sm text-gray-600 flex items-center gap-1.5"><ClockOutline class="text-[#e94470]" /> nach Aufwand</p>
-                </div>
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">Reißverschluss erneuern</h3>
-                    <p class="text-[#e94470] font-bold text-lg mb-2">ab 18 €</p>
-                    <p class="text-sm text-gray-600 flex items-center gap-1.5"><ClockOutline class="text-[#e94470]" /> 1–2 Tage</p>
-                </div>
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">Sakko & Mantel</h3>
-                    <p class="text-[#e94470] font-bold text-lg mb-2">ab 18 €</p>
-                    <p class="text-sm text-gray-600 flex items-center gap-1.5"><ClockOutline class="text-[#e94470]" /> 2 Tage</p>
-                </div>
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">Bügelservice & Hemden</h3>
-                    <p class="text-[#e94470] font-bold text-lg mb-2">ab 3,50 €</p>
-                    <p class="text-sm text-gray-600 flex items-center gap-1.5"><ClockOutline class="text-[#e94470]" /> 1 Tag</p>
-                </div>
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">Gardinen & Heimtextilien</h3>
-                    <p class="text-[#e94470] font-bold text-lg mb-2">auf Anfrage</p>
-                    <p class="text-sm text-gray-600 flex items-center gap-1.5"><ClockOutline class="text-[#e94470]" /> nach Absprache</p>
-                </div>
-            </div>
-        </section>
+        <!-- 3. LEISTUNGEN (FULL PRICELIST) -->
+        <PriceList client:visible />
 
         <!-- 4. WARUM VALENTINA? -->
         <section class="container mx-auto px-4 max-w-6xl mb-20">

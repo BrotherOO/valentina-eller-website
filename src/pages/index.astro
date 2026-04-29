@@ -9,6 +9,9 @@ import Testimonials from "../components/Testimonials.vue";
 import ContactInfo from "../components/ContactInfo.astro";
 import Footer from "../components/Footer.astro";
 import DhlImg from "../assets/images/0008769_dhl-express-shipping.jpeg";
+import { Image } from "astro:assets";
+import tailoringBoutiqueImg from "../assets/tailoring_boutique_interior.png";
+import tailoringCraftImg from "../assets/tailoring_craft_hands.png";
 ---
 
 <Layout
@@ -19,6 +22,25 @@ import DhlImg from "../assets/images/0008769_dhl-express-shipping.jpeg";
 	<main>
 		<Hero client:load />
 		<Services />
+
+        <!-- VISUAL BREAK 1 -->
+        <section class="container mx-auto px-4 max-w-6xl py-8">
+            <div class="lg:flex gap-8 items-center bg-white rounded-3xl p-4 lg:p-6 shadow-sm border border-gray-100">
+                <div class="lg:w-1/2 overflow-hidden rounded-2xl h-64 md:h-80 relative">
+                    <Image src={tailoringBoutiqueImg} alt="Blick in unsere Änderungsschneiderei" class="w-full h-full object-cover transition-transform hover:scale-105 duration-700" />
+                </div>
+                <div class="lg:w-1/2 p-4 lg:p-8">
+                    <h2 class="text-3xl font-bold text-[#122738] mb-4">Willkommen in Valentinas Nähstube.</h2>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                        Treten Sie ein und spüren Sie die Atmosphäre echten Schneiderhandwerks. Unsere helle, freundliche Boutique in Düsseldorf-Eller ist Ihr Ort für maßgeschneiderte Lösungen und professionelle Textilpflege.
+                    </p>
+                    <div class="flex items-center gap-3 text-[#e94470] font-semibold">
+                        <svg class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        <span>Einladendes Ambiente & Wohlfühlatmosphäre</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 		<!-- Why Valentina Section -->
 		<section class="py-16 bg-neutral-50/50">
@@ -237,6 +259,26 @@ import DhlImg from "../assets/images/0008769_dhl-express-shipping.jpeg";
 				</div>
 			</div>
 		</section>
+
+        <!-- VISUAL BREAK 2 -->
+        <section class="container mx-auto px-4 max-w-6xl py-12">
+            <div class="lg:flex flex-row-reverse gap-8 items-center bg-white rounded-3xl p-4 lg:p-6 shadow-sm border border-gray-100">
+                <div class="lg:w-1/2 overflow-hidden rounded-2xl h-64 md:h-80 relative">
+                    <Image src={tailoringCraftImg} alt="Schneiderhandwerk Detailaufnahme" class="w-full h-full object-cover transition-transform hover:scale-105 duration-700" />
+                </div>
+                <div class="lg:w-1/2 p-4 lg:p-8">
+                    <h2 class="text-3xl font-bold text-[#122738] mb-4">Leidenschaft fürs Detail.</h2>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                        Ob es um das genaue Maßnehmen, die Wahl des perfekten Garns oder den letzten, unsichtbaren Nadelstich geht – unser Handwerk erfordert ruhige Hände und ein geschultes Auge. Vertrauen Sie auf echte Expertise.
+                    </p>
+                    <div class="flex items-center gap-3 text-[#e94470] font-semibold">
+                        <svg class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        <span>Erfahrung, die man sieht und fühlt</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
 		<AboutTeaser />
 		<PriceList client:visible />
 		<Testimonials client:visible />
