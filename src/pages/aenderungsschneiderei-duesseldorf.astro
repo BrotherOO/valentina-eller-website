@@ -10,6 +10,9 @@ import CalendarCheck from '~icons/mdi/calendar-check';
 import CheckCircle from '~icons/mdi/check-circle';
 import Needle from '~icons/mdi/needle';
 import PackageVariantClosed from '~icons/mdi/package-variant-closed';
+import { Image } from "astro:assets";
+import sewingMachineImg from "../assets/sewing_machine.png";
+import tailoringToolsImg from "../assets/tailoring_tools.png";
 ---
 
 <Layout
@@ -125,6 +128,25 @@ import PackageVariantClosed from '~icons/mdi/package-variant-closed';
             </div>
         </section>
 
+        <!-- VISUAL BREAK 1 -->
+        <section class="container mx-auto px-4 max-w-6xl mb-20">
+            <div class="lg:flex gap-8 items-center bg-white rounded-3xl p-4 lg:p-6 shadow-sm border border-gray-100">
+                <div class="lg:w-1/2 overflow-hidden rounded-2xl h-64 md:h-80 relative">
+                    <Image src={sewingMachineImg} alt="Nahaufnahme einer professionellen Nähmaschine" class="w-full h-full object-cover transition-transform hover:scale-105 duration-700" />
+                </div>
+                <div class="lg:w-1/2 p-4 lg:p-8">
+                    <h2 class="text-3xl font-bold text-[#122738] mb-4">Präzision in jedem Stich.</h2>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                        In unserer Änderungsschneiderei legen wir größten Wert auf Details. Egal ob es um das exakte Kürzen einer Hose oder die Reparatur einer Lieblingsjacke geht – jedes Stück wird mit größter Sorgfalt behandelt.
+                    </p>
+                    <div class="flex items-center gap-3 text-[#e94470] font-semibold">
+                        <CheckCircle class="text-xl shrink-0" />
+                        <span>Höchste Präzision bei allen Nähten</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- 3. LEISTUNGEN -->
         <section id="preise" class="container mx-auto px-4 max-w-6xl mb-20">
             <h2 class="text-3xl font-bold text-[#122738] mb-10 text-center">Unsere Leistungen im Überblick</h2>
@@ -233,6 +255,25 @@ import PackageVariantClosed from '~icons/mdi/package-variant-closed';
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VISUAL BREAK 2 -->
+        <section class="container mx-auto px-4 max-w-6xl mb-20">
+            <div class="lg:flex flex-row-reverse gap-8 items-center bg-white rounded-3xl p-4 lg:p-6 shadow-sm border border-gray-100">
+                <div class="lg:w-1/2 overflow-hidden rounded-2xl h-64 md:h-80 relative">
+                    <Image src={tailoringToolsImg} alt="Schneiderwerkzeug und Maßband" class="w-full h-full object-cover transition-transform hover:scale-105 duration-700" />
+                </div>
+                <div class="lg:w-1/2 p-4 lg:p-8">
+                    <h2 class="text-3xl font-bold text-[#122738] mb-4">Perfekter Sitz für Ihre Kleidung.</h2>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                        Ihre Kleidung sollte sich wie eine zweite Haut anfühlen. Mit hochwertigen Garnen, professionellem Werkzeug und über 40 Jahren Erfahrung sorgen wir dafür, dass jedes Teil nach Ihren Wünschen sitzt.
+                    </p>
+                    <div class="flex items-center gap-3 text-[#e94470] font-semibold">
+                        <CheckCircle class="text-xl shrink-0" />
+                        <span>Hochwertige Garne & Materialien</span>
                     </div>
                 </div>
             </div>
