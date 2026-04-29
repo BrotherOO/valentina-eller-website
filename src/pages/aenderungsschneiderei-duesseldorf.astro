@@ -2,6 +2,14 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.vue";
 import Footer from "../components/Footer.astro";
+import MapMarker from '~icons/mdi/map-marker';
+import Phone from '~icons/mdi/phone';
+import ClockOutline from '~icons/mdi/clock-outline';
+import Flash from '~icons/mdi/flash';
+import CalendarCheck from '~icons/mdi/calendar-check';
+import CheckCircle from '~icons/mdi/check-circle';
+import Needle from '~icons/mdi/needle';
+import PackageVariantClosed from '~icons/mdi/package-variant-closed';
 ---
 
 <Layout
@@ -22,15 +30,15 @@ import Footer from "../components/Footer.astro";
         <!-- 1. HERO -->
         <section class="container mx-auto px-4 max-w-6xl mt-4 mb-20 lg:flex lg:gap-12 items-center">
             <!-- Left -->
-            <div class="lg:w-1/2">
+            <div class="lg:w-[55%] lg:pr-8">
                 <div class="inline-block bg-white text-gray-800 text-sm font-semibold px-4 py-2 rounded-full mb-6 shadow-sm border border-gray-100">
-                    📍 Düsseldorf-Eller · Seit über 40 Jahren
+                    <MapMarker class="inline text-[#e94470] -mt-0.5 mr-1" /> Düsseldorf-Eller · Seit über 40 Jahren
                 </div>
                 <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-[#122738] mb-6 leading-tight">
-                    Änderungsschneiderei in Düsseldorf – schnell & fair.
+                    Änderungsschneiderei in Düsseldorf: schnell & fair.
                 </h1>
                 <p class="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed">
-                    Professionelle Kleidungsänderungen, Reparaturen und Anpassungen. Kein Termin nötig – einfach vorbeikommen. Bearbeitungszeit meist 1–2 Tage.
+                    Professionelle Kleidungsänderungen, Reparaturen und Anpassungen. Kein Termin nötig, einfach vorbeikommen. Bearbeitungszeit meist 1–2 Tage.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4">
                     <a href="#preise" class="inline-flex items-center justify-center gap-2 bg-[#e94470] text-white px-8 py-4 rounded-full font-bold shadow-lg hover:shadow-xl hover:scale-105 hover:bg-[#ca1245] transition-all">
@@ -43,7 +51,7 @@ import Footer from "../components/Footer.astro";
             </div>
             
             <!-- Right -->
-            <div class="lg:w-1/2 mt-12 lg:mt-0 relative">
+            <div class="lg:w-[45%] mt-12 lg:mt-0 relative w-full">
                 <div class="absolute -inset-4 bg-gradient-to-r from-[#e94470]/10 to-[#f8dac2]/30 rounded-[2rem] blur-xl z-0"></div>
                 <div class="relative z-10 bg-white rounded-2xl shadow-xl border border-gray-100 p-6 md:p-8">
                     <h3 class="text-xl font-bold text-[#122738] mb-6">Preisübersicht (Auszug)</h3>
@@ -86,7 +94,7 @@ import Footer from "../components/Footer.astro";
                             Alle Preise sind Mindestpreise. Preis wird kostenlos vor Ort besprochen.
                         </p>
                         <div class="inline-flex items-center gap-2 bg-[#f8dac2]/30 text-[#ca1245] px-3 py-1.5 rounded-lg text-sm font-semibold border border-[#f3a397]/20">
-                            ⚡ Express Same-Day nach Absprache möglich
+                            <Flash class="inline text-[#ca1245]" /> Express Same-Day nach Absprache möglich
                         </div>
                     </div>
                 </div>
@@ -98,19 +106,19 @@ import Footer from "../components/Footer.astro";
             <div class="container mx-auto px-4 max-w-6xl">
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
                     <div class="flex flex-col items-center gap-2">
-                        <span class="text-3xl" aria-hidden="true">📅</span>
+                        <CalendarCheck class="text-3xl text-[#e94470]" />
                         <span class="font-semibold text-gray-800">Kein Termin nötig</span>
                     </div>
                     <div class="flex flex-col items-center gap-2">
-                        <span class="text-3xl" aria-hidden="true">⚡</span>
+                        <Flash class="text-3xl text-[#e94470]" />
                         <span class="font-semibold text-gray-800">Fertig in 1–2 Tagen</span>
                     </div>
                     <div class="flex flex-col items-center gap-2">
-                        <span class="text-3xl" aria-hidden="true">🧵</span>
+                        <Needle class="text-3xl text-[#e94470]" />
                         <span class="font-semibold text-gray-800">Seit über 40 Jahren</span>
                     </div>
                     <div class="flex flex-col items-center gap-2">
-                        <span class="text-3xl" aria-hidden="true">📍</span>
+                        <PackageVariantClosed class="text-3xl text-[#e94470]" />
                         <span class="font-semibold text-gray-800">Düsseldorf-Eller · DHL-Paketshop</span>
                     </div>
                 </div>
@@ -124,32 +132,32 @@ import Footer from "../components/Footer.astro";
                 <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
                     <h3 class="text-xl font-bold text-gray-900 mb-2">Hose kürzen</h3>
                     <p class="text-[#e94470] font-bold text-lg mb-2">ab 8 €</p>
-                    <p class="text-sm text-gray-600 flex items-center gap-1.5"><span aria-hidden="true">⏱️</span> fertig in 1 Tag</p>
+                    <p class="text-sm text-gray-600 flex items-center gap-1.5"><ClockOutline class="text-[#e94470]" /> fertig in 1 Tag</p>
                 </div>
                 <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
                     <h3 class="text-xl font-bold text-gray-900 mb-2">Kleid & Abendmode anpassen</h3>
                     <p class="text-[#e94470] font-bold text-lg mb-2">ab 14 €</p>
-                    <p class="text-sm text-gray-600 flex items-center gap-1.5"><span aria-hidden="true">⏱️</span> nach Aufwand</p>
+                    <p class="text-sm text-gray-600 flex items-center gap-1.5"><ClockOutline class="text-[#e94470]" /> nach Aufwand</p>
                 </div>
                 <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
                     <h3 class="text-xl font-bold text-gray-900 mb-2">Reißverschluss erneuern</h3>
                     <p class="text-[#e94470] font-bold text-lg mb-2">ab 18 €</p>
-                    <p class="text-sm text-gray-600 flex items-center gap-1.5"><span aria-hidden="true">⏱️</span> 1–2 Tage</p>
+                    <p class="text-sm text-gray-600 flex items-center gap-1.5"><ClockOutline class="text-[#e94470]" /> 1–2 Tage</p>
                 </div>
                 <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
                     <h3 class="text-xl font-bold text-gray-900 mb-2">Sakko & Mantel</h3>
                     <p class="text-[#e94470] font-bold text-lg mb-2">ab 18 €</p>
-                    <p class="text-sm text-gray-600 flex items-center gap-1.5"><span aria-hidden="true">⏱️</span> 2 Tage</p>
+                    <p class="text-sm text-gray-600 flex items-center gap-1.5"><ClockOutline class="text-[#e94470]" /> 2 Tage</p>
                 </div>
                 <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
                     <h3 class="text-xl font-bold text-gray-900 mb-2">Bügelservice & Hemden</h3>
                     <p class="text-[#e94470] font-bold text-lg mb-2">ab 3,50 €</p>
-                    <p class="text-sm text-gray-600 flex items-center gap-1.5"><span aria-hidden="true">⏱️</span> 1 Tag</p>
+                    <p class="text-sm text-gray-600 flex items-center gap-1.5"><ClockOutline class="text-[#e94470]" /> 1 Tag</p>
                 </div>
                 <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
                     <h3 class="text-xl font-bold text-gray-900 mb-2">Gardinen & Heimtextilien</h3>
                     <p class="text-[#e94470] font-bold text-lg mb-2">auf Anfrage</p>
-                    <p class="text-sm text-gray-600 flex items-center gap-1.5"><span aria-hidden="true">⏱️</span> nach Absprache</p>
+                    <p class="text-sm text-gray-600 flex items-center gap-1.5"><ClockOutline class="text-[#e94470]" /> nach Absprache</p>
                 </div>
             </div>
         </section>
@@ -163,19 +171,19 @@ import Footer from "../components/Footer.astro";
                         <h2 class="text-3xl font-bold text-[#122738] mb-8">Warum zu Valentina?</h2>
                         <ul class="space-y-4">
                             <li class="flex items-start gap-3">
-                                <span class="text-[#e94470] text-xl mt-0.5">✔</span>
-                                <span class="text-gray-700 text-lg">Kein Termin nötig – einfach vorbeikommen</span>
+                                <CheckCircle class="text-[#e94470] text-xl mt-0.5 shrink-0" />
+                                <span class="text-gray-700 text-lg">Kein Termin nötig, einfach vorbeikommen</span>
                             </li>
                             <li class="flex items-start gap-3">
-                                <span class="text-[#e94470] text-xl mt-0.5">✔</span>
-                                <span class="text-gray-700 text-lg">Transparente Preise – kein versteckter Aufpreis</span>
+                                <CheckCircle class="text-[#e94470] text-xl mt-0.5 shrink-0" />
+                                <span class="text-gray-700 text-lg">Transparente Preise, kein versteckter Aufpreis</span>
                             </li>
                             <li class="flex items-start gap-3">
-                                <span class="text-[#e94470] text-xl mt-0.5">✔</span>
+                                <CheckCircle class="text-[#e94470] text-xl mt-0.5 shrink-0" />
                                 <span class="text-gray-700 text-lg">Express Same-Day nach Absprache möglich</span>
                             </li>
                             <li class="flex items-start gap-3">
-                                <span class="text-[#e94470] text-xl mt-0.5">✔</span>
+                                <CheckCircle class="text-[#e94470] text-xl mt-0.5 shrink-0" />
                                 <span class="text-gray-700 text-lg">DHL Paketshop direkt vor Ort</span>
                             </li>
                         </ul>
@@ -200,21 +208,21 @@ import Footer from "../components/Footer.astro";
                             
                             <div class="space-y-4 text-sm text-gray-700">
                                 <div class="flex gap-3">
-                                    <span class="text-[#e94470]" aria-hidden="true">📍</span>
+                                    <MapMarker class="text-[#e94470] text-xl mt-0.5 shrink-0" />
                                     <div>
                                         <strong>Adresse</strong><br/>
                                         Dillenburger Weg 33a, 40229 Düsseldorf-Eller
                                     </div>
                                 </div>
                                 <div class="flex gap-3">
-                                    <span class="text-[#e94470]" aria-hidden="true">📞</span>
+                                    <Phone class="text-[#e94470] text-xl mt-0.5 shrink-0" />
                                     <div>
                                         <strong>Telefon</strong><br/>
                                         <a href="tel:+4921191737673" class="hover:text-[#e94470] transition-colors">0211 917 376 73</a>
                                     </div>
                                 </div>
                                 <div class="flex gap-3">
-                                    <span class="text-[#e94470]" aria-hidden="true">🕒</span>
+                                    <ClockOutline class="text-[#e94470] text-xl mt-0.5 shrink-0" />
                                     <div>
                                         <strong>Öffnungszeiten</strong><br/>
                                         Mo, Di, Do, Fr: 10–13 & 15–18 Uhr<br/>
@@ -242,7 +250,7 @@ import Footer from "../components/Footer.astro";
                         </span>
                     </summary>
                     <div class="p-5 pt-0 text-gray-600 group-open:bg-gray-50">
-                        Nein, ein Termin ist nicht nötig. Kommen Sie einfach während der Öffnungszeiten vorbei – wir nehmen Ihre Kleidung sofort entgegen und besprechen Preis und Bearbeitungszeit direkt vor Ort.
+                        Nein, ein Termin ist nicht nötig. Kommen Sie einfach während der Öffnungszeiten vorbei. Wir nehmen Ihre Kleidung sofort entgegen und besprechen Preis und Bearbeitungszeit direkt vor Ort.
                     </div>
                 </details>
                 
@@ -297,15 +305,15 @@ import Footer from "../components/Footer.astro";
         </section>
 
         <!-- 6. CTA-ABSCHNITT -->
-        <section class="bg-[#122738] py-20 rounded-t-[3rem]">
+        <section class="bg-gradient-to-br from-[#f8dac2]/50 to-[#f3a397]/30 py-20 rounded-[3rem] border border-[#f8dac2] shadow-sm mb-20 mx-4 lg:mx-0">
             <div class="container mx-auto px-4 max-w-4xl text-center">
-                <h2 class="text-4xl md:text-5xl font-bold text-white mb-8">Einfach vorbeikommen.</h2>
-                <div class="flex flex-col sm:flex-row justify-center gap-4">
-                    <a href="tel:+4921191737673" class="inline-flex items-center justify-center gap-2 bg-[#e94470] text-white px-8 py-4 rounded-full font-bold shadow-lg hover:shadow-xl hover:scale-105 hover:bg-[#ca1245] transition-all text-lg">
-                        <span aria-hidden="true">📞</span> 0211 917 376 73
+                <h2 class="text-4xl md:text-5xl font-bold text-[#122738] mb-8">Kommen Sie einfach vorbei.</h2>
+                <div class="flex flex-col sm:flex-row justify-center gap-6">
+                    <a href="tel:+4921191737673" class="inline-flex items-center justify-center gap-3 bg-[#e94470] text-white px-8 py-4 rounded-full font-bold shadow-lg hover:shadow-xl hover:scale-105 hover:bg-[#ca1245] transition-all text-lg">
+                        <Phone class="text-xl" /> 0211 917 376 73
                     </a>
-                    <a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x47b8cb99cead1003:0xcdc5770cd9c9ea36" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-white text-[#122738] px-8 py-4 rounded-full font-bold shadow-sm hover:bg-gray-100 hover:scale-105 transition-all text-lg">
-                        <span aria-hidden="true">📍</span> Route planen
+                    <a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x47b8cb99cead1003:0xcdc5770cd9c9ea36" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 bg-white text-[#122738] px-8 py-4 rounded-full font-bold shadow-sm border border-gray-200 hover:bg-gray-50 hover:scale-105 transition-all text-lg">
+                        <MapMarker class="text-xl text-[#e94470]" /> Route planen
                     </a>
                 </div>
             </div>
