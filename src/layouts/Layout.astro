@@ -3,6 +3,7 @@ import "../styles/global.css";
 import favicon from "../assets/valentina_favicon.png";
 import CookieBanner from "../components/CookieBanner.vue";
 import ClickRipple from "../components/ClickRipple.astro"; // Import ClickRipple
+import HolidayBanner from "../components/HolidayBanner.vue"; // Import HolidayBanner
 import Analytics from "@vercel/analytics/astro";
 
 interface Props {
@@ -128,6 +129,7 @@ const {
 	<body
 		class="bg-primary text-gray-800 font-sans antialiased overflow-x-hidden selection:bg-highlight selection:text-gray-900"
 	>
+		<HolidayBanner client:load />
 		<slot />
 		<CookieBanner client:load />
 		<ClickRipple />
